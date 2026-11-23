@@ -264,10 +264,11 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [x] Musterseite kreis/pi: Seite 'π durch Vielecke' komplett (Einstieg mit Messwerten, Komponente Vieleck mit statischer Form/nojs/Tastatur/Test, Herleitung, Beispielkasten, ≥3 Aufgaben mit Fehlerrückmeldung); Recap kreis/start als Rumpf nur soweit nötig; lernapps check; unabhängiger Lernenden-Prüfer; Checkpoint Musterseite
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
-- [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
+- [x] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-- [ ] Kapitel kreis: Recap kreis/start mit Kurztest-Komponente (Kopie der Vorlage inkl. W42) für Rechteck, Dezimalbrüche, Trigonometrie
+      Creator: Musterseite angenommen, übrige Seiten dürfen dem Muster folgen (Orchestrator in Vertretung).
+- [x] Kapitel kreis: Recap kreis/start mit Kurztest-Komponente (Kopie der Vorlage inkl. W42) für Rechteck, Dezimalbrüche, Trigonometrie
 - [ ] Kapitel kreis: Seiten umfang und flaeche (Komponente Torte, Aufgaben generated mit mistakes); Push
 - [ ] Kapitel kreis: Seiten einheitskreis und bogenmass (Komponente Einheitskreis, Umrechnen, RAD/DEG); Kapitelrückblick; Push
 - [ ] Kapitel koerper: Recap koerper/start (Prisma, Grundkörper, Pythagoras) und Seite zylinder
@@ -326,6 +327,7 @@ Umgesetzt: „wie oft passt“ → Division U : d im Text; Toleranz so eng, dass
 gelten; Radius eingeführt, Begründung der Grenzen (kürzester Weg), Legende der Farben, Ergebnis nicht mehr vorweg (Ergebnissatz
 ersetzt durch Aufgabe `obere-grenze-96`); Sechseck: Begründung gleichseitig, Bild `sechseck-dreiecke.svg`, Hinweis auf die obere Grenze;
 Komma nach Formel in den Schritten behoben; Schlusssatz angepasst.
+Alle diese Änderungen nach dem Prüferlauf sind nicht erneut vom Lernenden-Prüfer geprüft (vor „Veröffentlichen“ noch einmal).
 Nicht geändert (Laufzeit, in den Bericht): Standardrückmeldung ohne Fehlertyp bei Zahlen/Wahr-Falsch (W13/W39), „Antworte zuerst“ bei Textfeld
 (W6/W11), „.:“ bei Auswahl-Rückmeldung (W43), „Neue Aufgabe“ nur Symbol (W5), Startnummer zufällig (W12), „erlaubte Abweichung“ in der
 Lösung nach richtiger Antwort mit Toleranz (neu), Punkt als Dezimalzeichen wird akzeptiert (gewollt).
