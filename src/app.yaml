@@ -4,4 +4,4 @@ strand: mathematik/groessen-und-messen
 title: Kreis und Körper berechnen
 intro: Du bestimmst Größen, die du nicht auslegen kannst. Den Kreis schließt du mit Vielecken ein, bis π greifbar wird. Bei Körpern, Dreiecken und Vielecken suchst du das rechtwinklige Dreieck, das sich im Bild versteckt.
 languages: [de]
-chapters: [kreis]
+chapters: [kreis, koerper]

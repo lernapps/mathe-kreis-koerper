@@ -8,7 +8,7 @@ phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 2
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: { accessible: 3, checks-pass: 5 }
+failedChecks: { accessible: 4, checks-pass: 5 }
 ---
 
 # Plan: mathe-kreis-koerper, first version
@@ -271,7 +271,7 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
 - [x] Kapitel kreis: Recap kreis/start mit Kurztest-Komponente (Kopie der Vorlage inkl. W42) für Rechteck, Dezimalbrüche, Trigonometrie
 - [x] Kapitel kreis: Seiten umfang und flaeche (Komponente Torte, Aufgaben generated mit mistakes); Push
 - [x] Kapitel kreis: Seiten einheitskreis und bogenmass (Komponente Einheitskreis, Umrechnen, RAD/DEG); Kapitelrückblick; Push
-- [ ] Kapitel koerper: Recap koerper/start (Prisma, Grundkörper, Pythagoras) und Seite zylinder
+- [x] Kapitel koerper: Recap koerper/start (Prisma, Grundkörper, Pythagoras) und Seite zylinder
 - [ ] Kapitel koerper: Seiten pyramide-kegel (Komponente Umschuetten) und kugel; Push
 - [ ] Kapitel koerper: Recap dreiecke-start, Seiten schulhof und vielecke; Kapitelrückblick; Push
 - [ ] Content-Guide .agents/skills/app-content/SKILL.md vollständig; Glossar (Fachbegriffe aus den Recaps); Katalogeintrag-Entwurf
