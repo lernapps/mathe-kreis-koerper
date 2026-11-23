@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Messtag auf dem Schulhof
+description: "Die Höhe eines Baums und die Breite eines Flusses misst du nicht mit dem Maßband. Du suchst das rechtwinklige Dreieck und wählst das passende Verfahren."
+competencies: [berechnungen-dreiecke-vielecke]
+blocks:
+  - type: section
+    id: einstieg
+    title: Der Baum und sein Schatten
+    blocks:
+      - type: text
+        text: "Auf dem Schulhof steht ein hoher Baum. Du kannst nicht hinaufklettern. Aber du kannst messen, was du erreichst. Ein 2 m langer Stab wirft einen Schatten von 1,5 m. Zur selben Zeit wirft der Baum einen Schatten von 6 m."
+      - type: number
+        id: baum-schatten
+        text: "Wie hoch ist der Baum?"
+        answer: 8
+        tolerance: 0
+        unit: m
+        explanation: "Der Schatten des Baums ist 6 : 1,5 = 4-mal so lang wie der des Stabs. Also ist der Baum 4-mal so hoch wie der Stab: 2 · 4 = 8 m. Das ist ein Strahlensatz: Sonnenstrahlen sind parallel."
+  - type: section
+    id: verfahren
+    title: Das versteckte Dreieck finden
+    blocks:
+      - type: text
+        text: "Der Schatten geht nur bei Sonne. Mit einem Winkelmesser geht es immer. Du stellst dich in einem Abstand d vor den Baum, peilst die Spitze an und misst den Winkel α der Blicklinie gegen die Waagerechte. Im Bild siehst du, wo das rechtwinklige Dreieck steckt: waagerecht bis zum Baum, senkrecht bis zur Spitze und die Blicklinie dazwischen."
+      - type: figure
+        image: images/schulhof-baum.svg
+        alt: "Eine Person steht im Abstand d vor einem Baum und peilt die Spitze an. Das blaue Dreieck aus der waagerechten Strecke d, der Blicklinie und der senkrechten Strecke h ist rechtwinklig. Der Winkel α liegt an den Augen."
+        caption: "Das blaue Dreieck: Ankathete d, Gegenkathete h. Zur Baumhöhe kommt die Augenhöhe dazu."
+        source: eigene Zeichnung
+        licence: CC0-1.0
+      - type: text
+        text: "In diesem Dreieck sind der Winkel α und die Ankathete d bekannt. Gesucht ist die Gegenkathete h. Dafür passt der Tangens. Zur Baumhöhe zählst du dann noch die Augenhöhe, denn die Blicklinie beginnt an deinen Augen."
+      - type: formula
+        formula: 'h = d \cdot \tan \alpha'
+      - type: text
+        text: "Beim Fluss geht es ähnlich. Du kannst nicht hinübergehen. Am anderen Ufer steht ein Baum. Du stellst dich genau gegenüber an den Punkt A und gehst am Ufer eine Strecke s bis zum Punkt B. Von B aus misst du den Winkel β zwischen dem Weg zurück nach A und der Blicklinie zum Baum. Die Flussbreite w ist die Strecke von A zum Baum."
+      - type: figure
+        image: images/schulhof-fluss.svg
+        alt: "Ein Fluss zwischen zwei Ufern von oben. Am anderen Ufer steht ein Baum, am eigenen Ufer liegen die Punkte A und B. Das blaue Dreieck aus der Strecke s von A nach B, der Blicklinie von B zum Baum und der Flussbreite w ist rechtwinklig. Der rechte Winkel liegt bei A. Der Winkel β liegt bei B."
+        caption: "Das blaue Dreieck hat den rechten Winkel bei A. Die Flussbreite w liegt dem Winkel β gegenüber."
+        source: eigene Zeichnung
+        licence: CC0-1.0
+      - type: formula
+        formula: 'w = s \cdot \tan \beta'
+      - type: table
+        caption: Welches Verfahren passt?
+        header: [Situation, Verfahren]
+        rows:
+          - ["zwei Seiten im rechtwinkligen Dreieck, die dritte", "Pythagoras: a² + b² = c²"]
+          - ["ein Winkel und eine Seite im rechtwinkligen Dreieck", "Sinus, Kosinus oder Tangens"]
+          - ["parallele Linien und ein Faktor, zum Beispiel Schatten", "Strahlensatz: gleicher Faktor"]
+  - type: section
+    id: beispiel
+    title: Der Baum auf dem Schulhof
+    blocks:
+      - type: example
+        title: "Abstand 15 m, Winkel 32°"
+        blocks:
+          - type: text
+            text: "Du stehst 15 m vor dem Baum und misst α = 32°. Deine Augen sind 1,6 m über dem Boden."
+          - type: formula
+            formula: 'h = 15 \cdot \tan 32^\circ \approx 9,37'
+          - type: formula
+            formula: '\text{Baumhöhe} = 9,37 + 1,6 \approx 11,0'
+          - type: text
+            text: "Der Baum ist etwa 11,0 m hoch."
+  - type: section
+    id: uebung
+    title: Aufgaben
+    blocks:
+      - type: generated
+        id: baumhoehe
+        given:
+          d: { int: [10, 30], step: 1 }
+          alpha: { oneOf: [25, 30, 35, 40, 50] }
+        task:
+          text: "Du stehst {{d}} m vor einem Baum und misst den Winkel {{alpha}}° zur Spitze. Deine Augen sind 1,6 m über dem Boden. Wie hoch ist der Baum? Runde auf eine Stelle nach dem Komma."
+        answer:
+          { value: "round(d * tan(alpha) + 1.6, 1)", compare: { number: { decimals: 1, tolerance: 0.1, unit: m } } }
+        mistakes:
+          - value: "round(d * tan(alpha), 1)"
+            message: "Du hast die Augenhöhe vergessen. Das Dreieck beginnt auf Augenhöhe, also kommen 1,6 m dazu."
+          - value: "round(d * sin(alpha) + 1.6, 1)"
+            message: "Abstand und Höhe sind Ankathete und Gegenkathete. Das gehört zum Tangens, nicht zum Sinus."
+          - value: "round(d / tan(alpha) + 1.6, 1)"
+            message: "Du hast durch den Tangens geteilt. Die gesuchte Höhe ist die Gegenkathete, also tan α mal Ankathete."
+        hint: "Das Dreieck: Ankathete d, Gegenkathete h. Welche Funktion verbindet beide mit dem Winkel?"
+        steps:
+          - '$h = d \cdot \tan \alpha = {{d}} \cdot \tan {{alpha}}^\circ$'
+          - "Dazu kommen 1,6 m Augenhöhe: {{answer}} m."
+      - type: generated
+        id: flussbreite
+        given:
+          s: { int: [15, 40], step: 1 }
+          beta: { oneOf: [40, 50, 55, 60] }
+        task:
+          text: "Du gehst am Ufer {{s}} m von A bis B. Von B aus siehst du den Baum am anderen Ufer unter dem Winkel {{beta}}° zur Uferlinie. Wie breit ist der Fluss? Runde auf eine Stelle nach dem Komma."
+        answer: { value: "round(s * tan(beta), 1)", compare: { number: { decimals: 1, tolerance: 0.1, unit: m } } }
+        mistakes:
+          - value: "round(s / tan(beta), 1)"
+            message: "Die Flussbreite liegt dem Winkel β gegenüber und s liegt an ihm an. Gegenkathete gleich Ankathete mal tan β, nicht geteilt."
+          - value: "round(s * sin(beta), 1)"
+            message: "Der Sinus braucht die Hypotenuse. Die Blicklinie zum Baum kennst du aber nicht, nur die Ankathete s."
+          - value: "round(s * cos(beta), 1)"
+            message: "Der Kosinus verbindet Ankathete und Hypotenuse. Gesucht ist die Gegenkathete, das ist der Tangens."
+        hint: "Der rechte Winkel liegt bei A. Welche Seite liegt dem Winkel β gegenüber?"
+        steps:
+          - '$w = s \cdot \tan \beta = {{s}} \cdot \tan {{beta}}^\circ = {{answer}}$'
+      - type: generated
+        id: schatten-hoehe
+        given:
+          L: { int: [1, 3], step: 1 }
+          k: { int: [2, 4], step: 1 }
+          S: { int: [4, 24], step: 2 }
+        where: ["decimals(L * S / k) <= 1 and L != k and L * S / k != L + S - k"]
+        task:
+          text: "Ein Stab von {{L}} m Länge wirft einen Schatten von {{k}} m. Zur selben Zeit wirft ein Mast einen Schatten von {{S}} m. Wie hoch ist der Mast?"
+        answer: { value: "L * S / k", compare: { number: { decimals: 1, tolerance: 0, unit: m } } }
+        mistakes:
+          - value: "L * k / S"
+            message: "Du hast das Verhältnis umgedreht. Der Mast ist höher als der Stab, weil sein Schatten länger ist."
+          - value: "L + S - k"
+            message: "Du hast addiert und subtrahiert. Bei ähnlichen Figuren werden alle Längen mit demselben Faktor multipliziert."
+        hint: "Bestimme den Faktor der Schatten: {{S}} : {{k}}. Damit multiplizierst du die Länge des Stabs."
+        steps:
+          - '$\frac{{{S}}}{{{k}}}$ ist der Faktor.'
+          - "Mast: {{L}} mal Faktor = {{answer}} m."
+      - type: number
+        id: leiter
+        text: "Eine 4 m lange Leiter lehnt an einer Wand. Ihr Fuß steht 1,2 m von der Wand entfernt. Wie hoch reicht die Leiter an der Wand? Runde auf eine Stelle nach dem Komma."
+        answer: 3.8
+        tolerance: 0.05
+        unit: m
+        explanation: "Das Dreieck aus Leiter, Wand und Boden ist rechtwinklig, die Leiter ist die Hypotenuse. Es gilt h² = 4² − 1,2² = 16 − 1,44 = 14,56. Die Wurzel ist etwa 3,8 m."
+      - type: single-choice
+        id: rampe
+        text: "Eine 5 m lange Rampe steigt unter dem Winkel 12°. Du suchst die Höhe, die sie überwindet. Welches Verfahren passt?"
+        options:
+          - text: "Sinus"
+            correct: true
+            info: "Die Rampe ist die Hypotenuse, die Höhe die Gegenkathete zu 12°. Gegenkathete zu Hypotenuse ist der Sinus: h = 5 · sin 12° ≈ 1,04 m."
+          - text: "Tangens"
+            correct: false
+            info: "Der Tangens braucht die Ankathete. Gegeben ist aber die Hypotenuse, die Rampe selbst."
+          - text: "Satz des Pythagoras"
+            correct: false
+            info: "Pythagoras braucht zwei Seiten. Hier ist nur eine Seite und ein Winkel gegeben."
+          - text: "Strahlensatz"
+            correct: false
+            info: "Der Strahlensatz braucht parallele Linien und ähnliche Figuren. Hier gibt es keine."
+        explanation: "Ein Winkel und eine Seite im rechtwinkligen Dreieck: Sinus, Kosinus oder Tangens. Welche Funktion, hängt davon ab, welche Seiten vorkommen."
+      - type: matching
+        id: verfahren-zuordnen
+        text: "Ordne jeder Messung das passende Verfahren zu."
+        pairs:
+          - { left: "Ein Stab und ein Baum werfen Schatten", right: "Strahlensatz (gleicher Faktor)" }
+          - { left: "Winkel zur Baumspitze und Abstand zum Baum", right: "Tangens" }
+          - { left: "Länge einer Leiter und Abstand zur Wand", right: "Satz des Pythagoras" }
+          - { left: "Länge einer Rampe und ihr Steigungswinkel", right: "Sinus" }
+        explanation: "Du suchst immer erst das rechtwinklige Dreieck, dann prüfst du, welche Seiten oder Winkel bekannt sind."
+      - type: text
+        text: "**Das kannst du jetzt:** Du findest in einer Messsituation das rechtwinklige Dreieck und wählst zwischen Pythagoras, Trigonometrie und Strahlensatz."
