@@ -13,7 +13,8 @@
   <line x1="122" y1="125" x2="100" y2="140" stroke="#1a56c4" stroke-width="2.5" />
   <line x1="122" y1="20" x2="100" y2="140" stroke="#1a56c4" stroke-width="2.5" />
   <path d="M122,115 H112 V125" fill="none" stroke="#222" stroke-width="1.2" />
-  <text x="130" y="75" font-size="14" fill="#222" font-family="sans-serif">h</text>
+  <text x="143" y="80" font-size="14" fill="#222" font-family="sans-serif">h</text>
   <text x="82" y="156" font-size="13" fill="#222" font-family="sans-serif">a : 2</text>
-  <text x="40" y="108" font-size="13" fill="#222" font-family="sans-serif">Seitenhöhe</text>
+  <text x="2" y="100" font-size="13" fill="#222" font-family="sans-serif">Seitenhöhe</text>
+  <line x1="66" y1="96" x2="106" y2="96" stroke="#222" stroke-width="1"/>
 </svg>

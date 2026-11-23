@@ -141,7 +141,7 @@ blocks:
             info: "Dieses Dreieck ist nicht rechtwinklig, du kannst den Sinus nicht direkt benutzen. Erst halbieren, dann hast du einen rechten Winkel."
           - text: "Im Dreieck aus drei Ecken des Vielecks"
             correct: false
-            info: "Auch dieses Dreieck ist im Allgemeinen nicht rechtwinklig und hat r nicht als Seite, und du kennst keinen Winkel darin."
+            info: "Auch dieses Dreieck ist im Allgemeinen nicht rechtwinklig und hat r nicht als Seite. Mit ihm kommst du an die Seite a nicht direkt heran."
         explanation: "Das versteckte rechtwinklige Dreieck entsteht, wenn du das Teildreieck mit seiner Höhe halbierst. Der Winkel dort ist 180° : n."
       - type: text
         text: "**Das kannst du jetzt:** Du findest in einem regelmäßigen Vieleck das rechtwinklige Dreieck und berechnest Seite, Winkel und Fläche. Am Ende dieses Kapitels hast du Umfang, Fläche und Volumen von runden Körpern berechnet und Strecken und Winkel in Dreiecken. Immer hat dir das versteckte Dreieck oder das Annähern geholfen."

@@ -130,7 +130,6 @@ blocks:
         given:
           d: { int: [10, 30], step: 1 }
           h: { int: [4, 9], step: 1 }
-        where: ["h != d"]
         task:
           text: "Du stehst {{d}} m vor einem Mast. Seine Spitze liegt {{h}} m über deiner Augenhöhe. Unter welchem Winkel zur Waagerechten siehst du die Spitze? Runde auf eine Stelle nach dem Komma."
         answer: { value: "round(atan(h / d), 1)", compare: { number: { decimals: 1, tolerance: 0.1, unit: "°" } } }
@@ -174,7 +173,7 @@ blocks:
           - { left: "Ein Stab und ein Baum werfen Schatten", right: "Strahlensatz (gleicher Faktor)" }
           - { left: "Winkel zur Baumspitze und Abstand zum Baum", right: "Tangens" }
           - { left: "Länge einer Leiter und Abstand zur Wand", right: "Satz des Pythagoras" }
-          - { left: "Länge einer Rampe und ihr Steigungswinkel", right: "Sinus" }
+          - { left: "Länge einer Rampe und Steigungswinkel, gesucht ist die Höhe", right: "Sinus" }
         explanation: "Du suchst immer erst das rechtwinklige Dreieck, dann prüfst du, welche Seiten oder Winkel bekannt sind."
       - type: text
         text: "**Das kannst du jetzt:** Du findest in einer Messsituation das rechtwinklige Dreieck und wählst zwischen Pythagoras, Trigonometrie und Strahlensatz."

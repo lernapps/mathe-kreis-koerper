@@ -62,7 +62,7 @@ blocks:
       - type: text
         text: "Das ist der Satz des Pythagoras: Die Katheten sind r und h, die Hypotenuse ist s."
       - type: text
-        text: "Rollst du den Mantel ab, entsteht ein Kreisausschnitt mit dem Radius s. Sein Bogen ist so lang wie der Umfang des Grundkreises, 2 · π · r. Für seine Fläche gilt dasselbe wie bei den Tortenstücken auf der Seite „Die Fläche des Kreises“: Fläche gleich die Hälfte von Bogen mal Radius."
+        text: "Rollst du den Mantel ab, entsteht ein Kreisausschnitt mit dem Radius s. Sein Bogen ist so lang wie der Umfang des Grundkreises, 2 · π · r. Für seine Fläche gilt dasselbe wie bei den Tortenstücken auf der Seite „Die Fläche des Kreises“: Die Fläche ist die Hälfte von Bogen mal Radius."
       - type: formula
         formula: 'M = \frac{1}{2} \cdot 2 \pi r \cdot s = \pi \cdot r \cdot s'
       - type: formula

@@ -10,7 +10,6 @@
   <text x="300" y="64" font-size="13" fill="#1a56c4" font-family="sans-serif">r</text>
   <line x1="170" y1="70" x2="220" y2="70" stroke="#1a56c4" stroke-width="2.5" />
   <text x="190" y="64" font-size="13" fill="#1a56c4" font-family="sans-serif">r</text>
-  <line x1="10" y1="132" x2="110" y2="132" stroke="#222" stroke-width="1" />
   <text x="40" y="150" font-size="14" fill="#222" font-family="sans-serif">Kegel: 1</text>
   <text x="140" y="150" font-size="14" fill="#222" font-family="sans-serif">Kugel: 2</text>
   <text x="250" y="150" font-size="14" fill="#222" font-family="sans-serif">Zylinder: 3</text>

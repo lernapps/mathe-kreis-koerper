@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: code
+phase: commit
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 4
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -37,6 +37,7 @@ Oberfläche von Zylinder, Pyramide, Kegel und Kugel und Strecken und Winkel in D
 - Zwei Kapitel wie im Issue; je ein Recap am Kapitelanfang (regeln.md, Abschnitt 7) mit Komponente `Kurztest`. (guess: Recap
   von Kapitel 2 auf zwei Seiten geteilt, Körper / Dreiecke, damit es je Baustein höchstens ein Bildschirm bleibt.)
 - Rahmen: Schulhof-Messungen (Baumhöhe, Flussbreite) als reale Fälle ohne erfundene Kinder (Klasse 10: Fall mit Daten). (guess)
+- Keine Selbsteinschätzung (`selfAssessment`) in dieser Version (guess): Der Auftrag verlangt sie nicht, die Recap-Kurztests prüfen die Voraussetzungen; sie kann als Inkrement folgen.
 - Kein `scope`: keine `open-task`, kein Material des Auftraggebers (structure.md).
 - Keine `links:` an Aufgaben; verlangt das Werkzeug einen, zeigt er auf die Kartenseite des Bausteins (Fund W4/W45).
 
@@ -113,6 +114,8 @@ nachgerechnet. Lizenz Inhalte: CC BY 4.0, Code MIT (nach Skill).
 
 **Offene Punkte / Funde:** K-Funde keine neuen. Die Karte nennt bei `bogenmass` `trigonometrie` als Voraussetzung, im Recap
 Kap. 1 begründet (Verbindung zu sin im Bogenmaß-Modus).
+
+**Ganze-App-Check (Lernenden-Prüfer, 16 Seiten) und fachliche Prüfung:** Befunde und Umsetzung stehen unter „Review“. Behoben unter anderem: sichtbarer Platzhalter im Umschütten, abgeschnittene Formel bei 360 px, unmögliche Bogenaufgabe, Figuren, fehlende Erklärungen (Radius, Vollwinkel, Vielfaches von π, Torte), fehlende Aufgaben (Pyramiden-Oberfläche, Winkel gesucht).
 
 ## Explore
 
@@ -277,12 +280,12 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
 - [x] Content-Guide .agents/skills/app-content/SKILL.md vollständig; Glossar (Fachbegriffe aus den Recaps); Katalogeintrag-Entwurf
 - [x] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review einarbeiten; lernapps check grün; Vorschau-PR öffnen (nicht mergen)
 <!-- tasks: pages (8 added): the other pages or screens, after the pattern -->
-- [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
-- [ ] Vorschau-PR von work nach main öffnen (nicht mergen), Checks grün abwarten; Checkpoint Veröffentlichen melden (nach Nachprüfung der geänderten Stellen)
-- [ ] Run `npx --no -- lernapps check` until it passes.
-- [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
+- [x] Update the content guide so that it describes the app as built (`app-content-matches`).
+- [x] Vorschau-PR von work nach main öffnen (nicht mergen), Checks grün abwarten; Checkpoint Veröffentlichen melden (nach Nachprüfung der geänderten Stellen)
+- [x] Run `npx --no -- lernapps check` until it passes.
+- [x] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
       Compare each with its sketch.
-- [ ] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
+- [x] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
       fixed.
 
 ## Commit
@@ -295,7 +298,7 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
 
 ### Tasks
 
-- [ ] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
+- [x] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
       decisions" why the app has none. Commit.
 - [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.
