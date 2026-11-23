@@ -274,7 +274,7 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
 - [x] Kapitel koerper: Recap koerper/start (Prisma, Grundkörper, Pythagoras) und Seite zylinder
 - [x] Kapitel koerper: Seiten pyramide-kegel (Komponente Umschuetten) und kugel; Push
 - [x] Kapitel koerper: Recap dreiecke-start, Seiten schulhof und vielecke; Kapitelrückblick; Push
-- [ ] Content-Guide .agents/skills/app-content/SKILL.md vollständig; Glossar (Fachbegriffe aus den Recaps); Katalogeintrag-Entwurf
+- [x] Content-Guide .agents/skills/app-content/SKILL.md vollständig; Glossar (Fachbegriffe aus den Recaps); Katalogeintrag-Entwurf
 - [ ] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review einarbeiten; lernapps check grün; Vorschau-PR öffnen (nicht mergen)
 <!-- tasks: pages (8 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
@@ -314,9 +314,29 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
 
 ### Entry draft
 
-<!-- YAML valid against the entry schema the listing skill names. Only known values, never invented. -->
+Entwurf; `commit` und `creator` trägt der Mensch beim Veröffentlichen ein (nicht erfunden). Der Pfad der Seiten kommt aus `lernapps-pages.json`.
 
 ```yaml
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title: Kreis und Körper berechnen
+subject: mathematik
+strand: mathematik/groessen-und-messen
+grades: [9, 10]
+summary: >-
+  Du näherst dich der Zahl π mit Vielecken, berechnest Umfang und Fläche des Kreises und misst Winkel im Bogenmaß.
+  Dann rechnest du Volumen und Oberfläche von Zylinder, Kegel, Pyramide und Kugel und suchst in Dreiecken und
+  Vielecken das versteckte rechtwinklige Dreieck. Mit Bildern zum Bedienen und sofortiger Rückmeldung.
+url: https://lernapps.github.io/mathe-kreis-koerper/
+keywords: [Kreis, Kreisumfang, Kreisfläche, Pi, Bogenmaß, Zylinder, Kegel, Kugel, Pyramide, Volumen, Oberfläche, Trigonometrie, Klasse 9, Klasse 10]
+creator: { name: "TODO vom Menschen", url: "https://github.com/lernapps" }
+source: https://github.com/lernapps/mathe-kreis-koerper
+commit: "0000000000000000000000000000000000000000"
+fitness:
+  account: false
+  install: false
+  storage: device
+  thirdParty: none
+  checked: false
 ```
 
 

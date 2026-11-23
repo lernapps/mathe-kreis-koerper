@@ -24,16 +24,16 @@ Kapitel `kreis` (Kreis, π und Bogenmaß):
 - `bogenmass` – „Ich kann Winkel im Bogenmaß angeben und zwischen Grad- und Bogenmaß wechseln.“ Seiten
   `kreis/einheitskreis`, `kreis/bogenmass`.
 
-Kapitel `koerper` (Körper und Vielecke berechnen):
+Kapitel `koerper` (Zylinder, Kegel, Kugel und Vielecke berechnen):
 - `volumen-oberflaeche-zylinder` – „Ich kann Volumen und Oberflächeninhalt von Zylindern berechnen.“ Seite `koerper/zylinder`.
 - `volumen-oberflaeche-pyramide-kegel-kugel` – „Ich kann Volumen und Oberflächeninhalt von Pyramide, Kegel und Kugel
   berechnen.“ Seiten `koerper/pyramide-kegel`, `koerper/kugel`.
 - `berechnungen-dreiecke-vielecke` – „Ich kann Streckenlängen und Winkel in Dreiecken und Vielecken mit Pythagoras,
-  Ähnlichkeit und Trigonometrie berechnen.“ Seiten `koerper/schulhof`, `koerper/vielecke`.
+  Ähnlichkeit und Trigonometrie berechnen.“ Seiten `koerper/schulhof` (Baumhöhe, Flussbreite, Strahlensatz, Verfahrenswahl), `koerper/vielecke` (regelmäßiges n-Eck, Apothem).
 
 Recap-Seiten (ohne Aufgaben, mit `Kurztest`): `kreis/start` (`flaeche-umfang-quadrat-rechteck`, `dezimalbrueche-rechnen`,
 `trigonometrie`), `koerper/start` (`volumen-oberflaeche-prisma`, `satz-des-pythagoras`,
-`grundkoerper-pyramide-kegel-kugel`), `koerper/dreiecke-start` (`strahlensaetze`, `trigonometrie`).
+`grundkoerper-pyramide-kegel-kugel`), `koerper/dreiecke-start` (`strahlensaetze`, `trigonometrie`). Alle drei stehen am Anfang ihres Kapitels bzw. Abschnitts; die Begriffe der Recaps sind `definition`-Blöcke (Glossar): Flächeninhalt, Umfang, Stellenwert, Runden, Hypotenuse, Gegenkathete und Ankathete, Sinus Kosinus Tangens, Prisma, Volumen, Oberfläche, Satz des Pythagoras, Pyramide, Kegel, Kugel, Strahlensatz; in den Seiten kommen Kreiszahl π, Bogenmaß, Einheitskreis, Kreisfläche, Mantel, Mantellinie, Kugel (Formeln), Apothem dazu. Jeder Begriff steht nur einmal als `definition` (W34).
 Die Ids der Aufgaben stehen auf den Seiten (`<thema>-<art>`, zum Beispiel `pi-schranken`).
 
 ## Content structure
@@ -64,15 +64,16 @@ Keine `links:` an Aufgaben, sofern `lernapps check` besteht.
 - *Entscheiden*: `single-choice` mit `info` zu jeder Option („welches Dreieck, welches Verfahren“).
 - *Zuordnen/ordnen*: `matching` (Grad ↔ Bogenmaß), `ordering` (Rechenschritte).
 - *Komponenten* (`src/components/`, je `<Name>.vue/.ts/.test.ts`): `Kurztest` (Recap-Selbsttest, Vorlage des Epics, mit W42),
-  `Vieleck`, `Torte`, `Einheitskreis`, `Umschuetten`. Sie zeigen und prüfen nichts; die Aufgaben stehen darunter.
-  Jede hat eine statische Form (`nojs`), Tastatur und einen Test.
+  `Vieleck` (kreis/pi: 6-96 Ecken, Regler, Lupe), `Torte` (kreis/flaeche: Stücke, Knopf „Stücke umlegen“), `Einheitskreis`
+  (kreis/einheitskreis: Winkel 0-360° in 15°-Schritten, Bogenlänge, Punkt P), `Umschuetten` (koerper/pyramide-kegel: Kegel
+  dreimal in den Zylinder). Sie zeigen und prüfen nichts; die Aufgaben stehen darunter. Jede hat eine statische Form (`nojs`),
+  Tastatur (Regler, Knöpfe) und einen Test. Datenlisten: `src/data/messungen.yaml` (Dose: Durchmesser und Umfang), `src/data/tripel.yaml` (pythagoreische Tripel für Kegel).
+- *Weitere Muster*: `matching` (Winkel ↔ Bogenmaß, Situation ↔ Verfahren), `ordering` (Schritte zur Oberfläche), `true-false`, `number`.
 
 ## Figures
 
-Eigene SVG in `src/images/`, `source: eigene Zeichnung`, `licence: CC0-1.0`; `alt` sagt, was zu sehen ist, `caption`, worauf
-man achten soll. Konventionen: Radius blau, Durchmesser grau, Winkel mit Bogen und α, Schnur/Bogen orange; Farbe nie allein
-(Beschriftung und Linienart). Breite höchstens 360 px lesbar. Figuren: `pi-vieleck`, `torte-rechteck`, `einheitskreis-bogen`,
-`zylinder-mantel`, `kegel-dreieck`, `pyramide-dreieck`, `kugel-archimedes`, `schulhof-baum`, `schulhof-fluss`, `sechseck-dreiecke`.
+Eigene SVG in `src/images/`, `source: eigene Zeichnung`, `licence: CC0-1.0`; `alt` sagt, was zu sehen ist, `caption`, worauf man achten soll. Konventionen: Radius und Teildreieck blau (Füllung leicht), Hilfslinien gestrichelt, Winkel mit Bogen und α, Farbe nie allein (Beschriftung und Linienart). Die Figuren im SVG-Text nutzen feste dunkle Farben (Textkontrast 4,5:1 geprüft von `lernapps check`).
+Dateien: `sechseck-dreiecke.svg` (kreis/pi), `zylinder-mantel.svg` (koerper/zylinder), `kegel-dreieck.svg` und `pyramide-dreieck.svg` (koerper/pyramide-kegel), `kugel-archimedes.svg` (koerper/kugel), `schulhof-baum.svg` und `schulhof-fluss.svg` (koerper/schulhof), `vieleck-dreieck.svg` (koerper/vielecke). Bewegliche Bilder sind Komponenten (siehe Exercise patterns).
 
 ## Sources
 
