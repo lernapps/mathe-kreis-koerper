@@ -90,4 +90,7 @@ reicht. 5. `npx vp check --fix`, `npx vp build`, `npx --no -- lernapps check`. 6
 
 ## Rules learned from mistakes
 
-None yet.
+- Kein geschütztes Leerzeichen in `title` (auch nicht im `title` eines `example`-Kastens): der No-JS-Test vergleicht Überschriften normalisiert (W16).
+- Beim Ziehen von Zufallswerten prüfen, dass kein `mistakes`-Wert für einen gezogenen Wert gleich der Antwort ist (zum Beispiel U = A bei r = 2); Wertebereich verengen.
+- Lange Formeln in einem Beispielkasten in zwei `formula`-Blöcke teilen (axe: scrollbarer Bereich bei 360 px).
+- Im Formeltext `3,14` statt `3{,}14`.

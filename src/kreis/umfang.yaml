@@ -34,10 +34,10 @@ blocks:
     title: Der Brunnenrand
     blocks:
       - type: example
-        title: "Durchmesser 1,20 m"
+        title: "Durchmesser 1,20 m"
         blocks:
           - type: formula
-            formula: 'U = \pi \cdot d \approx 3{,}14 \cdot 1{,}20 = 3{,}768'
+            formula: 'U = \pi \cdot d \approx 3,14 \cdot 1,20 = 3,768'
           - type: text
             text: "Die Schnur muss etwa 3,77 m lang sein. Das passt zu den Messwerten der letzten Seite (3,77 m)."
   - type: section
@@ -58,7 +58,7 @@ blocks:
             message: "Du hast den Durchmesser zweimal genommen. Das ist π · d², eine Fläche. Der Umfang ist π · d."
         hint: "Der Durchmesser ist gegeben. Multipliziere ihn mit π ≈ 3,14."
         steps:
-          - '$U = \pi \cdot d \approx 3{,}14 \cdot {{d}} = {{answer}}$'
+          - '$U = \pi \cdot d \approx 3,14 \cdot {{d}} = {{answer}}$'
       - type: generated
         id: umfang-aus-radius
         given:
@@ -73,7 +73,7 @@ blocks:
             message: "Das ist die Fläche π · r², keine Länge. Der Umfang ist 2 · π · r."
         hint: "Der Radius ist halb so lang wie der Durchmesser. Erst d = 2 · r, dann U = π · d."
         steps:
-          - '$U = 2 \cdot \pi \cdot r \approx 2 \cdot 3{,}14 \cdot {{r}} = {{answer}}$'
+          - '$U = 2 \cdot \pi \cdot r \approx 2 \cdot 3,14 \cdot {{r}} = {{answer}}$'
       - type: generated
         id: durchmesser-aus-umfang
         given:
@@ -88,7 +88,7 @@ blocks:
             message: "Du hast multipliziert. Der Umfang ist U = π · d, also musst du durch π teilen, um d zu bekommen."
         hint: "U = π · d. Stelle die Gleichung nach d um."
         steps:
-          - '$d = \frac{U}{\pi} \approx \frac{{{U}}}{3{,}14} = {{answer}}$'
+          - '$d = \frac{U}{\pi} \approx \frac{{{U}}}{3,14} = {{answer}}$'
       - type: single-choice
         id: fehler-finden
         text: "Lena rechnet für einen Kreis mit dem Radius r = 5 cm: U = π · 5 ≈ 15,7 cm. Was ist falsch?"

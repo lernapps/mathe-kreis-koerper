@@ -60,10 +60,12 @@ blocks:
     title: Die runde Torte
     blocks:
       - type: example
-        title: "Radius 10 cm"
+        title: "Radius 10 cm"
         blocks:
           - type: formula
-            formula: 'A = \pi \cdot r^2 \approx 3{,}14 \cdot 10^2 = 3{,}14 \cdot 100 = 314'
+            formula: 'A = \pi \cdot r^2'
+          - type: formula
+            formula: 'A \approx 3,14 \cdot 10^2 = 314'
           - type: text
             text: "Die Torte hat eine Fläche von etwa 314 cm². Das liegt zwischen 200 cm² und 400 cm², wie geschätzt."
   - type: section
@@ -86,7 +88,7 @@ blocks:
             message: "Du hast den Durchmesser statt des Radius eingesetzt. In π · r² steht der Radius."
         hint: "Rechne erst r² = r · r, dann mal 3,14."
         steps:
-          - '$A = \pi \cdot r^2 \approx 3{,}14 \cdot {{r}}^2 = {{answer}}$'
+          - '$A = \pi \cdot r^2 \approx 3,14 \cdot {{r}}^2 = {{answer}}$'
       - type: generated
         id: flaeche-aus-durchmesser
         given:
@@ -102,7 +104,7 @@ blocks:
         hint: "Der Radius ist die Hälfte von {{d}} cm. Dann rechnest du π · r²."
         steps:
           - "$r = {{d}} : 2$"
-          - '$A = \pi \cdot r^2 \approx 3{,}14 \cdot r^2 = {{answer}}$'
+          - '$A = \pi \cdot r^2 \approx 3,14 \cdot r^2 = {{answer}}$'
       - type: number
         id: radius-aus-flaeche
         text: "Ein Kreis hat die Fläche 314 cm². Wie groß ist sein Radius? Rechne mit π ≈ 3,14."
