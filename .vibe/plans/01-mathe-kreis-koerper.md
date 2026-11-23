@@ -6,9 +6,9 @@ archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
 phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
-prePushFailures: 2
+prePushFailures: 4
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: { accessible: 5, checks-pass: 5 }
+failedChecks: { accessible: 7, checks-pass: 5 }
 ---
 
 # Plan: mathe-kreis-koerper, first version

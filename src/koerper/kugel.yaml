@@ -35,7 +35,9 @@ blocks:
       - type: text
         text: "Für die Kugel bleibt der Rest übrig. Das Verhältnis von Kegel, Kugel und Zylinder ist 1 zu 2 zu 3. Dieses Ergebnis nimmst du hier als gegeben. Die Begründung dafür braucht Schnittflächen und Mathematik aus der Oberstufe."
       - type: formula
-        formula: 'V_{Kugel} = V_{Zylinder} - V_{Kegel} = 2 \pi r^3 - \frac{2}{3} \pi r^3 = \frac{4}{3} \cdot \pi \cdot r^3'
+        formula: "V_{Kugel} = V_{Zylinder} - V_{Kegel}"
+      - type: formula
+        formula: 'V_{Kugel} = 2 \pi r^3 - \frac{2}{3} \pi r^3 = \frac{4}{3} \pi r^3'
       - type: text
         text: "Auch die Oberfläche geht auf Archimedes zurück. Sie ist so groß wie der Mantel des Zylinders um die Kugel. Der Mantel ist 2 · π · r mal 2 · r."
       - type: formula
