@@ -300,9 +300,9 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
 
 - [x] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
       decisions" why the app has none. Commit.
-- [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
+- [x] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.
-- [ ] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
+- [x] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
 - [ ] **Checkpoint:** publish. Show what the app does and the preview link from the comment "Vorschau der App". Ask
       whether it may go online. Stop and wait for the yes.
 - [ ] Load skill `lernapps-commit`. Publish as skill `lernapps-github` says: `work` into `main` as one squash commit,
@@ -373,12 +373,18 @@ Nach den beiden Prüferläufen geändert und **nicht erneut geprüft**: alle obe
 
 ### Phases reached
 
-<!-- Last phase completed, checkpoints passed. E.g. "commit; confirmed, published". -->
+Commit bis zum Checkpoint „Veröffentlichen“ (Stand: Vorschau-PR #1 offen, Checks grün, nicht veröffentlicht). Checkpoints bestanden (Orchestrator in Vertretung): Recherche, Plan, Musterseite. Aufgeführt wird nur, was gemeldet ist; „Veröffentlichen“ und der Katalogeintrag stehen aus.
 
 ### Creator turns after the plan
 
-<!-- Number of creator messages after the confirmation, topic of each. Target: at most 3. -->
+Orchestrator-Nachrichten nach der Plan-Bestätigung: 1 (Musterseite angenommen, Nachprüfung der Änderungen verlangt). Rückfragen des Menschen: 0 (Freigabe für `init`/`npx` einmal vorab, vor dem Plan).
 
 ### Where I had to guess
 
-<!-- Each gap in plan, skills, messages or answers, and your choice. "None" if none. -->
+- Interview-Themen (Goal, Learners, Look, Languages, Terms …) aus Issue und Regeln beantwortet statt gefragt: Deutsch, ruhige Laufzeit-Optik, Wörter der Karte.
+- Rahmen „Schulhof-Messungen“ ohne erfundene Kinder; Recap von Kapitel 2 auf zwei Seiten.
+- Keine Selbsteinschätzung in dieser Version.
+- π ≈ 3,14 mit Toleranz 0 in den Rechenaufgaben; Bogenmaß mit π-Taste, Toleranz 0,01.
+- Einheitskreis-Koordinaten bewusst weggelassen (Abgrenzung #396).
+- Pages-Einstellungen der Repo nicht prüfbar (Proxy sperrt `gh api …/pages`, W19); Autor (`creator`) und `commit` im Eintrags-Entwurf bleiben beim Menschen.
+- Plan-Aufgabe „Prüfer … Vorschau-PR öffnen“ habe ich zu früh abgehakt (vor dem PR); eine eigene Aufgabe für den PR nachgetragen und erledigt.
