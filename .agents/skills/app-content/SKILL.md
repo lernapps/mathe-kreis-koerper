@@ -5,59 +5,89 @@ description: Use for any content work in this app - researching, writing, extend
 
 # Content guide of this app
 
-<!--
-Skeleton. Delete this comment when you fill the guide.
-- When: after the plan is confirmed, before any content. Replace every placeholder comment below; none may remain
-  (`lernapps check`, rule app-content-guide, fails once the plan is in Commit).
-- Keep the headings.
-- Concrete, for an agent without your conversation: files, ids, data files, one example.
-  - No: "Use varied exercises with figures where they help."
-  - Yes: "Every page ends with section `uebung`: one `generated` exercise of pattern 'Ohmsches Gesetz' from
-    `src/data/widerstaende.yaml`, one `matching` of symbols and parts."
-- Content decision changes → update this file in the same commit.
-- Public: no personal data, no goals of one learner.
--->
+Explainer "Kreis und Körper berechnen" (Issue lernapps/apps#429, Strang `mathematik/groessen-und-messen`, Stufen 9-10).
+Gemeinsame Regeln des Mathe-Epics: `regeln.md` (Schreibweisen, Aufgaben, Quellen, Recap); sie gelten zusätzlich.
 
 ## Curriculum
 
-<!-- FILL IN: Land, Schulform, Jahrgang; orientation (Lehrplan: document, issuer, year, address, page and unit per
-part; welcome, not required); where the creator's material differs, and which one the app follows. -->
+Klassen 9-10, Gymnasium (Hessen, Annahme). Die Reihenfolge gibt die Lernlandkarte Mathematik (`mathematik.json`, gelesen
+am 2026-11-23); ein Lehrplan wurde nicht geöffnet (nicht geprüft) und ist nicht nötig. Es gibt kein eigenes Material des
+Auftraggebers; alles sind eigene Herleitungen und Aufgaben. Die Abgrenzung: wir rechnen. Prisma und Quader: #398 (Recap);
+Körper bauen: #432; Sätze (Pythagoras, Strahlensätze, Trigonometrie): #399; Sinus- und Kosinusfunktion: #396.
+Nicht in dieser App: Beweis, dass π irrational ist; Integralrechnung für die Kugel (Archimedes nur als Bild).
 
 ## Competencies
 
-<!-- FILL IN: every competency as "Ich kann …", grouped by chapter; per competency: page or round (file, id),
-exercise ids. -->
+Kapitel `kreis` (Kreis, π und Bogenmaß):
+- `kreis-umfang-flaeche` – „Ich kann Umfang und Flächeninhalt eines Kreises berechnen und die Zahl Pi am Kreis erklären.“
+  Seiten `kreis/pi`, `kreis/umfang`, `kreis/flaeche`.
+- `bogenmass` – „Ich kann Winkel im Bogenmaß angeben und zwischen Grad- und Bogenmaß wechseln.“ Seiten
+  `kreis/einheitskreis`, `kreis/bogenmass`.
+
+Kapitel `koerper` (Körper und Vielecke berechnen):
+- `volumen-oberflaeche-zylinder` – „Ich kann Volumen und Oberflächeninhalt von Zylindern berechnen.“ Seite `koerper/zylinder`.
+- `volumen-oberflaeche-pyramide-kegel-kugel` – „Ich kann Volumen und Oberflächeninhalt von Pyramide, Kegel und Kugel
+  berechnen.“ Seiten `koerper/pyramide-kegel`, `koerper/kugel`.
+- `berechnungen-dreiecke-vielecke` – „Ich kann Streckenlängen und Winkel in Dreiecken und Vielecken mit Pythagoras,
+  Ähnlichkeit und Trigonometrie berechnen.“ Seiten `koerper/schulhof`, `koerper/vielecke`.
+
+Recap-Seiten (ohne Aufgaben, mit `Kurztest`): `kreis/start` (`flaeche-umfang-quadrat-rechteck`, `dezimalbrueche-rechnen`,
+`trigonometrie`), `koerper/start` (`volumen-oberflaeche-prisma`, `satz-des-pythagoras`,
+`grundkoerper-pyramide-kegel-kugel`), `koerper/dreiecke-start` (`strahlensaetze`, `trigonometrie`).
+Die Ids der Aufgaben stehen auf den Seiten (`<thema>-<art>`, zum Beispiel `pi-schranken`).
 
 ## Content structure
 
-<!-- FILL IN: how a chapter, page or round is built: sections or question groups in order, ids or titles, what
-each holds; length. -->
+Eine Seite hat die Abschnitte (Ids gleich auf jeder Seite, nicht jede Seite hat alle): `einstieg` (erste Handlung vor der
+Erklärung: Schätzung, Messwerte, Komponente), `herleitung` (Annähern, Umlegen, Zerlegen), `beispiel` (Beispielkasten mit
+Rechenweg), `uebung` (mindestens drei Aufgaben je Baustein, steigend; die erste ohne Vorwissen aus dem Kapitel lösbar),
+`rueckblick` (ein bis zwei Sätze „Das kannst du jetzt“). Höchstens 350 Wörter Text je Seite, höchstens vier Textblöcke in
+Folge. Der Rahmen: Messungen auf dem Schulhof (Brunnenrand, Dose, Baum, Fluss), ohne erfundene Kinder. Recap-Seiten:
+je Baustein Überschrift (Name der Karte), **fette** Begriffe mit Beispiel, `Kurztest`, Schlussliste „Du bist bereit, wenn du …“.
 
 ## Terminology
 
-<!-- FILL IN: terms used and avoided (why); units, notation; how learners are addressed; glossary terms with
-wording. -->
+Wörter der Karte: Kreisumfang, Kreisfläche, Bogenmaß, Zylinder, Pyramide, Kegel, Kugel, Mantellinie. Neue Wörter am Beispiel
+einführen, dann `definition` (je Begriff nur einmal im Explainer, W34). Dezimalkomma; ab fünf Stellen Dreiergruppen mit
+schmalem geschütztem Leerzeichen, in Überschriften keine; Minus `−`; `·` und `:`; Einheiten mit geschütztem Leerzeichen
+(`3 cm`), `cm²`, `cm³`; Winkel mit `∠` (U+2220) und `\alpha`, Grad `30^\circ`; Brüche gesetzt (`\frac`), in Kurztest- und
+`mistakes`-Texten `a/b` (W28, im Plan gezählt). Anrede „du“. π ist die Zahl; `\pi` in Formeln. Rundung steht in der Aufgabe.
+Keine `links:` an Aufgaben, sofern `lernapps check` besteht.
 
 ## Exercise patterns
 
-<!-- FILL IN: per pattern: name, competency, archetype form (block or question type, fixed parts, what varies),
-one example (file, id), data file. -->
+- *Berechnen mit Einheit*: `generated`, `given` ganze Zahlen mit `step`, Antwort mit `round(…, n)` und `compare: number`
+  mit `decimals`, `tolerance`, `unit`; je 2-3 `mistakes` mit Grund; `hint`; `steps`. Beispiel: `src/kreis/umfang.yaml`, Id
+  `umfang-berechnen`.
+- *Fehlertypen* (immer benennen): d statt r, U ↔ A, r statt r², ⅓ vergessen, Höhe statt Mantellinie, nur Mantel statt
+  Oberfläche, Taschenrechner RAD statt DEG, falsche Kathete, falsches Streckenverhältnis.
+- *Entscheiden*: `single-choice` mit `info` zu jeder Option („welches Dreieck, welches Verfahren“).
+- *Zuordnen/ordnen*: `matching` (Grad ↔ Bogenmaß), `ordering` (Rechenschritte).
+- *Komponenten* (`src/components/`, je `<Name>.vue/.ts/.test.ts`): `Kurztest` (Recap-Selbsttest, Vorlage des Epics, mit W42),
+  `Vieleck`, `Torte`, `Einheitskreis`, `Umschuetten`. Sie zeigen und prüfen nichts; die Aufgaben stehen darunter.
+  Jede hat eine statische Form (`nojs`), Tastatur und einen Test.
 
 ## Figures
 
-<!-- FILL IN: figure kinds and images, for what; conventions (colours, labels, units, orientation, sizes); alt
-texts and captions; image origin and licence. -->
+Eigene SVG in `src/images/`, `source: eigene Zeichnung`, `licence: CC0-1.0`; `alt` sagt, was zu sehen ist, `caption`, worauf
+man achten soll. Konventionen: Radius blau, Durchmesser grau, Winkel mit Bogen und α, Schnur/Bogen orange; Farbe nie allein
+(Beschriftung und Linienart). Breite höchstens 360 px lesbar. Figuren: `pi-vieleck`, `torte-rechteck`, `einheitskreis-bogen`,
+`zylinder-mantel`, `kegel-dreieck`, `pyramide-dreieck`, `kugel-archimedes`, `schulhof-baum`, `schulhof-fluss`, `sechseck-dreiecke`.
 
 ## Sources
 
-<!-- FILL IN: sources linked or relied on (Lehrplan, second explanations, videos, articles), how verified, what
-is left out; the creator's material stays local, never committed. -->
+Lernlandkarte Mathematik (geöffnet), eigene Herleitungen, eigene Zeichnungen. Fakten wie der Zusammenhang
+Kegel : Kugel : Zylinder = 1 : 2 : 3 sind selbst hergeleitet und vom fachlichen Prüfer nachgerechnet. Nichts aus Schulbüchern
+oder Arbeitsblättern; keine externen Seiten und keine `links:`. KMK-Bildungsstandards und Hessisches Kerncurriculum:
+nicht geöffnet (nicht geprüft). Dritt-Inhalte: keine.
 
 ## Adding a chapter or round
 
-<!-- FILL IN: the steps for a new chapter (explainer) or round (quiz), in order, with the files: competencies,
-content, exercises from the patterns, entry topics, check, commit. -->
+1. Baustein in `mathematik.json` suchen (id, Ich-kann-Satz, `requires`). 2. Ordner `src/<kapitel>/` mit `chapter.yaml`, in
+`src/app.yaml` unter `chapters` eintragen. 3. Recap-Seite für Voraussetzungen von außen (`recap:` plus `Kurztest`).
+4. Je Seite `competencies`, Abschnitte nach „Content structure“, Aufgaben nach den Mustern, Komponenten nur wenn kein Block
+reicht. 5. `npx vp check --fix`, `npx vp build`, `npx --no -- lernapps check`. 6. Dieses Dokument im selben Commit anpassen.
 
 ## Rules learned from mistakes
 
-<!-- FILL IN: one line per rule with the mistake it came from. "None yet." until the first. -->
+None yet.
