@@ -104,7 +104,7 @@ $x = \frac{1}{6} \cdot 2\pi = \frac{\pi}{3} \approx 1,047$
   - ✓ 1,5 – x = b : r = 6 : 4 = 1,5. Es gibt keine Einheit, weil cm durch cm geteilt wird.
   - ✗ 1,5 cm – Die Zahl stimmt, aber das Bogenmaß hat keine Einheit: Länge durch Länge ergibt eine reine Zahl.
   - ✗ 24 – Du hast b mit r multipliziert. Das Bogenmaß ist der Quotient b : r.
-  - ✗ 0,67 – Du hast r : b gerechnet. Der Bogen b steht oben: x = b : r.
+  - ✗ 0,67 – Du hast r : b gerechnet. Das Bogenmaß ist b : r: erst der Bogen, dann der Radius.
 - Lösung: 1,5
 - Erklärung: Das Bogenmaß ist die Bogenlänge geteilt durch den Radius. Es hängt nicht von der Größe des Kreises ab.
 - Link: [../?via=tutor#bogen-und-radius](../?via=tutor#bogen-und-radius)
