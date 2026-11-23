@@ -1,0 +1,128 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zwischen Grad und Bogenmaß wechseln
+description: "Mit einer Verhältnisgleichung rechnest du Winkel vom Gradmaß ins Bogenmaß um und zurück. Dazu der Taschenrechner im richtigen Modus."
+competencies: [bogenmass]
+blocks:
+  - type: section
+    id: einstieg
+    title: Ein Achtel des Vollkreises
+    blocks:
+      - type: text
+        text: "Der Winkel 45° ist ein Achtel von 360°. Der Vollkreis hat im Bogenmaß den Wert 2π."
+      - type: number
+        id: achtel
+        text: "Wie groß ist 45° im Bogenmaß? Rechne mit π ≈ 3,14 und gib das Ergebnis mit zwei Stellen nach dem Komma an."
+        answer: 0.79
+        tolerance: 0.005
+        explanation: "Ein Achtel von 2π ist 2 · 3,14 : 8 = 0,785. Gerundet sind das 0,79. Das ist π : 4."
+  - type: section
+    id: herleitung
+    title: Eine Verhältnisgleichung für beide Richtungen
+    blocks:
+      - type: text
+        text: "Der Winkel α hat im Gradmaß denselben Anteil am Vollwinkel 360° wie sein Bogenmaß x am Vollkreis 2π. Aus dieser Gleichheit der Anteile lässt sich in beide Richtungen umrechnen."
+      - type: formula
+        formula: '\frac{\alpha}{360^\circ} = \frac{x}{2\pi}'
+      - type: formula
+        formula: 'x = \alpha \cdot \frac{\pi}{180^\circ}'
+      - type: formula
+        formula: '\alpha = x \cdot \frac{180^\circ}{\pi}'
+      - type: text
+        text: "Von Grad ins Bogenmaß multiplizierst du mit π und teilst durch 180°. Vom Bogenmaß in Grad multiplizierst du mit 180° und teilst durch π. Wenn du das Ergebnis als Vielfaches von π schreiben willst, lässt du π stehen: Aus 90° wird 90 : 180 = ½ mal π."
+      - type: note
+        title: Der Taschenrechner
+        blocks:
+          - type: text
+            text: "Dein Taschenrechner hat einen Modus für Winkel: DEG für Grad, RAD für Bogenmaß. Rechnest du sin(30) und erhältst −0,988, steht er auf RAD. Auf DEG ist sin(30) = 0,5. Mit π/6 und Modus RAD kommt ebenfalls 0,5 heraus."
+  - type: section
+    id: beispiel
+    title: Hin und zurück
+    blocks:
+      - type: example
+        title: 225° und x = 2
+        blocks:
+          - type: formula
+            formula: 'x = 225^\circ \cdot \frac{\pi}{180^\circ} = \frac{225}{180}\,\pi = \frac{5}{4}\,\pi \approx 3,93'
+          - type: formula
+            formula: '\alpha = 2 \cdot \frac{180^\circ}{\pi} \approx 114,6^\circ'
+          - type: text
+            text: "225° sind also fünf Viertel von π im Bogenmaß. Das Bogenmaß 2 gehört zu einem Winkel von etwa 114,6°. Das ist nicht 2 als Gradzahl."
+  - type: section
+    id: uebung
+    title: Aufgaben
+    blocks:
+      - type: generated
+        id: grad-zu-bogenmass
+        given:
+          alpha: { oneOf: [30, 45, 60, 120, 135, 150, 210, 240, 300] }
+        task:
+          text: "Gib {{alpha}}° im Bogenmaß an, als Dezimalzahl mit zwei Stellen nach dem Komma. Rechne mit der π-Taste."
+        answer:
+          { value: "round(alpha * 3.14159265358979 / 180, 2)", compare: { number: { decimals: 2, tolerance: 0.01 } } }
+        mistakes:
+          - value: "round(alpha / 180, 2)"
+            message: "Du hast nur durch 180 geteilt. Es fehlt der Faktor π: x = α · π : 180°."
+          - value: "round(alpha * 180 / 3.14159265358979, 2)"
+            message: "Du hast in die falsche Richtung umgerechnet. Von Grad ins Bogenmaß multiplizierst du mit π : 180°."
+        hint: "x = α · π : 180°. Erst α mit π multiplizieren, dann durch 180 teilen."
+        steps:
+          - '$x = {{alpha}}^\circ \cdot \frac{\pi}{180^\circ} = {{answer}}$'
+      - type: generated
+        id: vielfaches-von-pi
+        given:
+          alpha: { oneOf: [18, 36, 45, 72, 90, 135, 144, 180, 225, 270, 360] }
+        task:
+          text: "Das Bogenmaß von {{alpha}}° ist x = k · π. Wie groß ist k? Gib k als Dezimalzahl an."
+        answer: { value: "alpha / 180", compare: { number: { decimals: 2, tolerance: 0 } } }
+        mistakes:
+          - value: "alpha / 360"
+            message: "Du hast durch 360 geteilt. Das ist der Anteil am Vollwinkel. Der Vollwinkel hat aber das Bogenmaß 2π, darum teilst du durch 180."
+        hint: "Der Halbkreis hat 180° und das Bogenmaß π. Welchen Anteil von 180° ist {{alpha}}°?"
+        steps:
+          - "$k = {{alpha}} : 180 = {{answer}}$"
+      - type: generated
+        id: bogenmass-zu-grad
+        given:
+          n: { int: [1, 11], step: 1 }
+        where: ["n != 6"]
+        task:
+          text: "Ein Winkel hat das Bogenmaß x = {{n}} · π : 6. Gib ihn in Grad an."
+        answer: { value: "n * 30", compare: { number: { decimals: 0, tolerance: 0, unit: "°" } } }
+        mistakes:
+          - value: "n * 60"
+            message: "Du hast π mit 360° gleichgesetzt. π entspricht aber 180°."
+          - value: "n * 6"
+            message: "Du hast die Zahl 6 stehen lassen. π : 6 ist 180° : 6 = 30°, also n mal 30°."
+        hint: "π entspricht 180°. Dann ist π : 6 gleich 180° : 6."
+        steps:
+          - '$x = {{n}} \cdot 30^\circ = {{answer}}^\circ$'
+      - type: single-choice
+        id: modus
+        text: "Du tippst sin(30) in den Taschenrechner und erhältst −0,988. Was ist passiert?"
+        options:
+          - text: "Der Rechner steht auf RAD."
+            correct: true
+            info: "Im Modus RAD ist 30 ein Bogenmaß, also viele Umdrehungen. Der Sinus davon ist −0,988. Für 30° brauchst du den Modus DEG."
+          - text: "Der Rechner steht auf DEG."
+            correct: false
+            info: "Im Modus DEG rechnet der Rechner mit Grad und liefert sin(30°) = 0,5."
+          - text: "Der Sinus von 30° ist −0,988."
+            correct: false
+            info: "Der Sinus von 30° ist 0,5. Bei einem Winkel zwischen 0° und 90° ist der Sinus nie negativ."
+        explanation: "Prüfe immer den Modus: DEG für Grad, RAD für Bogenmaß. Mit dem falschen Modus bekommst du eine falsche, aber echte Zahl."
+      - type: matching
+        id: winkel-zuordnen
+        text: "Ordne jedem Winkel im Gradmaß sein Bogenmaß zu."
+        pairs:
+          - { left: "90°", right: "π : 2 (Viertelkreis)" }
+          - { left: "180°", right: "π (Halbkreis)" }
+          - { left: "270°", right: "3π : 2 (Dreiviertelkreis)" }
+          - { left: "360°", right: "2π (Vollkreis)" }
+        explanation: "Der Vollkreis hat das Bogenmaß 2π. Halbkreis, Viertelkreis und Dreiviertelkreis sind die passenden Anteile davon."
+      - type: true-false
+        id: neunzig-grad
+        text: "Der Winkel 90° und der Winkel mit dem Bogenmaß π : 2 beschreiben denselben Winkel."
+        answer: true
+        explanation: "90° ist ein Viertel des Vollwinkels. Ein Viertel von 2π ist π : 2, also derselbe Winkel."
+      - type: text
+        text: "**Das kannst du jetzt:** Du kannst Winkel vom Gradmaß ins Bogenmaß und zurück umrechnen, als Dezimalzahl und als Vielfaches von π, und du stellst den Taschenrechner richtig ein."

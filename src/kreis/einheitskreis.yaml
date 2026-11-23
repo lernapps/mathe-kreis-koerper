@@ -1,0 +1,132 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das Bogenmaß am Einheitskreis
+description: "Ein Winkel lässt sich mit der Länge eines Bogens messen. Am Einheitskreis ist der Bogen selbst das Winkelmaß."
+competencies: [bogenmass]
+blocks:
+  - type: section
+    id: einstieg
+    title: Der Kreisrand in Radiusstücken
+    blocks:
+      - type: text
+        text: "Ein Kreis hat den Radius r = 5 cm. Du schneidest Schnurstücke, die so lang sind wie der Radius, also 5 cm. Dann legst du sie nacheinander auf den Kreisrand. Der Umfang ist U = 2 · π · r ≈ 31,4 cm (mit π ≈ 3,14)."
+      - type: number
+        id: radiusstuecke
+        text: "Wie viele Stücke der Länge r passen auf den Kreisrand? Gib die Zahl mit zwei Stellen nach dem Komma an."
+        answer: 6.28
+        tolerance: 0.01
+        explanation: "31,4 : 5 = 6,28. Auf den Kreisrand passen gut sechs Radiusstücke, genauer 2 · π Stück. Diese Zahl hängt nicht von der Größe des Kreises ab."
+  - type: section
+    id: herleitung
+    title: Einen Winkel mit einem Bogen messen
+    blocks:
+      - type: text
+        text: "Bisher misst du Winkel in Grad. Ein Vollkreis hat 360°, das ist eine Verabredung. Es geht auch mit einer Länge: Ein Winkel mit der Spitze im Mittelpunkt schneidet aus dem Kreis einen **Bogen** aus. Je größer der Winkel, desto länger der Bogen. Damit das Maß nicht von der Größe des Kreises abhängt, teilst du die Bogenlänge b durch den Radius r."
+      - type: definition
+        term: Bogenmaß
+        explanation: "Das Bogenmaß eines Winkels ist die Länge $b$ des Bogens, den er aus einem Kreis ausschneidet, geteilt durch den Radius $r$: $x = b : r$. Es hat keine Einheit, denn Länge durch Länge ergibt eine reine Zahl."
+      - type: definition
+        term: Einheitskreis
+        explanation: "Der Einheitskreis ist ein Kreis mit dem Radius 1 um den Mittelpunkt. An ihm ist $x = b : 1$, das Bogenmaß ist also genau die Länge des Bogens."
+      - type: text
+        text: "Im Bild unten ist der Einheitskreis. Mit dem Regler stellst du den Winkel ein. Der dicke rote Bogen ist der Teil des Kreises, den der Winkel ausschneidet. Der blaue Strahl führt zum Punkt P am Ende des Bogens. Unter dem Bild steht die Länge des Bogens."
+      - type: vue-component
+        id: einheitskreis
+        component: Einheitskreis
+        props:
+          label: Winkel
+          ergebnis: "Winkel {grad}°: Der Bogen hat die Länge {bogen}"
+          exaktText: "Als Vielfaches von π:"
+          punktText: "Der Punkt P hat die Koordinaten"
+          bild: "Der Einheitskreis mit einem Winkel von {grad} Grad. Der Bogen vom Winkel 0 bis zum Winkel {grad} ist dick gezeichnet."
+        nojs: |
+          Der Einheitskreis hat den Radius 1. Ein Winkel mit der Spitze im Mittelpunkt schneidet einen Bogen aus. Die Länge des Bogens ist das Bogenmaß des Winkels. Einige Winkel:
+
+          - 30°: Bogenlänge 0,524, das ist $\frac{\pi}{6}$.
+          - 60°: Bogenlänge 1,047, das ist $\frac{\pi}{3}$.
+          - 90°: Bogenlänge 1,571, das ist $\frac{\pi}{2}$.
+          - 180°: Bogenlänge 3,142, das ist $\pi$.
+          - 270°: Bogenlänge 4,712, das ist $\frac{3\pi}{2}$.
+          - 360°: Bogenlänge 6,283, das ist $2\pi$.
+      - type: text
+        text: "Der ganze Kreisrand ist der Bogen zum Vollwinkel. Am Einheitskreis hat er die Länge U = 2 · π · 1. Der Halbkreis ist die Hälfte davon, der Viertelkreis ein Viertel."
+      - type: table
+        caption: Wichtige Winkel im Gradmaß und im Bogenmaß
+        header: [Winkel, Bogenmaß]
+        rows:
+          - ["90°", "$\\frac{\\pi}{2}$ ≈ 1,57"]
+          - ["180°", "π ≈ 3,14"]
+          - ["270°", "$\\frac{3\\pi}{2}$ ≈ 4,71"]
+          - ["360°", "2π ≈ 6,28"]
+  - type: section
+    id: beispiel
+    title: Der Winkel 60°
+    blocks:
+      - type: example
+        title: Von Grad zum Bogenmaß
+        blocks:
+          - type: text
+            text: "60° sind $\\frac{60}{360} = \\frac{1}{6}$ des Vollwinkels. Der Bogen ist also ein Sechstel des Kreisrands, am Einheitskreis ein Sechstel von 2π."
+          - type: formula
+            formula: 'x = \frac{1}{6} \cdot 2\pi = \frac{\pi}{3} \approx 1,047'
+  - type: section
+    id: uebung
+    title: Aufgaben
+    blocks:
+      - type: single-choice
+        id: bogen-und-radius
+        text: "Ein Winkel schneidet aus einem Kreis mit r = 4 cm einen Bogen der Länge b = 6 cm aus. Wie groß ist sein Bogenmaß?"
+        options:
+          - text: "1,5"
+            correct: true
+            info: "x = b : r = 6 : 4 = 1,5. Es gibt keine Einheit, weil cm durch cm geteilt wird."
+          - text: "1,5 cm"
+            correct: false
+            info: "Die Zahl stimmt, aber das Bogenmaß hat keine Einheit: Länge durch Länge ergibt eine reine Zahl."
+          - text: "24"
+            correct: false
+            info: "Du hast b mit r multipliziert. Das Bogenmaß ist der Quotient b : r."
+          - text: "0,67"
+            correct: false
+            info: "Du hast r : b gerechnet. Der Bogen b steht oben: x = b : r."
+        explanation: "Das Bogenmaß ist die Bogenlänge geteilt durch den Radius. Es hängt nicht von der Größe des Kreises ab."
+      - type: generated
+        id: bogenmass-aus-bogen
+        given:
+          r: { oneOf: [2, 4, 5, 8, 10] }
+          b: { int: [3, 30], step: 1 }
+        where: ["decimals(b / r) <= 2 and b != r"]
+        task:
+          text: "Ein Winkel schneidet aus einem Kreis mit dem Radius r = {{r}} cm einen Bogen der Länge b = {{b}} cm aus. Gib den Winkel im Bogenmaß an."
+        answer: { value: "b / r", compare: { number: { decimals: 2, tolerance: 0 } } }
+        mistakes:
+          - value: "r / b"
+            message: "Du hast r : b gerechnet. Das Bogenmaß ist b : r, die Bogenlänge geteilt durch den Radius."
+          - value: "b * r"
+            message: "Du hast b und r multipliziert. Das Bogenmaß ist der Quotient b : r."
+        hint: "Teile die Bogenlänge {{b}} durch den Radius {{r}}."
+        steps:
+          - "$x = b : r = {{b}} : {{r}} = {{answer}}$"
+      - type: single-choice
+        id: halbkreis
+        text: "Welches Bogenmaß hat der Winkel 180°?"
+        options:
+          - text: "π"
+            correct: true
+            info: "180° sind ein halber Vollwinkel. Der halbe Kreisrand am Einheitskreis hat die Länge ½ · 2π = π."
+          - text: "2π"
+            correct: false
+            info: "2π ist der ganze Kreisrand, also 360°."
+          - text: "180"
+            correct: false
+            info: "180 ist die Gradzahl. Im Bogenmaß ist das die Länge eines Bogens, und die ist hier viel kleiner."
+          - text: "$\\frac{\\pi}{2}$"
+            correct: false
+            info: "Das ist ein Viertelkreis, also 90°."
+        explanation: "Der Halbkreis ist die Hälfte des Kreisrands mit der Länge 2π, also π."
+      - type: true-false
+        id: einheit-bogenmass
+        text: "Das Bogenmaß hat keine Einheit, auch wenn Bogen und Radius in Zentimetern gemessen werden."
+        answer: true
+        explanation: "x = b : r. Zentimeter geteilt durch Zentimeter kürzt sich weg. Darum ist das Bogenmaß eine reine Zahl und passt an jeden Kreis."
+      - type: text
+        text: "**Das kannst du jetzt:** Du kannst ein Bogenmaß aus Bogen und Radius bestimmen und die Winkel 90°, 180°, 270° und 360° am Einheitskreis im Bogenmaß angeben."
