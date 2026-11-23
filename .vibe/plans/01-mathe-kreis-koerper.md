@@ -8,7 +8,7 @@ phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: {}
+failedChecks: { checks-pass: 1 }
 ---
 
 # Plan: mathe-kreis-koerper, first version
@@ -37,6 +37,7 @@ Oberfläche von Zylinder, Pyramide, Kegel und Kugel und Strecken und Winkel in D
 - Zwei Kapitel wie im Issue; je ein Recap am Kapitelanfang (regeln.md, Abschnitt 7) mit Komponente `Kurztest`. (guess: Recap
   von Kapitel 2 auf zwei Seiten geteilt, Körper / Dreiecke, damit es je Baustein höchstens ein Bildschirm bleibt.)
 - Rahmen: Schulhof-Messungen (Baumhöhe, Flussbreite) als reale Fälle ohne erfundene Kinder (Klasse 10: Fall mit Daten). (guess)
+- Kein `scope`: keine `open-task`, kein Material des Auftraggebers (structure.md).
 - Keine `links:` an Aufgaben; verlangt das Werkzeug einen, zeigt er auf die Kartenseite des Bausteins (Fund W4/W45).
 
 ## Notes
@@ -254,12 +255,12 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
       `npx --no -- lernapps create --archetype explainer`.
 - [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
       no "FILL IN" left. Commit it before any content.
-- [ ] Load skill `lernapps-explainer`.
-- [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
+- [x] Load skill `lernapps-explainer`.
+- [x] Load skill `lernapps-content-questions`. Read whole, with your file tool:
       `.agents/skills/lernapps-explainer/references/blocks.md` and
       `.agents/skills/lernapps-explainer/references/exercises.md`. A foreign language: also
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
-- [ ] Decide whether the app needs `scope`, as "`scope`" in
+- [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [ ] Musterseite kreis/pi: Seite 'π durch Vielecke' komplett (Einstieg mit Messwerten, Komponente Vieleck mit statischer Form/nojs/Tastatur/Test, Herleitung, Beispielkasten, ≥3 Aufgaben mit Fehlerrückmeldung); Recap kreis/start als Rumpf nur soweit nötig; lernapps check; unabhängiger Lernenden-Prüfer; Checkpoint Musterseite
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->

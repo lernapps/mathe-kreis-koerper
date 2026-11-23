@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Kreis, π und Bogenmaß
+summary: Du näherst dich der Zahl π mit Vielecken, berechnest Umfang und Fläche eines Kreises und misst Winkel mit der Länge eines Bogens.
+pages: [pi]

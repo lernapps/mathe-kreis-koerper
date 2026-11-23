@@ -1,0 +1,128 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Die Zahl π
+description: "Der Umfang eines Kreises ist immer gleich oft so lang wie sein Durchmesser. Du schließt diese Zahl mit Vielecken von innen und außen ein."
+competencies: [kreis-umfang-flaeche]
+blocks:
+  - type: section
+    id: einstieg
+    title: Wie oft passt der Durchmesser in den Umfang?
+    blocks:
+      - type: text
+        text: Auf dem Schulhof misst du vier runde Dinge. Den Umfang U legst du mit einer Schnur und misst die Schnur. Den Durchmesser d misst du quer durch den Kreis.
+      - type: table
+        caption: Vier Messungen
+        header: [Gegenstand, Durchmesser d, Umfang U]
+        rows:
+          - [Dose, "7,5 cm", "23,6 cm"]
+          - [Teller, "26 cm", "81,7 cm"]
+          - [Brunnenrand, "1,20 m", "3,77 m"]
+          - [Fahrradreifen, "70 cm", "219,9 cm"]
+      - type: number
+        id: teller-verhaeltnis
+        text: "Wie oft passt beim Teller der Durchmesser in den Umfang? Rechne U : d und runde auf eine Stelle nach dem Komma."
+        answer: 3.1
+        tolerance: 0.05
+        explanation: "81,7 : 26 ist etwa 3,14. Der Umfang ist also gut dreimal so lang wie der Durchmesser. Das gilt auch für die Dose (23,6 : 7,5 ≈ 3,15) und die anderen Messungen."
+  - type: section
+    id: herleitung
+    title: Den Kreis von zwei Seiten einschließen
+    blocks:
+      - type: text
+        text: |
+          Bei jedem Gegenstand kommt fast dieselbe Zahl heraus. Das ist kein Zufall. Messen mit der Schnur ist aber ungenau. Du kannst π genauer bestimmen, wenn du den Kreis **einschließt**: Du zeichnest ein Vieleck innen und eines außen. Der Kreisumfang ist länger als der Umfang des inneren Vielecks und kürzer als der des äußeren.
+      - type: definition
+        term: Kreiszahl π
+        explanation: "π (sprich „Pi“) ist das Verhältnis von Umfang und Durchmesser eines Kreises: $\\pi = U : d$. Es ist für jeden Kreis gleich."
+      - type: text
+        text: |
+          Im Bild hat der Kreis den Radius 1, also den Durchmesser 2. Du teilst jeden Vielecksumfang durch 2 und bekommst so eine Grenze für π. Ziehe den Regler und achte auf die Lupe: Sie zeigt den obersten Teil des Kreises vergrößert. Das gestrichelte Vieleck liegt außen, das durchgezogene innen.
+      - type: vue-component
+        id: vieleck
+        component: Vieleck
+        props:
+          label: Anzahl der Ecken
+          ergebnis: "Mit {n} Ecken liegt π zwischen {innen} und {aussen}."
+          bild: "Ein Kreis mit einem Vieleck mit {n} Ecken innen (durchgezogene Linie) und einem außen (gestrichelte Linie)."
+          lupe: "Lupe: der oberste Teil des Kreises, vergrößert"
+        nojs: |
+          Ein Kreis mit Radius 1 und dem Durchmesser 2. Innen und außen liegt je ein regelmäßiges Vieleck. Der Umfang jedes Vielecks, geteilt durch 2, ist eine Grenze für π:
+
+          - 6 Ecken: π liegt zwischen 3,0000 und 3,4641.
+          - 12 Ecken: π liegt zwischen 3,1058 und 3,2154.
+          - 24 Ecken: π liegt zwischen 3,1326 und 3,1597.
+          - 48 Ecken: π liegt zwischen 3,1394 und 3,1461.
+          - 96 Ecken: π liegt zwischen 3,1410 und 3,1427.
+
+          Mit jeder Verdopplung der Ecken liegen die beiden Vielecke näher am Kreis.
+      - type: text
+        text: Mit 96 Ecken liegt π zwischen 3,1410 und 3,1427. Auf zwei Stellen nach dem Komma ist also π ≈ 3,14. Mehr Ecken engen π weiter ein. Das Vieleck wird dabei nie ganz zum Kreis, aber der Abstand wird beliebig klein.
+  - type: section
+    id: beispiel
+    title: Das Sechseck von Hand
+    blocks:
+      - type: example
+        title: Die untere Grenze 3
+        blocks:
+          - type: text
+            text: Ein Sechseck innen im Kreis mit dem Radius r besteht aus sechs gleichseitigen Dreiecken. Jede Seite ist so lang wie der Radius. Der Umfang des Sechsecks ist 6 · r, der Durchmesser des Kreises 2 · r.
+          - type: formula
+            formula: '\frac{6 \cdot r}{2 \cdot r} = 3'
+          - type: text
+            text: "Der Kreisumfang ist länger als der Sechsecksumfang. Also ist U : d größer als 3, und das gilt für jeden Radius r."
+  - type: section
+    id: uebung
+    title: Aufgaben
+    blocks:
+      - type: single-choice
+        id: was-ist-pi
+        text: Welche Aussage über π stimmt für jeden Kreis?
+        options:
+          - text: Umfang geteilt durch Durchmesser ist π.
+            correct: true
+            info: Das ist die Erklärung von π. Es ist für große und kleine Kreise gleich.
+          - text: Umfang geteilt durch Radius ist π.
+            correct: false
+            info: "Der Radius ist halb so lang wie der Durchmesser. Darum ergibt U : r etwa 6,28, also 2 · π."
+          - text: Umfang minus Durchmesser ist π.
+            correct: false
+            info: Bei der Dose ergibt 23,6 − 7,5 etwa 16,1. Bei einem größeren Kreis kommt etwas anderes heraus. Nur das Teilen gibt immer dieselbe Zahl.
+        explanation: π ist ein Verhältnis, also eine Division, und hängt nicht von der Größe des Kreises ab.
+      - type: generated
+        id: verhaeltnis-messen
+        given:
+          m: { pick: 1, from: { data: messungen } }
+        task:
+          text: "Eine Dose hat den Durchmesser {{m.durchmesser}} cm. Die Schnur um die Dose ist {{m.umfang}} cm lang. Berechne U : d und runde auf zwei Stellen nach dem Komma."
+        answer:
+          value: "round(m.umfang / m.durchmesser, 2)"
+          compare: { number: { decimals: 2, tolerance: 0.01 } }
+        mistakes:
+          - value: "round(m.durchmesser / m.umfang, 2)"
+            message: "Du hast d : U gerechnet. π ist der Umfang geteilt durch den Durchmesser, also U : d."
+          - value: "round(m.umfang / (m.durchmesser / 2), 2)"
+            message: "Du hast durch den Radius geteilt. Das ergibt 2 · π. Teile durch den Durchmesser d."
+        hint: "Teile den Umfang U durch den Durchmesser d: {{m.umfang}} : {{m.durchmesser}}."
+        steps:
+          - "$U : d = {{m.umfang}} : {{m.durchmesser}} = {{answer}}$"
+      - type: generated
+        id: sechseck-umfang
+        given:
+          r: { int: [2, 30], step: 1 }
+        task:
+          text: "In einen Kreis mit dem Radius r = {{r}} cm ist ein regelmäßiges Sechseck gezeichnet. Alle sechs Ecken liegen auf dem Kreis, und jede Seite ist so lang wie der Radius. Wie lang ist der Umfang des Sechsecks in cm?"
+        answer: { value: "6 * r", compare: { number: { unit: cm } } }
+        mistakes:
+          - value: "12 * r"
+            message: "Du hast die Seite so lang wie den Durchmesser gerechnet. Sie ist aber so lang wie der Radius."
+          - value: "3 * r"
+            message: "Das sind nur drei Seiten. Ein Sechseck hat sechs Seiten."
+        hint: "Der Umfang ist die Summe aller sechs Seiten. Jede ist {{r}} cm lang."
+        steps:
+          - '$6 \cdot {{r}} = {{answer}}$, der Umfang ist {{answer}} cm.'
+      - type: true-false
+        id: pi-genau
+        text: "Mit 96 Ecken hat man π genau bestimmt: π = 3,1410."
+        answer: false
+        explanation: "Mit 96 Ecken liegt π zwischen 3,1410 und 3,1427. Das ist eine Einschließung, kein genauer Wert. Mehr Ecken machen sie nur enger."
+      - type: text
+        text: "**Das kannst du jetzt:** Du kannst erklären, was π ist, und du weißt, wie Vielecke π von zwei Seiten einschließen."
