@@ -2,3 +2,20 @@
 title: Kreis, π und Bogenmaß
 summary: Du näherst dich der Zahl π mit Vielecken, berechnest Umfang und Fläche eines Kreises und misst Winkel mit der Länge eines Bogens.
 pages: [start, pi, umfang, flaeche, einheitskreis, bogenmass]
+# Die Selbsteinschätzung des Kapitels: zwei Rechenaufgaben je Seite, die ohne die Seite verständlich sind (keine Wiederholungsseite).
+selfAssessment:
+  pages:
+    - exercises:
+        - /kreis/pi/#verhaeltnis-messen
+        - /kreis/pi/#sechseck-umfang
+        - /kreis/umfang/#umfang-aus-radius
+        - /kreis/umfang/#durchmesser-aus-umfang
+    - exercises:
+        - /kreis/flaeche/#flaeche-aus-radius
+        - /kreis/flaeche/#flaeche-aus-durchmesser
+        - /kreis/einheitskreis/#bogenmass-aus-bogen
+        - /kreis/einheitskreis/#bogen-und-radius
+    - exercises:
+        - /kreis/bogenmass/#grad-zu-bogenmass
+        - /kreis/bogenmass/#vielfaches-von-pi
+        - /kreis/bogenmass/#bogenmass-zu-grad

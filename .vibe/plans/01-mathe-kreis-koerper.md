@@ -37,7 +37,7 @@ Oberfläche von Zylinder, Pyramide, Kegel und Kugel und Strecken und Winkel in D
 - Zwei Kapitel wie im Issue; je ein Recap am Kapitelanfang (regeln.md, Abschnitt 7) mit Komponente `Kurztest`. (guess: Recap
   von Kapitel 2 auf zwei Seiten geteilt, Körper / Dreiecke, damit es je Baustein höchstens ein Bildschirm bleibt.)
 - Rahmen: Schulhof-Messungen (Baumhöhe, Flussbreite) als reale Fälle ohne erfundene Kinder (Klasse 10: Fall mit Daten). (guess)
-- Keine Selbsteinschätzung (`selfAssessment`) in dieser Version (guess): Der Auftrag verlangt sie nicht, die Recap-Kurztests prüfen die Voraussetzungen; sie kann als Inkrement folgen.
+- Selbsteinschätzung je Kapitel (nachgebaut nach Hinweis des Orchestrators): zwei Rechenaufgaben je Seite, vorhandene `generated`-Aufgaben und eine Auswahlfrage, keine neuen Aufgaben; Recap-Seiten sind nie dabei.
 - Kein `scope`: keine `open-task`, kein Material des Auftraggebers (structure.md).
 - Keine `links:` an Aufgaben; verlangt das Werkzeug einen, zeigt er auf die Kartenseite des Bausteins (Fund W4/W45).
 
@@ -367,13 +367,16 @@ Nicht umgesetzt: S3 Bogenmaß in `matching` als Bruch gesetzt (Formeln in `match
 Verbatim-Stichprobe: sieben Sätze und die Strahlensatz-Definition gesucht, keine wörtliche Übernahme gefunden.
 Nach den beiden Prüferläufen geändert und **nicht erneut geprüft**: alle oben genannten Textänderungen, die neuen Aufgaben `pyramide-oberflaeche` und `mast-winkel` samt Datei `pyramiden.yaml`, die geänderten Figuren, die Aufgabe `teller-verhaeltnis` (jetzt zwei Stellen). Inhaltliche Änderungen daran prüft der fachliche Prüfer noch einmal (Plan: vor „Veröffentlichen“).
 
+### Selbsteinschätzung (nachträglich)
+Kapitel `kreis`: 11 Aufgaben in drei Schritten, Kapitel `koerper`: 10 Aufgaben in drei Schritten (App: 21, etwas über dem Richtwert 15 bis 20; zwei je Seite, damit jede Seite ein Ergebnis bekommt). Es sind nur Verweise auf vorhandene, schon nachgerechnete Aufgaben; neu geschrieben wurde nichts, ein Satz in einer Rückmeldung („steht oben“) wurde geändert. Der fachliche Prüfer hat nichts Neues nachzurechnen. `lernapps check` (inklusive der drei Läufe der Selbsteinschätzung im End-to-End-Test) ohne Fehler.
+
 ## Retrospective
 
 <!-- At the end of Commit, before the listing pull request. Facts, short, no names. Read by review and evals. -->
 
 ### Phases reached
 
-Commit bis zum Checkpoint „Veröffentlichen“ (Stand: Vorschau-PR #1 offen, Checks grün, nicht veröffentlicht). Checkpoints bestanden (Orchestrator in Vertretung): Recherche, Plan, Musterseite. Aufgeführt wird nur, was gemeldet ist; „Veröffentlichen“ und der Katalogeintrag stehen aus.
+Commit bis zum Checkpoint „Veröffentlichen“ (Stand: Vorschau-PR #1 offen, Checks grün, nicht veröffentlicht). Checkpoints bestanden (Orchestrator in Vertretung): Recherche, Plan, Musterseite. „Veröffentlichen“ als gemeldet angenommen; Katalogeintrag erst nach Freigabe des Orchestrators.
 
 ### Creator turns after the plan
 

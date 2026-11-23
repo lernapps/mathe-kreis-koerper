@@ -87,7 +87,8 @@ nicht geöffnet (nicht geprüft). Dritt-Inhalte: keine.
 1. Baustein in `mathematik.json` suchen (id, Ich-kann-Satz, `requires`). 2. Ordner `src/<kapitel>/` mit `chapter.yaml`, in
 `src/app.yaml` unter `chapters` eintragen. 3. Recap-Seite für Voraussetzungen von außen (`recap:` plus `Kurztest`).
 4. Je Seite `competencies`, Abschnitte nach „Content structure“, Aufgaben nach den Mustern, Komponenten nur wenn kein Block
-reicht. 5. `npx vp check --fix`, `npx vp build`, `npx --no -- lernapps check`. 6. Dieses Dokument im selben Commit anpassen.
+reicht. 5. `npx vp check --fix`, `npx vp build`, `npx --no -- lernapps check`. 6. 1 bis 3 ihrer Übungen in `selfAssessment` (in `chapter.yaml`) aufnehmen, wie Skill `lernapps-explainer-self-assessment` sagt: möglichst `generated`, ohne Bezug auf die Seite („oben“, „im Bild“) lesbar. Bisher je Kapitel zwei Aufgaben je Seite (Recap-Seiten sind nie dabei).
+7. Dieses Dokument im selben Commit anpassen.
 
 ## Rules learned from mistakes
 

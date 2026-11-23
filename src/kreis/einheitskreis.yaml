@@ -86,7 +86,7 @@ blocks:
             info: "Du hast b mit r multipliziert. Das Bogenmaß ist der Quotient b : r."
           - text: "0,67"
             correct: false
-            info: "Du hast r : b gerechnet. Der Bogen b steht oben: x = b : r."
+            info: "Du hast r : b gerechnet. Das Bogenmaß ist b : r: erst der Bogen, dann der Radius."
         explanation: "Das Bogenmaß ist die Bogenlänge geteilt durch den Radius. Es hängt nicht von der Größe des Kreises ab."
       - type: generated
         id: bogenmass-aus-bogen
