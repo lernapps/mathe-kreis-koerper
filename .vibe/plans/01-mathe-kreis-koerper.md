@@ -262,7 +262,7 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
 - [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-- [ ] Musterseite kreis/pi: Seite 'π durch Vielecke' komplett (Einstieg mit Messwerten, Komponente Vieleck mit statischer Form/nojs/Tastatur/Test, Herleitung, Beispielkasten, ≥3 Aufgaben mit Fehlerrückmeldung); Recap kreis/start als Rumpf nur soweit nötig; lernapps check; unabhängiger Lernenden-Prüfer; Checkpoint Musterseite
+- [x] Musterseite kreis/pi: Seite 'π durch Vielecke' komplett (Einstieg mit Messwerten, Komponente Vieleck mit statischer Form/nojs/Tastatur/Test, Herleitung, Beispielkasten, ≥3 Aufgaben mit Fehlerrückmeldung); Recap kreis/start als Rumpf nur soweit nötig; lernapps check; unabhängiger Lernenden-Prüfer; Checkpoint Musterseite
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
@@ -317,6 +317,18 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
 
 ```yaml
 ```
+
+
+## Review
+
+### Lernenden-Prüfer (Musterseite kreis/pi, Klasse 9-10, unabhängiger Unteragent)
+Umgesetzt: „wie oft passt“ → Division U : d im Text; Toleranz so eng, dass 3,14 bei „eine Stelle“ und Nachbarwerte bei „zwei Stellen“ nicht
+gelten; Radius eingeführt, Begründung der Grenzen (kürzester Weg), Legende der Farben, Ergebnis nicht mehr vorweg (Ergebnissatz
+ersetzt durch Aufgabe `obere-grenze-96`); Sechseck: Begründung gleichseitig, Bild `sechseck-dreiecke.svg`, Hinweis auf die obere Grenze;
+Komma nach Formel in den Schritten behoben; Schlusssatz angepasst.
+Nicht geändert (Laufzeit, in den Bericht): Standardrückmeldung ohne Fehlertyp bei Zahlen/Wahr-Falsch (W13/W39), „Antworte zuerst“ bei Textfeld
+(W6/W11), „.:“ bei Auswahl-Rückmeldung (W43), „Neue Aufgabe“ nur Symbol (W5), Startnummer zufällig (W12), „erlaubte Abweichung“ in der
+Lösung nach richtiger Antwort mit Toleranz (neu), Punkt als Dezimalzeichen wird akzeptiert (gewollt).
 
 ## Retrospective
 
