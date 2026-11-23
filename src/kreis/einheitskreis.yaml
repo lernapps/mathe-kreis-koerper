@@ -112,7 +112,7 @@ blocks:
         options:
           - text: "π"
             correct: true
-            info: "180° sind ein halber Vollwinkel. Der halbe Kreisrand am Einheitskreis hat die Länge ½ · 2π = π."
+            info: "180° sind ein halber Vollwinkel. Der halbe Kreisrand am Einheitskreis hat die Länge 2π : 2 = π."
           - text: "2π"
             correct: false
             info: "2π ist der ganze Kreisrand, also 360°."

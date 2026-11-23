@@ -272,7 +272,7 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
 - [x] Kapitel kreis: Seiten umfang und flaeche (Komponente Torte, Aufgaben generated mit mistakes); Push
 - [x] Kapitel kreis: Seiten einheitskreis und bogenmass (Komponente Einheitskreis, Umrechnen, RAD/DEG); Kapitelrückblick; Push
 - [x] Kapitel koerper: Recap koerper/start (Prisma, Grundkörper, Pythagoras) und Seite zylinder
-- [ ] Kapitel koerper: Seiten pyramide-kegel (Komponente Umschuetten) und kugel; Push
+- [x] Kapitel koerper: Seiten pyramide-kegel (Komponente Umschuetten) und kugel; Push
 - [ ] Kapitel koerper: Recap dreiecke-start, Seiten schulhof und vielecke; Kapitelrückblick; Push
 - [ ] Content-Guide .agents/skills/app-content/SKILL.md vollständig; Glossar (Fachbegriffe aus den Recaps); Katalogeintrag-Entwurf
 - [ ] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review einarbeiten; lernapps check grün; Vorschau-PR öffnen (nicht mergen)

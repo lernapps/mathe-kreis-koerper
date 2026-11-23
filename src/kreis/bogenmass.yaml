@@ -28,7 +28,7 @@ blocks:
       - type: formula
         formula: '\alpha = x \cdot \frac{180^\circ}{\pi}'
       - type: text
-        text: "Von Grad ins Bogenmaß multiplizierst du mit π und teilst durch 180°. Vom Bogenmaß in Grad multiplizierst du mit 180° und teilst durch π. Wenn du das Ergebnis als Vielfaches von π schreiben willst, lässt du π stehen: Aus 90° wird 90 : 180 = ½ mal π."
+        text: "Von Grad ins Bogenmaß multiplizierst du mit π und teilst durch 180°. Vom Bogenmaß in Grad multiplizierst du mit 180° und teilst durch π. Wenn du das Ergebnis als Vielfaches von π schreiben willst, lässt du π stehen: Aus 90° wird 90 : 180 = 0,5, also 0,5 mal π."
       - type: note
         title: Der Taschenrechner
         blocks:

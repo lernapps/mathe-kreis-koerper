@@ -1,0 +1,10 @@
+- { radius: 3, hoehe: 4, mantellinie: 5 }
+- { radius: 6, hoehe: 8, mantellinie: 10 }
+- { radius: 5, hoehe: 12, mantellinie: 13 }
+- { radius: 9, hoehe: 12, mantellinie: 15 }
+- { radius: 8, hoehe: 15, mantellinie: 17 }
+- { radius: 12, hoehe: 16, mantellinie: 20 }
+- { radius: 4, hoehe: 3, mantellinie: 5 }
+- { radius: 12, hoehe: 5, mantellinie: 13 }
+- { radius: 15, hoehe: 8, mantellinie: 17 }
+- { radius: 8, hoehe: 6, mantellinie: 10 }
