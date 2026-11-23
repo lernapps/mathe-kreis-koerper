@@ -1,0 +1,112 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Der Umfang des Kreises
+description: "Aus π = U : d wird eine Formel für den Umfang: U = π · d und U = 2 · π · r. Du rechnest damit vorwärts und rückwärts."
+competencies: [kreis-umfang-flaeche]
+blocks:
+  - type: section
+    id: einstieg
+    title: Die Schnur um den Brunnen
+    blocks:
+      - type: text
+        text: "Der Rand eines runden Brunnens hat den Durchmesser 1,20 m. Du willst eine Schnur einmal um den Rand legen. Du weißt: Der Umfang ist ungefähr dreimal so lang wie der Durchmesser."
+      - type: number
+        id: brunnen-schaetzen
+        text: "Wie lang ist die Schnur ungefähr? Rechne mit 3 statt mit π und gib das Ergebnis in Metern an."
+        answer: 3.6
+        tolerance: 0.01
+        unit: m
+        explanation: "3 · 1,20 m = 3,6 m. Das ist eine Schätzung, denn der Faktor ist nicht genau 3, sondern π ≈ 3,14."
+  - type: section
+    id: herleitung
+    title: Von π zur Formel
+    blocks:
+      - type: text
+        text: "Du kennst die Zahl π aus U : d. Wenn du diese Gleichung umstellst, bekommst du den Umfang: Du multiplizierst mit d. Der Durchmesser ist doppelt so lang wie der Radius, d = 2 · r. So entsteht die zweite Form."
+      - type: formula
+        formula: '\pi = \frac{U}{d} \quad \Rightarrow \quad U = \pi \cdot d = 2 \cdot \pi \cdot r'
+      - type: note
+        title: Mit welchem Wert für π?
+        blocks:
+          - type: text
+            text: "In diesem Kapitel rechnest du mit π ≈ 3,14, wenn die Aufgabe es sagt. Dann ist das Ergebnis genau bestimmt. Die π-Taste deines Taschenrechners nutzt mehr Stellen. Das Ergebnis weicht dann ein wenig ab."
+  - type: section
+    id: beispiel
+    title: Der Brunnenrand
+    blocks:
+      - type: example
+        title: "Durchmesser 1,20 m"
+        blocks:
+          - type: formula
+            formula: 'U = \pi \cdot d \approx 3{,}14 \cdot 1{,}20 = 3{,}768'
+          - type: text
+            text: "Die Schnur muss etwa 3,77 m lang sein. Das passt zu den Messwerten der letzten Seite (3,77 m)."
+  - type: section
+    id: uebung
+    title: Aufgaben
+    blocks:
+      - type: generated
+        id: umfang-aus-durchmesser
+        given:
+          d: { int: [4, 40], step: 1 }
+        task:
+          text: "Ein Kreis hat den Durchmesser d = {{d}} cm. Berechne seinen Umfang mit π ≈ 3,14."
+        answer: { value: "3.14 * d", compare: { number: { decimals: 2, tolerance: 0, unit: cm } } }
+        mistakes:
+          - value: "3.14 * d / 2"
+            message: "Du hast durch 2 geteilt. Bei gegebenem Durchmesser rechnest du U = π · d, ohne 2."
+          - value: "3.14 * d * d"
+            message: "Du hast den Durchmesser zweimal genommen. Das ist π · d², eine Fläche. Der Umfang ist π · d."
+        hint: "Der Durchmesser ist gegeben. Multipliziere ihn mit π ≈ 3,14."
+        steps:
+          - '$U = \pi \cdot d \approx 3{,}14 \cdot {{d}} = {{answer}}$'
+      - type: generated
+        id: umfang-aus-radius
+        given:
+          r: { int: [3, 25], step: 1 }
+        task:
+          text: "Ein Kreis hat den Radius r = {{r}} cm. Berechne seinen Umfang mit π ≈ 3,14."
+        answer: { value: "2 * 3.14 * r", compare: { number: { decimals: 2, tolerance: 0, unit: cm } } }
+        mistakes:
+          - value: "3.14 * r"
+            message: "Du hast den Radius wie einen Durchmesser behandelt. Der Durchmesser ist 2 · r, also U = 2 · π · r. So bekommst du nur den halben Umfang."
+          - value: "3.14 * r * r"
+            message: "Das ist die Fläche π · r², keine Länge. Der Umfang ist 2 · π · r."
+        hint: "Der Radius ist halb so lang wie der Durchmesser. Erst d = 2 · r, dann U = π · d."
+        steps:
+          - '$U = 2 \cdot \pi \cdot r \approx 2 \cdot 3{,}14 \cdot {{r}} = {{answer}}$'
+      - type: generated
+        id: durchmesser-aus-umfang
+        given:
+          U: { int: [20, 200], step: 1 }
+        task:
+          text: "Um einen runden Baumstamm legst du ein Maßband: Der Umfang ist {{U}} cm. Wie groß ist der Durchmesser des Stamms? Rechne mit π ≈ 3,14 und runde auf eine Stelle nach dem Komma."
+        answer: { value: "round(U / 3.14, 1)", compare: { number: { decimals: 1, tolerance: 0, unit: cm } } }
+        mistakes:
+          - value: "round(U / 3.14 / 2, 1)"
+            message: "Das ist der Radius r = U : (2 · π). Gefragt ist der Durchmesser d = U : π."
+          - value: "round(U * 3.14, 1)"
+            message: "Du hast multipliziert. Der Umfang ist U = π · d, also musst du durch π teilen, um d zu bekommen."
+        hint: "U = π · d. Stelle die Gleichung nach d um."
+        steps:
+          - '$d = \frac{U}{\pi} \approx \frac{{{U}}}{3{,}14} = {{answer}}$'
+      - type: single-choice
+        id: fehler-finden
+        text: "Lena rechnet für einen Kreis mit dem Radius r = 5 cm: U = π · 5 ≈ 15,7 cm. Was ist falsch?"
+        options:
+          - text: "Sie hat vergessen, mit 2 zu multiplizieren."
+            correct: true
+            info: "Mit dem Radius gilt U = 2 · π · r = 2 · 3,14 · 5 = 31,4 cm. Die Formel π · d braucht den Durchmesser, und der ist 10 cm."
+          - text: "Sie muss r quadrieren."
+            correct: false
+            info: "Das Quadrieren gehört zur Fläche (π · r²). Der Umfang ist eine Länge."
+          - text: "Sie muss durch π teilen."
+            correct: false
+            info: "Durch π teilst du, wenn der Umfang gegeben ist und du d suchst. Hier ist der Radius gegeben und der Umfang gesucht."
+        explanation: "Mit dem Radius braucht der Umfang den Faktor 2, weil d = 2 · r ist."
+      - type: true-false
+        id: radius-verdoppeln
+        text: "Wenn du den Radius eines Kreises verdoppelst, verdoppelt sich auch sein Umfang."
+        answer: true
+        explanation: "U = 2 · π · r. Wenn r doppelt so groß wird, wird auch U doppelt so groß: Der Umfang wächst im gleichen Verhältnis wie der Radius."
+      - type: text
+        text: "**Das kannst du jetzt:** Du kannst den Umfang aus Durchmesser oder Radius berechnen und aus dem Umfang den Durchmesser bestimmen."

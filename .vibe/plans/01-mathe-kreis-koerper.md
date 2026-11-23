@@ -269,7 +269,7 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
       change: change the pattern first.
       Creator: Musterseite angenommen, übrige Seiten dürfen dem Muster folgen (Orchestrator in Vertretung).
 - [x] Kapitel kreis: Recap kreis/start mit Kurztest-Komponente (Kopie der Vorlage inkl. W42) für Rechteck, Dezimalbrüche, Trigonometrie
-- [ ] Kapitel kreis: Seiten umfang und flaeche (Komponente Torte, Aufgaben generated mit mistakes); Push
+- [x] Kapitel kreis: Seiten umfang und flaeche (Komponente Torte, Aufgaben generated mit mistakes); Push
 - [ ] Kapitel kreis: Seiten einheitskreis und bogenmass (Komponente Einheitskreis, Umrechnen, RAD/DEG); Kapitelrückblick; Push
 - [ ] Kapitel koerper: Recap koerper/start (Prisma, Grundkörper, Pythagoras) und Seite zylinder
 - [ ] Kapitel koerper: Seiten pyramide-kegel (Komponente Umschuetten) und kugel; Push
