@@ -10,8 +10,8 @@ blocks:
       - type: text
         text: Auf dem Schulhof misst du vier runde Dinge. Den Umfang U legst du mit einer Schnur und misst die Schnur. Den Durchmesser d misst du quer durch den Kreis.
       - type: table
-        caption: Vier Messungen
-        header: [Gegenstand, Durchmesser d, Umfang U]
+        caption: "Vier Messungen (d: Durchmesser, U: Umfang)"
+        header: [Gegenstand, d, U]
         rows:
           - [Dose, "7,5 cm", "23,6 cm"]
           - [Teller, "26 cm", "81,7 cm"]
