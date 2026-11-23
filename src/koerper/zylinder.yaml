@@ -36,7 +36,9 @@ blocks:
         source: eigene Zeichnung
         licence: CC0-1.0
       - type: formula
-        formula: 'M = 2 \cdot \pi \cdot r \cdot h \qquad O = 2 \cdot \pi \cdot r^2 + 2 \cdot \pi \cdot r \cdot h'
+        formula: 'M = 2 \cdot \pi \cdot r \cdot h'
+      - type: formula
+        formula: 'O = 2 \cdot \pi \cdot r^2 + M'
       - type: text
         text: "Die Oberfläche besteht aus zwei Kreisen (Boden und Deckel) und dem Mantel."
   - type: section
@@ -51,7 +53,9 @@ blocks:
           - type: formula
             formula: 'M = 2 \cdot \pi \cdot r \cdot h \approx 2 \cdot 3,14 \cdot 4 \cdot 10 = 251,2'
           - type: formula
-            formula: 'O = 2 \cdot 3,14 \cdot 16 + 251,2 = 100,48 + 251,2 = 351,68'
+            formula: 'O = 2 \cdot 3,14 \cdot 16 + 251,2'
+          - type: formula
+            formula: "O = 100,48 + 251,2 = 351,68"
           - type: text
             text: "Volumen 502,4 cm³, Mantel 251,2 cm², Oberfläche 351,68 cm². Beachte die Einheiten: Das Volumen hat cm³, Mantel und Oberfläche haben cm²."
   - type: section
