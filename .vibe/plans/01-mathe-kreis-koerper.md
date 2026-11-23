@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: explore
+phase: plan
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -152,9 +152,10 @@ Kap. 1 begründet (Verbindung zu sin im Bogenmaß-Modus).
       off), and which misconception the feedback catches.
 - [x] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
       elements", never a silent "1–20"), the languages.
-- [ ] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
+- [x] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
       approach, the scope, every "(guess)", the sources and what is unchecked, the archetype and its reason. Stop and
       wait. Changes: change them, then ask again.
+      Creator: Recherche freigegeben (Orchestrator in Vertretung): Zuschnitt, Abgrenzung, Recap Kap. 2 auf zwei Seiten, nur Deutsch ok; Musterseite aus Kap. 1 (π durch Vielecke) mit unabhängigem Lernenden-Prüfer.
 
 ### Answers
 
@@ -182,28 +183,59 @@ Kap. 1 begründet (Verbindung zu sin im Bogenmaß-Modus).
 
 ### Tasks
 
-- [ ] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
+- [x] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
       "Content method".
-- [ ] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
-- [ ] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
+- [x] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
+- [x] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
       opening task, the change of activity, the reward, the story.
-- [ ] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
+- [x] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
       screen, `npx --no -- lernapps plan add --at pattern "<task>"`. Then the others, one call each:
       `npx --no -- lernapps plan add --at pages "<task>"`. Each task says what it builds and what it shows.
-- [ ] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
+- [x] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
       learners see after each. Keep the files in `.vibe/sketches/`.
-- [ ] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
+- [x] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
       plain words (what learners see and do, what the app cannot do). At most 2 questions.
 - [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
       them, then ask again.
 
 ### Content method
 
-<!-- One line each: the patterns and where; the figures and how they are made; the data files; each component, what it
-checks and what it cannot; how a later agent adds a chapter. It becomes the content guide in Code. -->
-<!-- An explainer: per figure, model and component its learning action in two to four sentences
-(`explainer-representation-explained`); per page its prerequisites the app does not practise, and which get a recap
-page, which a link. -->
+**Karte → Seiten.** Strang-App, 2 Kapitel (`kreis`, `koerper`), 13 Seiten (Kapitelordner: `kreis` mit start, pi, umfang, flaeche, einheitskreis, bogenmass; `koerper` mit start, zylinder, pyramide-kegel, kugel, dreiecke-start, schulhof, vielecke) (je Kapitel Recap-Seiten mit `recap:`; Kapitel 2 hat
+zwei Recap-Seiten). Eine Kompetenz darf mehrere Seiten haben, wenn sie groß ist (`kreis-umfang-flaeche` 3, `berechnungen-dreiecke-vielecke` 2,
+Pyramide/Kegel/Kugel 2). Voraussetzungen von außen nur im Recap; Zylinder vor Pyramide/Kegel/Kugel, π vor Bogenmaß (alles in der App geübt).
+
+**Seiten und Engagement** (Eröffnung · Wechsel · Belohnung · Geschichte):
+- `kreis/start` Recap (Rechteck, Dezimalbrüche, Trigonometrie): je Baustein Begriffe fett + Beispielkasten + `Kurztest` (nicht zu leicht, Hinweis zeigt den Weg); Checkliste.
+- `kreis/pi` · Opening: schätze U : d an einer Dose (gegebene Messwerte in Tabelle); Wechsel: Komponente `Vieleck` (Ecken ändern → Ober-/Untergrenze von π, Lupe-Symbol, Vorgang sichtbar), lesen, rechnen; Belohnung: π zwischen 3,14 und 3,15 eingeschlossen; Geschichte: Schulhof-Auftrag (Rundbeet / Brunnenrand messen).
+- `kreis/umfang` · Opening: Schnur um den Brunnen, d gemessen → U schätzen; U = π · d = 2 · π · r; Aufgaben mit Rückwärts (r aus U); Geschichte: der Brunnenrand.
+- `kreis/flaeche` · Opening: Tortenstücke, Anzahl ändern (Komponente `Torte`: 8/16/32 Stücke → Fast-Rechteck, Breite ½ · U, Höhe r); A = π · r²; Fehler d statt r.
+- `bogenmass/einheitskreis` · Opening: Bogen der Länge 1 am Einheitskreis → Winkel ≈ 57,3°; Komponente `Einheitskreis` (Winkel ziehen, Bogenlänge ablesen, Tastatur ±15°); Definition x = b : r; Belohnung: 2π ↔ 360°, Vorbereitung für #396.
+- `bogenmass/umrechnen` · Opening: 90° ↔ π/2 aus der Proportion; Umrechnen beide Richtungen (`generated`), RAD/DEG am Taschenrechner, sin(π/6) = 0,5.
+- `koerper/start` Recap 2a (Prisma, Grundkörper, Pythagoras) mit `Kurztest`.
+- `koerper/zylinder` · Opening: Dose abrollen, Mantel = Rechteck 2 · π · r mal h (Bild, Textalternative); V = G · h; O = 2G + M.
+- `koerper/pyramide-kegel` · Opening: Kegel in Zylinder umschütten (Komponente `Umschuetten` mit Stufen, statisch drei Bilder); Drittel; versteckte Dreiecke (h, r, s) und (h, a/2, h_s); V und O.
+- `koerper/kugel` · Opening: Archimedes-Bild: Kegel + Kugel = Zylinder (Volumen 1 : 2 : 3), V = 4/3 · π · r³, O = 4 · π · r²; zusammengesetzte Körper (Eistüte).
+- `dreiecke/start` Recap 2b (Strahlensätze, Trigonometrie) mit `Kurztest`.
+- `dreiecke/schulhof` · Opening: Höhe eines Baums (Schatten/Strahlensatz, Winkel + Abstand + Augenhöhe); Flussbreite; Entscheidungstabelle „welches Dreieck, welches Verfahren“; Geschichte: Messtag auf dem Schulhof.
+- `dreiecke/vielecke` · Opening: reguläres Sechseck → sechs gleichseitige Dreiecke; n-Eck: Mittelpunktsdreieck (r, Seite, Apothem); Fläche und Winkel; Rückbezug auf π durch Vielecke.
+Jede Seite endet mit einem Rückblick-Satz „Das kannst du jetzt“ und einer Aufgabenfolge (≥ 3 je Baustein, steigend).
+
+**Muster je Kompetenz** (`generated` mit `given`, `mistakes`, Rundung angeben, fester Seed):
+- Kreis: „berechne U/A aus r bzw. d“, „r aus U oder A“ (mistakes: d statt r, U ↔ A, r statt r², Einheit); `matching` für „welche Formel passt“; `single-choice` für „warum π“.
+- Bogenmaß: Grad → Bogenmaß als Vielfaches von π (Eingabe `0,5` oder `0.5`, Zahl vor π), Bogenmaß → Grad (mistakes: mit 180/π vertauscht); `single-choice` zu RAD/DEG.
+- Zylinder, Pyramide, Kegel, Kugel: V und O mit Einheit; Rückwärts (h aus V); mistakes: d statt r, ⅓ vergessen, Höhe statt Mantellinie/Seitenhöhe, nur Mantel statt Oberfläche; `ordering` der Rechenschritte.
+- Dreiecke/Vielecke: Strecke oder Winkel mit sin/cos/tan oder Strahlensatz oder Pythagoras; `single-choice` „welches Verfahren“; mistakes: falsche Kathete, RAD/DEG, falsches Streckenverhältnis.
+Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` und im Plan gezählt (W28).
+
+**Figuren** (SVG, Textalternative, gleiche Konventionen: Radius blau, Durchmesser grau, Winkel mit ∠ und α, nie Farbe allein):
+`pi-vieleck` (innen/außen), `torte-rechteck`, `einheitskreis-bogen`, `zylinder-mantel`, `kegel-dreieck`, `pyramide-dreieck`, `kugel-archimedes`, `schulhof-baum`, `schulhof-fluss`, `sechseck-dreiecke`.
+
+**Komponenten** (`prefer-built-in-block`: kein Block zeigt eine Eckenzahl, die sich verändert, oder zieht einen Winkel): `Kurztest` (Vorlage),
+`Vieleck` (Ecken 3-96; zeigt U_innen, U_außen, π-Schranken; Tasten ← → ändern die Ecken; statisch: drei Bilder 6/12/24 + Tabelle), `Torte` (Anzahl Stücke 4/8/16/32; statisch: zwei Bilder), `Einheitskreis` (Winkel in 15°-Schritten, Bogenlänge; statisch: Tabelle der Winkel), `Umschuetten` (Stufen; statisch: drei Bilder). Jede mit Logikmodul, Test, `nojs`. Sie prüfen nichts; die Aufgaben stehen unter den Komponenten.
+
+**Daten:** `src/data/` nur wenn `generated` Datensätze braucht (nicht geplant: Zahlen aus `given`).
+
+**Wie ein späterer Agent ein Kapitel ergänzt:** Muster in `.agents/skills/app-content/SKILL.md` (wird in Code geschrieben): Abschnittsnamen `einstieg`, `herleitung`, `beispiel`, `uebung`, `rueckblick`; Zahlen, Einheiten, Winkelschreibweise; Mistakes-Bibliothek.
 
 ## Code
 
@@ -228,11 +260,20 @@ page, which a link. -->
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
 - [ ] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-<!-- tasks: pattern: the one page or screen that is the pattern for the others -->
+- [ ] Musterseite kreis/pi: Seite 'π durch Vielecke' komplett (Einstieg mit Messwerten, Komponente Vieleck mit statischer Form/nojs/Tastatur/Test, Herleitung, Beispielkasten, ≥3 Aufgaben mit Fehlerrückmeldung); Recap kreis/start als Rumpf nur soweit nötig; lernapps check; unabhängiger Lernenden-Prüfer; Checkpoint Musterseite
+<!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-<!-- tasks: pages: the other pages or screens, after the pattern -->
+- [ ] Kapitel kreis: Recap kreis/start mit Kurztest-Komponente (Kopie der Vorlage inkl. W42) für Rechteck, Dezimalbrüche, Trigonometrie
+- [ ] Kapitel kreis: Seiten umfang und flaeche (Komponente Torte, Aufgaben generated mit mistakes); Push
+- [ ] Kapitel kreis: Seiten einheitskreis und bogenmass (Komponente Einheitskreis, Umrechnen, RAD/DEG); Kapitelrückblick; Push
+- [ ] Kapitel koerper: Recap koerper/start (Prisma, Grundkörper, Pythagoras) und Seite zylinder
+- [ ] Kapitel koerper: Seiten pyramide-kegel (Komponente Umschuetten) und kugel; Push
+- [ ] Kapitel koerper: Recap dreiecke-start, Seiten schulhof und vielecke; Kapitelrückblick; Push
+- [ ] Content-Guide .agents/skills/app-content/SKILL.md vollständig; Glossar (Fachbegriffe aus den Recaps); Katalogeintrag-Entwurf
+- [ ] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review einarbeiten; lernapps check grün; Vorschau-PR öffnen (nicht mergen)
+<!-- tasks: pages (8 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.
 - [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
