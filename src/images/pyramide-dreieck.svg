@@ -12,8 +12,8 @@
   <line x1="122" y1="20" x2="122" y2="125" stroke="#1a56c4" stroke-width="2.5" stroke-dasharray="6 3" />
   <line x1="122" y1="125" x2="100" y2="140" stroke="#1a56c4" stroke-width="2.5" />
   <line x1="122" y1="20" x2="100" y2="140" stroke="#1a56c4" stroke-width="2.5" />
-  <path d="M122,115 H132 V125" fill="none" stroke="#222" stroke-width="1.2" />
+  <path d="M122,115 H112 V125" fill="none" stroke="#222" stroke-width="1.2" />
   <text x="130" y="75" font-size="14" fill="#222" font-family="sans-serif">h</text>
-  <text x="96" y="155" font-size="13" fill="#222" font-family="sans-serif">a : 2</text>
-  <text x="14" y="90" font-size="13" fill="#222" font-family="sans-serif">Seitenhöhe</text>
+  <text x="82" y="156" font-size="13" fill="#222" font-family="sans-serif">a : 2</text>
+  <text x="40" y="108" font-size="13" fill="#222" font-family="sans-serif">Seitenhöhe</text>
 </svg>

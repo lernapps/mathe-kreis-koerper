@@ -1,18 +1,16 @@
 <script setup lang="ts">
 // The unit circle (radius 1). A slider sets the angle in steps of 15°; the arc it cuts out is drawn thick, and the text
-// gives its length: the angle in radians, as a decimal number and as a multiple of π. The point P at the end of the arc
-// is marked with its two coordinates. Logic in Einheitskreis.ts. It shows and checks nothing: the exercises stand below.
+// gives its length: the angle in radians, as a decimal number and as a multiple of π. The point P at the end of the arc is marked. Logic in Einheitskreis.ts. It shows and checks nothing: the exercises stand below.
 import { computed, ref } from "vue";
-import { WINKEL, bildPunkt, bogenPfad, bogen, exakt, exaktWorte, punkt, zahl } from "./Einheitskreis.ts";
+import { WINKEL, bildPunkt, bogenPfad, bogen, exakt, exaktWorte, zahl } from "./Einheitskreis.ts";
 
 const props = defineProps<{
   /** The label of the slider. */
   label: string;
   /** The sentence for the arc: "Winkel {grad}°: Bogenlänge {bogen}", with {grad} and {bogen}. */
   ergebnis: string;
-  /** The words before the multiple of π ("Als Vielfaches von π:") and before the coordinates of P. */
+  /** The words before the multiple of π ("Als Vielfaches von π:"). */
   exaktText: string;
-  punktText: string;
   /** What the figure shows, for screen readers, with {grad}. */
   bild: string;
 }>();
@@ -23,7 +21,6 @@ const R = 110;
 const C = 150;
 const pfad = computed(() => bogenPfad(grad.value, R, C, C));
 const p = computed(() => bildPunkt(grad.value, R, C, C));
-const koordinaten = computed(() => punkt(grad.value));
 const bruch = computed(() => exakt(grad.value));
 const oben = computed(() => (bruch.value.zaehler === 1 ? "π" : `${bruch.value.zaehler} π`));
 const worte = computed(() => exaktWorte(grad.value));
@@ -65,7 +62,7 @@ const alt = computed(() => props.bild.replace("{grad}", String(grad.value)));
       <span v-else class="ek-bruch" role="math" :aria-label="worte">
         <span class="ek-zaehler">{{ oben }}</span>
         <span class="ek-nenner">{{ bruch.nenner }}</span> </span
-      >. {{ punktText }} x = {{ zahl(koordinaten.x, 3) }}, y = {{ zahl(koordinaten.y, 3) }}.
+      >.
     </p>
   </div>
 </template>

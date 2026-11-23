@@ -52,7 +52,7 @@ blocks:
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Selbsttest: Ein Stab ist 1,5 m hoch und wirft einen Schatten von 2 m. Zur selben Zeit wirft ein Baum einen Schatten von 12 m. Wie hoch ist der Baum? Antwort: 9 m. Der Faktor ist 12 : 2 = 6, und 1,5 · 6 = 9. Die anderen Zahlen kommen von falschen Rechnungen (8 vom Teilen durch die Stabhöhe, 18 vom Malnehmen mit 12, 10,5 vom Subtrahieren).
+          Selbsttest: Ein Stab ist 1,5 m hoch und wirft einen Schatten von 2 m. Zur selben Zeit wirft ein Baum einen Schatten von 12 m. Wie hoch ist der Baum? Antwort: 9 m. Der Faktor ist 12 : 2 = 6, und 1,5 · 6 = 9. Die anderen Zahlen kommen von falschen Rechnungen (8 vom Teilen durch die Stabhöhe, 18 vom Malnehmen mit 12, 10,5 vom Subtrahieren).
       - type: text
         text: "Wenn die Antwort falsch war: Schau dir den Baustein „Strahlensätze“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/strahlensaetze/)."
   - type: section
@@ -67,6 +67,11 @@ blocks:
         formula: '\cos \alpha = \frac{\text{Ankathete}}{\text{Hypotenuse}}'
       - type: formula
         formula: '\tan \alpha = \frac{\text{Gegenkathete}}{\text{Ankathete}}'
+      - type: example
+        title: Eine Kathete
+        blocks:
+          - type: text
+            text: "Die Ankathete von α = 50° ist 6 cm lang. Die Gegenkathete ist a = 6 · tan 50° ≈ 6 · 1,192 ≈ 7,15 cm."
       - type: vue-component
         id: test-turm
         component: Kurztest
@@ -96,7 +101,7 @@ blocks:
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Selbsttest: Du stehst 20 m vor einem Turm und siehst seine Spitze unter dem Winkel 40°. Die Augenhöhe zählt nicht mit. Wie hoch ist der Turm? Antwort: 20 · tan 40° ≈ 16,8 m. Abstand und Höhe sind Ankathete und Gegenkathete, das gehört zum Tangens. 12,9 käme vom Sinus, 15,3 vom Kosinus, 23,8 vom Teilen durch den Tangens.
+          Selbsttest: Du stehst 20 m vor einem Turm und siehst seine Spitze unter dem Winkel 40°. Die Augenhöhe zählt nicht mit. Wie hoch ist der Turm? Antwort: 20 · tan 40° ≈ 16,8 m. Abstand und Höhe sind Ankathete und Gegenkathete, das gehört zum Tangens. 12,9 käme vom Sinus, 15,3 vom Kosinus, 23,8 vom Teilen durch den Tangens.
       - type: text
         text: "Wenn die Antwort falsch war: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/)."
   - type: section

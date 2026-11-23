@@ -59,7 +59,7 @@ blocks:
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Selbsttest: Ein Prisma hat als Grundfläche ein Dreieck mit dem Flächeninhalt 12 cm² und ist 5 cm hoch. Wie groß ist sein Volumen? Antwort: 60 cm³, denn V = G · h = 12 · 5. 17 cm³ käme vom Addieren, 60 cm² hat die falsche Einheit.
+          Selbsttest: Ein Prisma hat als Grundfläche ein Dreieck mit dem Flächeninhalt 12 cm² und ist 5 cm hoch. Wie groß ist sein Volumen? Antwort: 60 cm³, denn V = G · h = 12 · 5. 17 cm³ käme vom Addieren, 60 cm² hat die falsche Einheit.
       - type: vue-component
         id: test-quader-oberflaeche
         component: Kurztest
@@ -89,7 +89,7 @@ blocks:
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Selbsttest: Ein Quader ist 3 cm lang, 4 cm breit und 5 cm hoch. Wie groß ist seine Oberfläche? Antwort: 94 cm², denn 2 · (3 · 4 + 3 · 5 + 4 · 5) = 2 · 47. 60 wäre die Zahl des Volumens, 47 nur die Hälfte der Seiten.
+          Selbsttest: Ein Quader ist 3 cm lang, 4 cm breit und 5 cm hoch. Wie groß ist seine Oberfläche? Antwort: 94 cm², denn 2 · (3 · 4 + 3 · 5 + 4 · 5) = 2 · 47. 60 wäre die Zahl des Volumens, 47 nur die Hälfte der Seiten.
       - type: text
         text: "Wenn die Antwort falsch war: Schau dir den Baustein „Volumen und Oberfläche: Prisma“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/volumen-oberflaeche-prisma/)."
   - type: section
@@ -127,7 +127,7 @@ blocks:
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Selbsttest: Ein rechtwinkliges Dreieck hat die Katheten 6 cm und 8 cm. Wie lang ist die Hypotenuse? Antwort: 10 cm, denn c² = 36 + 64 = 100 und c = 10. 14 wäre die Summe der Katheten, 100 ist c² ohne Wurzel, 5,3 käme vom Subtrahieren.
+          Selbsttest: Ein rechtwinkliges Dreieck hat die Katheten 6 cm und 8 cm. Wie lang ist die Hypotenuse? Antwort: 10 cm, denn c² = 36 + 64 = 100 und c = 10. 14 wäre die Summe der Katheten, 100 ist c² ohne Wurzel, 5,3 käme vom Subtrahieren.
       - type: text
         text: "Wenn die Antwort falsch war: Schau dir den Baustein „Satz des Pythagoras“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/satz-des-pythagoras/)."
   - type: section

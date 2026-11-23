@@ -1,0 +1,9 @@
+- { kante: 6, hoehe: 4, seitenhoehe: 5 }
+- { kante: 10, hoehe: 12, seitenhoehe: 13 }
+- { kante: 16, hoehe: 15, seitenhoehe: 17 }
+- { kante: 12, hoehe: 8, seitenhoehe: 10 }
+- { kante: 24, hoehe: 5, seitenhoehe: 13 }
+- { kante: 18, hoehe: 12, seitenhoehe: 15 }
+- { kante: 8, hoehe: 3, seitenhoehe: 5 }
+- { kante: 14, hoehe: 24, seitenhoehe: 25 }
+- { kante: 30, hoehe: 8, seitenhoehe: 17 }

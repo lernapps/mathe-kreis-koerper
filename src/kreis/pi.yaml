@@ -19,17 +19,17 @@ blocks:
           - [Fahrradreifen, "70 cm", "219,9 cm"]
       - type: number
         id: teller-verhaeltnis
-        text: "Wie oft passt beim Teller der Durchmesser in den Umfang? Rechne U : d und runde auf eine Stelle nach dem Komma."
-        answer: 3.1
-        tolerance: 0.01
-        explanation: "81,7 : 26 ist etwa 3,14. Der Umfang ist also gut dreimal so lang wie der Durchmesser. Das gilt auch für die Dose (23,6 : 7,5 ≈ 3,15) und die anderen Messungen."
+        text: "Wie oft passt beim Teller der Durchmesser in den Umfang? Rechne U : d und runde auf zwei Stellen nach dem Komma."
+        answer: 3.14
+        tolerance: 0.005
+        explanation: "81,7 : 26 = 3,142, gerundet 3,14. Der Umfang ist also gut dreimal so lang wie der Durchmesser. Das gilt auch für die Dose (23,6 : 7,5 ≈ 3,15) und die anderen Messungen. Die Werte weichen ein wenig voneinander ab, weil man mit Schnur und Zollstock nie ganz genau misst."
   - type: section
     id: herleitung
     title: Den Kreis von zwei Seiten einschließen
     blocks:
       - type: text
         text: |
-          Bei jedem Gegenstand kommt fast dieselbe Zahl heraus. Das ist kein Zufall. Messen mit der Schnur ist aber ungenau. Du kannst π genauer bestimmen, wenn du den Kreis **einschließt**: Du zeichnest ein Vieleck innen und eines außen, beide mit gleich langen Seiten. Eine gerade Strecke ist der kürzeste Weg zwischen zwei Punkten. Darum ist der Kreisumfang länger als der Umfang des inneren Vielecks und kürzer als der des äußeren.
+          Bei jedem Gegenstand kommt fast dieselbe Zahl heraus. Das ist kein Zufall. Messen mit der Schnur ist aber ungenau. Du kannst π genauer bestimmen, wenn du den Kreis **einschließt**: Du zeichnest ein Vieleck innen und eines außen, beide mit gleich langen Seiten. Eine gerade Strecke ist der kürzeste Weg zwischen zwei Punkten. Darum ist der Kreisumfang länger als der Umfang des inneren Vielecks. Der Kreis liegt ganz im äußeren Vieleck, und jedes Stück des Kreises ist kürzer als der Weg außen herum. Darum ist der Kreisumfang kürzer als der Umfang des äußeren Vielecks.
       - type: definition
         term: Kreiszahl π
         explanation: "π (sprich „Pi“) ist das Verhältnis von Umfang und Durchmesser eines Kreises: $\\pi = U : d$. Es ist für jeden Kreis gleich."
@@ -68,7 +68,7 @@ blocks:
         title: Die untere Grenze 3
         blocks:
           - type: text
-            text: "Ein Sechseck innen im Kreis mit dem Radius r besteht aus sechs Dreiecken mit dem Mittelpunkt als Spitze. Der Winkel dort ist 360° : 6 = 60°, und zwei Seiten jedes Dreiecks sind Radien, also gleich lang. Dann sind auch die beiden anderen Winkel je 60°, die Dreiecke sind gleichseitig. Jede Sechseckseite ist so lang wie der Radius. Der Umfang des Sechsecks ist 6 · r, der Durchmesser des Kreises 2 · r."
+            text: "Ein Sechseck innen im Kreis mit dem Radius r besteht aus sechs Dreiecken mit dem Mittelpunkt als Spitze. Der Winkel dort ist 360° : 6 = 60°, und zwei Seiten jedes Dreiecks sind Radien, also gleich lang. Die Dreiecke sind gleichschenklig, darum sind die beiden anderen Winkel gleich groß. Zusammen sind sie 180° − 60° = 120°, also je 60°. Alle drei Winkel sind 60°, die Dreiecke sind gleichseitig. Jede Sechseckseite ist so lang wie der Radius. Der Umfang des Sechsecks ist 6 · r, der Durchmesser des Kreises 2 · r."
           - type: figure
             image: images/sechseck-dreiecke.svg
             alt: Ein Kreis mit einem Sechseck innen. Sechs gestrichelte Strecken vom Mittelpunkt zu den Ecken zerlegen es in sechs Dreiecke. Eine Strecke ist mit r beschriftet, der Winkel in der Mitte mit 60 Grad.

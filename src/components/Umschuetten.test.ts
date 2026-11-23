@@ -16,4 +16,5 @@ test("the water height and the sentence", () => {
   expect(wasserHoehe(1, 90)).toBeCloseTo(30, 12);
   expect(satz(1, "{k} mal umgeschüttet, noch {rest} mal bis voll")).toBe("1 mal umgeschüttet, noch 2 mal bis voll");
   expect(satz(3, "{rest}")).toBe("0");
+  expect(satz(2, "{k} von 3, {k} mal")).toBe("2 von 3, 2 mal");
 });

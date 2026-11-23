@@ -28,7 +28,7 @@ blocks:
         title: Mit welchem Wert für π?
         blocks:
           - type: text
-            text: "In diesem Kapitel rechnest du mit π ≈ 3,14, wenn die Aufgabe es sagt. Dann ist das Ergebnis genau bestimmt. Die π-Taste deines Taschenrechners nutzt mehr Stellen. Das Ergebnis weicht dann ein wenig ab."
+            text: "In diesem Kapitel rechnest du mit π ≈ 3,14, wenn die Aufgabe es sagt. Dann ist das Ergebnis eindeutig vorgegeben. Die π-Taste deines Taschenrechners nutzt mehr Stellen. Das Ergebnis weicht dann ein wenig ab und gilt bei diesen Aufgaben als falsch."
   - type: section
     id: beispiel
     title: Der Brunnenrand
@@ -40,6 +40,8 @@ blocks:
             formula: 'U = \pi \cdot d \approx 3,14 \cdot 1,20 = 3,768'
           - type: text
             text: "Die Schnur muss etwa 3,77 m lang sein. Das passt zu den Messwerten der letzten Seite (3,77 m)."
+          - type: text
+            text: "Rückwärts: Ist der Umfang 44 cm, dann ist der Durchmesser d = U : π ≈ 44 : 3,14 ≈ 14,0 cm."
   - type: section
     id: uebung
     title: Aufgaben
@@ -91,7 +93,7 @@ blocks:
           - '$d = \frac{U}{\pi} \approx \frac{{{U}}}{3,14} = {{answer}}$'
       - type: single-choice
         id: fehler-finden
-        text: "Lena rechnet für einen Kreis mit dem Radius r = 5 cm: U = π · 5 ≈ 15,7 cm. Was ist falsch?"
+        text: "Jemand rechnet für einen Kreis mit dem Radius r = 5 cm: U = π · 5 ≈ 15,7 cm. Was ist falsch?"
         options:
           - text: "Sie hat vergessen, mit 2 zu multiplizieren."
             correct: true

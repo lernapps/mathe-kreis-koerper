@@ -37,17 +37,17 @@ blocks:
     title: Ein Drittel des Prismas
     blocks:
       - type: text
-        text: "Das Umschütten zeigt, wie das Volumen eines Kegels entsteht: ein Drittel des Zylinders mit derselben Grundfläche G und derselben Höhe h. Für die Pyramide gilt dasselbe, wenn du sie mit einem Prisma gleicher Grundfläche und Höhe vergleichst."
+        text: "Das Umschütten zeigt, wie das Volumen eines Kegels entsteht: ein Drittel des Zylinders mit derselben Grundfläche G und derselben Höhe h. Für die Pyramide gilt dasselbe, wenn du sie mit einem Prisma gleicher Grundfläche und Höhe vergleichst. Das nimmst du hier als gegeben."
       - type: formula
-        formula: 'V_{Kegel} = \frac{1}{3} \cdot \pi \cdot r^2 \cdot h'
+        formula: 'V_{\text{Kegel}} = \frac{1}{3} \cdot \pi \cdot r^2 \cdot h'
       - type: formula
-        formula: 'V_{Pyramide} = \frac{1}{3} \cdot G \cdot h'
+        formula: 'V_{\text{Pyramide}} = \frac{1}{3} \cdot G \cdot h'
   - type: section
     id: dreieck
     title: Das versteckte Dreieck im Kegel
     blocks:
       - type: text
-        text: "Für den Mantel brauchst du die **Mantellinie** s. Das ist die Strecke von der Spitze zum Rand des Grundkreises. Im Bild liegen Höhe h, Radius r und Mantellinie s in einem rechtwinkligen Dreieck. Der rechte Winkel liegt am Mittelpunkt des Grundkreises."
+        text: "Für den Mantel brauchst du die **Mantellinie** s. Der Kegel ist gerade: Seine Spitze liegt senkrecht über dem Mittelpunkt des Grundkreises. Im Bild liegen Höhe h, Radius r und Mantellinie s in einem rechtwinkligen Dreieck. Der rechte Winkel liegt am Mittelpunkt des Grundkreises."
       - type: definition
         term: Mantellinie
         explanation: "Die Mantellinie eines Kegels ist die Strecke von der Spitze zu einem Punkt am Rand des Grundkreises. Sie ist länger als die Höhe und länger als der Radius."
@@ -60,13 +60,15 @@ blocks:
       - type: formula
         formula: "s^2 = r^2 + h^2"
       - type: text
-        text: "Rollst du den Mantel ab, entsteht ein Kreisausschnitt mit dem Radius s. Sein Bogen ist so lang wie der Umfang des Grundkreises, 2 · π · r. Ein solcher Ausschnitt ist wie ein Tortenstück: Fläche gleich die Hälfte von Bogen mal Radius."
+        text: "Das ist der Satz des Pythagoras: Die Katheten sind r und h, die Hypotenuse ist s."
+      - type: text
+        text: "Rollst du den Mantel ab, entsteht ein Kreisausschnitt mit dem Radius s. Sein Bogen ist so lang wie der Umfang des Grundkreises, 2 · π · r. Für seine Fläche gilt dasselbe wie bei den Tortenstücken auf der Seite „Die Fläche des Kreises“: Fläche gleich die Hälfte von Bogen mal Radius."
       - type: formula
         formula: 'M = \frac{1}{2} \cdot 2 \pi r \cdot s = \pi \cdot r \cdot s'
       - type: formula
         formula: 'O = \pi \cdot r^2 + \pi \cdot r \cdot s'
       - type: text
-        text: "Bei der Pyramide steckt das Dreieck ebenso im Körper. Der Boden ist hier ein Quadrat mit der Kante a. Die Höhe h trifft die Mitte des Bodens. Von dort geht eine Strecke der Länge a : 2 zur Mitte einer Kante. Die Seitenhöhe $h_s$ geht von der Spitze zur Mitte dieser Kante, sie ist die Hypotenuse."
+        text: "Bei der Pyramide steckt das Dreieck ebenso im Körper. Die Pyramide ist gerade und ihr Boden ein Quadrat mit der Kante a. Die Höhe h trifft die Mitte des Bodens. Von dort geht eine Strecke der Länge a : 2 zur Mitte einer Kante. Die **Seitenhöhe** $h_s$ geht von der Spitze zur Mitte dieser Kante, sie ist die Hypotenuse."
       - type: figure
         image: images/pyramide-dreieck.svg
         alt: "Eine Pyramide mit quadratischer Grundfläche. Die gestrichelte Höhe, die halbe Grundkante und die Seitenhöhe bilden ein blau markiertes rechtwinkliges Dreieck."
@@ -173,6 +175,28 @@ blocks:
         hint: "Die Grundfläche ist a · a. Das Volumen ist ein Drittel von Grundfläche mal Höhe."
         steps:
           - '$V = \frac{1}{3} \cdot G \cdot h = \frac{1}{3} \cdot {{a}}^2 \cdot {{h}} = {{answer}}$'
+      - type: generated
+        id: pyramide-oberflaeche
+        given:
+          p: { pick: 1, from: { data: pyramiden } }
+        task:
+          text: "Eine gerade Pyramide hat ein Quadrat mit der Kante a = {{p.kante}} cm als Grundfläche und die Höhe h = {{p.hoehe}} cm. Berechne ihre Oberfläche. Die Seitenhöhe kommt als ganze Zahl heraus."
+        answer:
+          {
+            value: "p.kante * p.kante + 2 * p.kante * p.seitenhoehe",
+            compare: { number: { decimals: 0, tolerance: 0, unit: cm² } },
+          }
+        mistakes:
+          - value: "2 * p.kante * p.seitenhoehe"
+            message: "Du hast nur den Mantel gerechnet. Das Quadrat am Boden fehlt."
+          - value: "p.kante * p.kante + 2 * p.kante * p.hoehe"
+            message: "Du hast die Höhe statt der Seitenhöhe in den Mantel eingesetzt. Die Dreiecke des Mantels haben die Seitenhöhe als Höhe."
+          - value: "p.kante * p.kante + 4 * p.kante * p.seitenhoehe"
+            message: "Jedes Mantel-Dreieck hat die Fläche ein halb mal a mal Seitenhöhe. Du hast das Halbieren vergessen."
+        hint: "Erst die Seitenhöhe: h² plus (a : 2)², dann die Wurzel. Dann O = a² + 2 · a · Seitenhöhe."
+        steps:
+          - '$h_s^2 = {{p.hoehe}}^2 + \left( \frac{{{p.kante}}}{2} \right)^2$'
+          - "Die Seitenhöhe ist {{p.seitenhoehe}} cm. Dann ist die Oberfläche {{answer}} cm²."
       - type: number
         id: seitenhoehe
         text: "Eine Pyramide hat ein Quadrat mit der Kante a = 10 cm als Grundfläche und die Höhe h = 12 cm. Wie lang ist die Seitenhöhe?"

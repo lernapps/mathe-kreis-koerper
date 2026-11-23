@@ -16,5 +16,9 @@ export function wasserHoehe(k: number, h: number): number {
 
 /** The sentence under the figure, with {k} for the pourings and {rest} for the pourings still needed. */
 export function satz(k: number, vorlage: string): string {
-  return vorlage.replace("{k}", String(k)).replace("{rest}", String(3 - Math.min(Math.max(k, 0), 3)));
+  return vorlage
+    .split("{k}")
+    .join(String(k))
+    .split("{rest}")
+    .join(String(3 - Math.min(Math.max(k, 0), 3)));
 }

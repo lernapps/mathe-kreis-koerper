@@ -21,7 +21,7 @@ blocks:
     title: Ein Prisma mit einem Kreis
     blocks:
       - type: text
-        text: "Ein **Zylinder** ist ein Prisma, dessen Grundfläche ein Kreis ist. Mit dem Radius r hat die Grundfläche den Flächeninhalt π · r². Das Volumen ist wieder Grundfläche mal Höhe."
+        text: "Ein **Zylinder** ist wie ein Prisma, nur mit einem Kreis als Grundfläche. Mit dem Radius r hat die Grundfläche den Flächeninhalt π · r². Das Volumen ist wieder Grundfläche mal Höhe."
       - type: formula
         formula: 'V = G \cdot h = \pi \cdot r^2 \cdot h'
       - type: definition
@@ -49,9 +49,13 @@ blocks:
         title: "Radius 4 cm, Höhe 10 cm"
         blocks:
           - type: formula
-            formula: 'V = \pi \cdot r^2 \cdot h \approx 3,14 \cdot 16 \cdot 10 = 502,4'
+            formula: 'V = \pi \cdot r^2 \cdot h'
           - type: formula
-            formula: 'M = 2 \cdot \pi \cdot r \cdot h \approx 2 \cdot 3,14 \cdot 4 \cdot 10 = 251,2'
+            formula: 'V \approx 3,14 \cdot 16 \cdot 10 = 502,4'
+          - type: formula
+            formula: 'M = 2 \cdot \pi \cdot r \cdot h'
+          - type: formula
+            formula: 'M \approx 2 \cdot 3,14 \cdot 4 \cdot 10 = 251,2'
           - type: formula
             formula: 'O = 2 \cdot 3,14 \cdot 16 + 251,2'
           - type: formula
@@ -147,8 +151,7 @@ blocks:
         text: "Bringe die Schritte zur Oberfläche eines Zylinders in die richtige Reihenfolge."
         items:
           - Radius r und Höhe h ablesen
-          - Die Grundfläche π · r² berechnen
-          - Den Mantel 2 · π · r · h berechnen
+          - Grundfläche π · r² und Mantel 2 · π · r · h berechnen
           - Zwei Grundflächen und den Mantel addieren
         explanation: "Erst die Maße, dann die einzelnen Flächen, zuletzt die Summe. Die Grundfläche brauchst du zweimal, für Boden und Deckel."
       - type: text

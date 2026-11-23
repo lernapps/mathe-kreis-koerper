@@ -8,7 +8,7 @@ phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 4
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: { accessible: 7, checks-pass: 5 }
+failedChecks: { accessible: 7, checks-pass: 6 }
 ---
 
 # Plan: mathe-kreis-koerper, first version
@@ -275,7 +275,7 @@ Alle Rückmeldungen mit Grund; wo Brüche in Rückmeldungen nötig sind: `a/b` u
 - [x] Kapitel koerper: Seiten pyramide-kegel (Komponente Umschuetten) und kugel; Push
 - [x] Kapitel koerper: Recap dreiecke-start, Seiten schulhof und vielecke; Kapitelrückblick; Push
 - [x] Content-Guide .agents/skills/app-content/SKILL.md vollständig; Glossar (Fachbegriffe aus den Recaps); Katalogeintrag-Entwurf
-- [ ] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review einarbeiten; lernapps check grün; Vorschau-PR öffnen (nicht mergen)
+- [x] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review einarbeiten; lernapps check grün; Vorschau-PR öffnen (nicht mergen)
 <!-- tasks: pages (8 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.
@@ -351,6 +351,17 @@ Alle diese Änderungen nach dem Prüferlauf sind nicht erneut vom Lernenden-Prü
 Nicht geändert (Laufzeit, in den Bericht): Standardrückmeldung ohne Fehlertyp bei Zahlen/Wahr-Falsch (W13/W39), „Antworte zuerst“ bei Textfeld
 (W6/W11), „.:“ bei Auswahl-Rückmeldung (W43), „Neue Aufgabe“ nur Symbol (W5), Startnummer zufällig (W12), „erlaubte Abweichung“ in der
 Lösung nach richtiger Antwort mit Toleranz (neu), Punkt als Dezimalzeichen wird akzeptiert (gewollt).
+
+
+### Lernenden-Prüfer (ganze App, 16 Seiten, 360/1280 px, unabhängiger Unteragent)
+Umgesetzt: Platzhalter `{k}` im Umschütten (ersetzt nur das erste Vorkommen); Formelzeilen im Zylinder-Beispiel geteilt (abgeschnitten bei 360 px); `114{,}6`; Aufgabe Bogen länger als Kreis (`b < 6 · r`); Einheitskreis ohne Koordinaten von P (unerklärt, Abgrenzung #396); Vollwinkel und Vielfaches von π erklärt; Torte: Farben erklärt, Breite mit π verbunden; Radius und Durchmesser im Recap; Rückwärtsrechnen in Umfang- und Flächenseite mit Beispiel; Pyramiden-Oberfläche und Winkel-Aufgabe (`mast-winkel`) neu; Trigonometrie-Beispiel im Recap; doppelte Sätze auf der Kegelseite gekürzt, Pythagoras genannt; Figuren: rechte Winkel, 36°-Bogen, Lage der Beschriftungen, Augenhöhe, Kugelbild maßgleich.
+Nicht umgesetzt: Rohkennungen „mathematik/…“ im Recap-Text und Silbentrennung „Bo-gen“ (Laufzeit); Standardrückmeldung bei number/true-false (W13/W39); Symbolkonflikte (d, s, M in verschiedenen Kapiteln): in den Seiten jeweils im Text erklärt, nicht vereinheitlicht; Bogenmaß im Kap. 2 nicht erneut verwendet (Karte: nur Baustein, #396 knüpft an); Recap prüft nicht Winkelsumme, Wurzel, Umstellen (nicht in den `requires` der Karte).
+
+### Fachlicher Prüfer (ganze App, alle Aufgaben nachgerechnet, 7 Sätze per Websuche)
+Umgesetzt: F1 Bogen länger als Kreis; F2 „Höhe ist immer r“; M1 Kugelbild; M2 „Oberstufe“ gestrichen, Oberfläche als gegeben; M3 gerader Kegel/Pyramide, Seitenhöhe fett, Pyramide als gegeben; M4 Fünfeck 59,4 mit Hinweis; M5 drei Texte; M6 Ordering; M7 Argument äußeres Vieleck; M8 Basiswinkel; M9 „eindeutig“; M10 „Länge der oberen Kante“; M11 Teller auf zwei Stellen (3,14), Hinweis auf Messabweichung; M12 Fehlerwert `n · 180`, „knapp fünf Umdrehungen“; M13 Rampe; M14 Figuren; S1 geschützte Leerzeichen in `nojs`; S2 `π : 6`; S4 `\text{…}` in Indizes; S5 „Lena“ → „Jemand“; A1 Koordinaten entfernt; A2 Pyramidenoberfläche und Winkel-Aufgabe; H1 π-Taste im Hinweis; H4 „wie ein Prisma“; H5 Wertebereiche kleiner.
+Nicht umgesetzt: S3 Bogenmaß in `matching` als Bruch gesetzt (Formeln in `matching` erscheinen roh, W43); S6 Kartenlinks der Recaps (verlangt von regeln.md 7.3); H2/H3 (Laufzeit / Niveau der Recap-Tests bleibt); A3 Strahlensatz mit parallelen Sonnenstrahlen (Hinweis).
+Verbatim-Stichprobe: sieben Sätze und die Strahlensatz-Definition gesucht, keine wörtliche Übernahme gefunden.
+Nach den beiden Prüferläufen geändert und **nicht erneut geprüft**: alle oben genannten Textänderungen, die neuen Aufgaben `pyramide-oberflaeche` und `mast-winkel` samt Datei `pyramiden.yaml`, die geänderten Figuren, die Aufgabe `teller-verhaeltnis` (jetzt zwei Stellen). Inhaltliche Änderungen daran prüft der fachliche Prüfer noch einmal (Plan: vor „Veröffentlichen“).
 
 ## Retrospective
 

@@ -33,7 +33,7 @@ blocks:
         title: Der Taschenrechner
         blocks:
           - type: text
-            text: "Dein Taschenrechner hat einen Modus für Winkel: DEG für Grad, RAD für Bogenmaß. Rechnest du sin(30) und erhältst −0,988, steht er auf RAD. Auf DEG ist sin(30) = 0,5. Mit π/6 und Modus RAD kommt ebenfalls 0,5 heraus."
+            text: "Dein Taschenrechner hat einen Modus für Winkel: DEG für Grad, RAD für Bogenmaß. Rechnest du sin(30) und erhältst −0,988, steht er auf RAD. Auf DEG ist sin(30) = 0,5. Mit π : 6 und Modus RAD kommt ebenfalls 0,5 heraus."
   - type: section
     id: beispiel
     title: Hin und zurück
@@ -44,7 +44,7 @@ blocks:
           - type: formula
             formula: 'x = 225^\circ \cdot \frac{\pi}{180^\circ} = \frac{225}{180}\,\pi = \frac{5}{4}\,\pi \approx 3,93'
           - type: formula
-            formula: '\alpha = 2 \cdot \frac{180^\circ}{\pi} \approx 114,6^\circ'
+            formula: '\alpha = 2 \cdot \frac{180^\circ}{\pi} \approx 114{,}6^\circ'
           - type: text
             text: "225° sind also fünf Viertel von π im Bogenmaß. Das Bogenmaß 2 gehört zu einem Winkel von etwa 114,6°. Das ist nicht 2 als Gradzahl."
   - type: section
@@ -91,8 +91,8 @@ blocks:
         mistakes:
           - value: "n * 60"
             message: "Du hast π mit 360° gleichgesetzt. π entspricht aber 180°."
-          - value: "n * 6"
-            message: "Du hast die Zahl 6 stehen lassen. π : 6 ist 180° : 6 = 30°, also n mal 30°."
+          - value: "n * 180"
+            message: "Du hast π durch 180° ersetzt, aber das Teilen durch 6 vergessen. π : 6 ist 180° : 6 = 30°, also n mal 30°."
         hint: "π entspricht 180°. Dann ist π : 6 gleich 180° : 6."
         steps:
           - '$x = {{n}} \cdot 30^\circ = {{answer}}^\circ$'
@@ -102,7 +102,7 @@ blocks:
         options:
           - text: "Der Rechner steht auf RAD."
             correct: true
-            info: "Im Modus RAD ist 30 ein Bogenmaß, also viele Umdrehungen. Der Sinus davon ist −0,988. Für 30° brauchst du den Modus DEG."
+            info: "Im Modus RAD ist 30 ein Bogenmaß, also knapp fünf Umdrehungen. Der Sinus davon ist −0,988. Für 30° brauchst du den Modus DEG."
           - text: "Der Rechner steht auf DEG."
             correct: false
             info: "Im Modus DEG rechnet der Rechner mit Grad und liefert sin(30°) = 0,5."

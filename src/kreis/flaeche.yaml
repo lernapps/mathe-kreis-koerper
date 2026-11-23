@@ -28,7 +28,7 @@ blocks:
     title: Aus Tortenstücken wird ein Rechteck
     blocks:
       - type: text
-        text: "Schneide den Kreis in gleich große Tortenstücke. Lege sie abwechselnd nebeneinander, eines mit der Spitze nach oben, das nächste nach unten. Mit dem Regler änderst du die Zahl der Stücke, der Knopf legt sie um."
+        text: "Schneide den Kreis in gleich große Tortenstücke. Lege sie abwechselnd nebeneinander, eines mit der Spitze nach oben, das nächste nach unten. Mit dem Regler änderst du die Zahl der Stücke, der Knopf legt sie um. Die Stücke sind abwechselnd rosa mit gestricheltem Rand und grau, damit du sie auseinanderhältst."
       - type: vue-component
         id: torte
         component: Torte
@@ -36,18 +36,18 @@ blocks:
           label: Anzahl der Stücke
           umlegen: Stücke umlegen
           zurueck: Zurück zum Kreis
-          ergebnis: "Bei {n} Stücken ist die Figur etwa {b} · r breit und r hoch."
+          ergebnis: "Bei {n} Stücken ist die Figur etwa {b} · r breit und fast r hoch. Je mehr Stücke, desto näher kommt die Breite an π · r ≈ 3,14 · r."
           bildKreis: "Ein Kreis, in {n} gleich große Stücke geteilt."
           bildRechteck: "Die {n} Stücke nebeneinander, abwechselnd mit der Spitze nach oben und nach unten. Die Figur ist fast ein Rechteck."
         nojs: |
-          Ein Kreis mit dem Radius r wird in n gleich große Stücke geteilt. Die Stücke liegen abwechselnd mit der Spitze nach oben und nach unten nebeneinander. Je mehr Stücke es sind, desto mehr sieht die Figur wie ein Rechteck aus. Ihre Breite (oben und unten zusammen) in Vielfachen von r:
+          Ein Kreis mit dem Radius r wird in n gleich große Stücke geteilt. Die Stücke liegen abwechselnd mit der Spitze nach oben und nach unten nebeneinander. Je mehr Stücke es sind, desto mehr sieht die Figur wie ein Rechteck aus. Die Länge der oberen Kante in Vielfachen von r (sie wird immer näher an π · r):
 
           - 4 Stücke: 2,828 · r.
           - 8 Stücke: 3,061 · r.
           - 16 Stücke: 3,121 · r.
           - 32 Stücke: 3,137 · r.
 
-          Die Höhe ist immer r.
+          Die Höhe ist etwas kleiner als r und kommt mit mehr Stücken immer näher an r.
       - type: text
         text: "Die Figur ist fast ein Rechteck. Seine Höhe ist der Radius r. Seine Breite ist die Hälfte des Kreisumfangs, denn oben liegt der halbe Rand und unten der andere halbe Rand. Mit U = 2 · π · r ist die Breite also π · r. Die Fläche des Rechtecks ist Breite mal Höhe."
       - type: formula
@@ -68,6 +68,8 @@ blocks:
             formula: 'A \approx 3,14 \cdot 10^2 = 314'
           - type: text
             text: "Die Torte hat eine Fläche von etwa 314 cm². Das liegt zwischen 200 cm² und 400 cm², wie geschätzt."
+          - type: text
+            text: "Rückwärts geht es so: Aus A = π · r² folgt r² = A : π. Dann ziehst du die Wurzel. Aus A = 314 cm² wird r² = 100 und r = 10 cm."
   - type: section
     id: uebung
     title: Aufgaben

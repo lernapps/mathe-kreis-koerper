@@ -21,6 +21,9 @@ blocks:
       - type: definition
         term: Umfang
         explanation: "Der Umfang ist die Länge des Randes einer Figur. Bei einem Rechteck ist er $U = 2 \\cdot (a + b)$, die Einheit ist zum Beispiel cm."
+      - type: definition
+        term: Radius und Durchmesser
+        explanation: "Beim Kreis ist der Radius $r$ der Abstand vom Mittelpunkt zum Rand. Der Durchmesser $d$ geht durch den Mittelpunkt von Rand zu Rand und ist doppelt so lang: $d = 2 \\cdot r$. Ein Kreis mit $r = 3$\u00a0cm hat $d = 6$\u00a0cm."
       - type: example
         title: Ein Beet
         blocks:
@@ -47,7 +50,7 @@ blocks:
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Selbsttest: Ein rechteckiges Beet ist 12 m lang und 7,5 m breit. Wie groß ist sein Flächeninhalt? Antwort: 90 m². Denn 12 · 7,5 = 90, und eine Fläche hat die Einheit m². 39 m wäre der Umfang, 19,5 m² käme vom Addieren statt Multiplizieren.
+          Selbsttest: Ein rechteckiges Beet ist 12 m lang und 7,5 m breit. Wie groß ist sein Flächeninhalt? Antwort: 90 m². Denn 12 · 7,5 = 90, und eine Fläche hat die Einheit m². 39 m wäre der Umfang, 19,5 m² käme vom Addieren statt Multiplizieren.
       - type: text
         text: "Wenn die Antwort falsch war: Schau dir den Baustein „Fläche und Umfang: Rechteck, Quadrat“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/flaeche-umfang-quadrat-rechteck/)."
   - type: section
@@ -169,12 +172,12 @@ blocks:
             - {
                 text: "3 cm",
                 correct: false,
-                info: "Ein Winkel von 30° bedeutet nicht 30 % von 10. Du brauchst den Sinus von 30°, und der ist 0,5.",
+                info: "Ein Winkel von 30° bedeutet nicht 30 % von 10. Du brauchst den Sinus von 30°, und der ist 0,5.",
               }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Selbsttest: Ein rechtwinkliges Dreieck hat die Hypotenuse 10 cm und den Winkel α = 30°. Wie lang ist die Gegenkathete von α? Antwort: 5 cm, denn 10 · sin 30° = 10 · 0,5 = 5. 8,7 cm wäre die Ankathete (Kosinus).
+          Selbsttest: Ein rechtwinkliges Dreieck hat die Hypotenuse 10 cm und den Winkel α = 30°. Wie lang ist die Gegenkathete von α? Antwort: 5 cm, denn 10 · sin 30° = 10 · 0,5 = 5. 8,7 cm wäre die Ankathete (Kosinus).
       - type: vue-component
         id: test-winkel
         component: Kurztest
@@ -204,7 +207,7 @@ blocks:
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Selbsttest: In einem rechtwinkligen Dreieck ist die Gegenkathete von α 3 cm lang und die Ankathete 4 cm. Wie findest du α? Antwort: tan α = 3 : 4 = 0,75, also α = tan⁻¹(0,75) ≈ 36,9°. Der Sinus bräuchte die Hypotenuse, und 4 : 3 wäre mit vertauschten Seiten gerechnet.
+          Selbsttest: In einem rechtwinkligen Dreieck ist die Gegenkathete von α 3 cm lang und die Ankathete 4 cm. Wie findest du α? Antwort: tan α = 3 : 4 = 0,75, also α = tan⁻¹(0,75) ≈ 36,9°. Der Sinus bräuchte die Hypotenuse, und 4 : 3 wäre mit vertauschten Seiten gerechnet.
       - type: text
         text: "Wenn die Antwort falsch war: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/)."
   - type: section

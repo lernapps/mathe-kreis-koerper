@@ -12,6 +12,6 @@
   <line x1="120" y1="20" x2="190" y2="135" stroke="#1a56c4" stroke-width="2.5" />
   <path d="M120,123 H132 V135" fill="none" stroke="#222" stroke-width="1.2" />
   <text x="104" y="82" font-size="14" fill="#222" font-family="sans-serif">h</text>
-  <text x="152" y="152" font-size="14" fill="#222" font-family="sans-serif">r</text>
+  <text x="160" y="128" font-size="14" fill="#222" font-family="sans-serif">r</text>
   <text x="164" y="76" font-size="14" fill="#222" font-family="sans-serif">s</text>
 </svg>

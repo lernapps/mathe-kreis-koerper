@@ -71,7 +71,7 @@ blocks:
       - type: generated
         id: baumhoehe
         given:
-          d: { int: [10, 30], step: 1 }
+          d: { int: [10, 25], step: 1 }
           alpha: { oneOf: [25, 30, 35, 40, 50] }
         task:
           text: "Du stehst {{d}} m vor einem Baum und misst den Winkel {{alpha}}° zur Spitze. Deine Augen sind 1,6 m über dem Boden. Wie hoch ist der Baum? Runde auf eine Stelle nach dem Komma."
@@ -125,6 +125,24 @@ blocks:
         steps:
           - '$\frac{{{S}}}{{{k}}}$ ist der Faktor.'
           - "Mast: {{L}} mal Faktor = {{answer}} m."
+      - type: generated
+        id: mast-winkel
+        given:
+          d: { int: [10, 30], step: 1 }
+          h: { int: [4, 9], step: 1 }
+        where: ["h != d"]
+        task:
+          text: "Du stehst {{d}} m vor einem Mast. Seine Spitze liegt {{h}} m über deiner Augenhöhe. Unter welchem Winkel zur Waagerechten siehst du die Spitze? Runde auf eine Stelle nach dem Komma."
+        answer: { value: "round(atan(h / d), 1)", compare: { number: { decimals: 1, tolerance: 0.1, unit: "°" } } }
+        mistakes:
+          - value: "round(atan(d / h), 1)"
+            message: "Du hast die Seiten vertauscht. Der Tangens ist Gegenkathete durch Ankathete, hier also Höhe durch Abstand."
+          - value: "round(h / d, 1)"
+            message: "Das ist der Wert von tan α, nicht der Winkel. Den Winkel bekommst du mit der Umkehrfunktion tan⁻¹ (Modus DEG)."
+        hint: "Höhe und Abstand sind Gegenkathete und Ankathete von α. Dann ist tan α = Höhe : Abstand."
+        steps:
+          - '$\tan \alpha = \frac{{{h}}}{{{d}}}$'
+          - "Mit tan⁻¹ ergibt das {{answer}}°."
       - type: number
         id: leiter
         text: "Eine 4 m lange Leiter lehnt an einer Wand. Ihr Fuß steht 1,2 m von der Wand entfernt. Wie hoch reicht die Leiter an der Wand? Runde auf eine Stelle nach dem Komma."
@@ -134,7 +152,7 @@ blocks:
         explanation: "Das Dreieck aus Leiter, Wand und Boden ist rechtwinklig, die Leiter ist die Hypotenuse. Es gilt h² = 4² − 1,2² = 16 − 1,44 = 14,56. Die Wurzel ist etwa 3,8 m."
       - type: single-choice
         id: rampe
-        text: "Eine 5 m lange Rampe steigt unter dem Winkel 12°. Du suchst die Höhe, die sie überwindet. Welches Verfahren passt?"
+        text: "Eine Rampe ist entlang der Schräge 5 m lang und steigt unter dem Winkel 12°. Du suchst die Höhe, die sie überwindet. Welches Verfahren passt?"
         options:
           - text: "Sinus"
             correct: true

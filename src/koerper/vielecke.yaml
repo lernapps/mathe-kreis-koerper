@@ -59,7 +59,7 @@ blocks:
           - type: formula
             formula: 'A = 5 \cdot \frac{1}{2} \cdot 5,88 \cdot 4,05 \approx 59,4'
           - type: text
-            text: "Die Seite ist etwa 5,88 cm lang, das Apothem 4,05 cm, die Fläche etwa 59,4 cm². Der Innenwinkel ist 180° − 72° = 108°."
+            text: "Die Seite ist etwa 5,88 cm lang, das Apothem 4,05 cm, die Fläche etwa 59,4 cm². (Mit den hier gerundeten Werten 5,88 und 4,05 kommt 59,5 heraus. Mit den genauen Zwischenwerten ist es 59,4.) Der Innenwinkel ist 180° − 72° = 108°."
       - type: note
         title: Vom Vieleck zum Kreis
         blocks:
@@ -81,7 +81,7 @@ blocks:
             message: "Das ist der Winkel bei M im Teildreieck, nicht der Innenwinkel des Vielecks. Der Innenwinkel ist 180° minus dieser Winkel."
           - value: "180 / n"
             message: "Das ist der halbe Winkel bei M. Der Innenwinkel ist 180° − 360° : n."
-        hint: "An jeder Ecke ergeben der Innenwinkel und der Winkel bei M zusammen mit dem Dreieck 180°."
+        hint: "Der Innenwinkel und der Winkel bei M im Teildreieck, 360° : n, ergeben zusammen 180°."
         steps:
           - '$180^\circ - 360^\circ : {{n}} = {{answer}}^\circ$'
       - type: generated
@@ -97,7 +97,7 @@ blocks:
           - value: "round(r * sin(180 / n), 2)"
             message: "Das ist die halbe Seite a : 2. Die Seite ist doppelt so lang: a = 2 · r · sin(180° : n)."
           - value: "round(2 * r * sin(360 / n), 2)"
-            message: "Im rechtwinkligen Dreieck gehört der halbe Winkel 180° : n zur Hypotenuse r, nicht 360° : n."
+            message: "Im rechtwinkligen Dreieck ist der Winkel bei M nur halb so groß wie im Teildreieck: 180° : n, nicht 360° : n."
         hint: "Im rechtwinkligen Dreieck ist r die Hypotenuse und a : 2 die Gegenkathete zu 180° : n."
         steps:
           - '$a = 2 \cdot r \cdot \sin \frac{180^\circ}{n} = 2 \cdot {{r}} \cdot \sin \frac{180^\circ}{{{n}}} = {{answer}}$'
@@ -141,7 +141,7 @@ blocks:
             info: "Dieses Dreieck ist nicht rechtwinklig, du kannst den Sinus nicht direkt benutzen. Erst halbieren, dann hast du einen rechten Winkel."
           - text: "Im Dreieck aus drei Ecken des Vielecks"
             correct: false
-            info: "Auch dieses Dreieck ist im Allgemeinen nicht rechtwinklig und enthält keine bekannte Größe wie r."
+            info: "Auch dieses Dreieck ist im Allgemeinen nicht rechtwinklig und hat r nicht als Seite, und du kennst keinen Winkel darin."
         explanation: "Das versteckte rechtwinklige Dreieck entsteht, wenn du das Teildreieck mit seiner Höhe halbierst. Der Winkel dort ist 180° : n."
       - type: text
         text: "**Das kannst du jetzt:** Du findest in einem regelmäßigen Vieleck das rechtwinklige Dreieck und berechnest Seite, Winkel und Fläche. Am Ende dieses Kapitels hast du Umfang, Fläche und Volumen von runden Körpern berechnet und Strecken und Winkel in Dreiecken. Immer hat dir das versteckte Dreieck oder das Annähern geholfen."
