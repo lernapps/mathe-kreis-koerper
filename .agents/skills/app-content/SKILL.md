@@ -95,4 +95,5 @@ reicht. 5. `npx vp check --fix`, `npx vp build`, `npx --no -- lernapps check`. 6
 - Beim Ziehen von Zufallswerten prüfen, dass kein `mistakes`-Wert für einen gezogenen Wert gleich der Antwort ist (zum Beispiel U = A bei r = 2); Wertebereich verengen.
 - Lange Formeln in einem Beispielkasten in zwei `formula`-Blöcke teilen (axe: scrollbarer Bereich bei 360 px).
 - Eine Formel höchstens etwa 45 Zeichen lang (360 px); `\qquad`-Doppelformeln teilen; sonst axe `scrollable-region-focusable`.
+- Indizes in Formeln als `V_{Kegel}`, nicht `V_{\text{Kegel}}` (die Laufzeit zeigt sonst „ext“).
 - Im Formeltext `3,14` statt `3{,}14`; einzige Ausnahme `114{,}6^\circ`, weil ein Komma vor `^\circ` sonst einen Leerraum erzeugt.

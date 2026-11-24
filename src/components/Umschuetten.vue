@@ -29,10 +29,9 @@ function giessen(): void {
 <template>
   <div class="umschuetten">
     <svg viewBox="0 0 300 130" role="img" :aria-label="alt" class="us-bild">
-      <!-- the cone, tip down; it is empty after the first pouring -->
+      <!-- the cone, tip down; it is filled again before every pouring -->
       <polygon points="30,20 130,20 80,110" fill="none" stroke="var(--page-text)" stroke-width="1.5" />
       <polygon
-        v-if="k === 0"
         points="30,20 130,20 80,110"
         fill="var(--page-accent)"
         fill-opacity="0.45"

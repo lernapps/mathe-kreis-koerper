@@ -15,7 +15,7 @@ blocks:
     title: "Volumen und Oberfläche: Prisma"
     blocks:
       - type: text
-        text: "Der Baustein: Ich kann Volumen und Oberflächeninhalt von Prismen berechnen."
+        text: "Der Baustein: Ich kann Volumen und Oberflächeninhalt von Prismen berechnen. Du brauchst es, weil du den Zylinder ähnlich rechnest wie ein Prisma."
       - type: definition
         term: Prisma
         explanation: "Ein Prisma hat zwei gleiche Vielecke als Grundfläche und Deckfläche. Sie liegen parallel, und die Seitenflächen sind Rechtecke. Ein Quader ist ein Prisma mit einem Rechteck als Grundfläche."
@@ -54,7 +54,7 @@ blocks:
     title: Satz des Pythagoras
     blocks:
       - type: text
-        text: "Der Baustein: Ich kann mit dem Satz des Pythagoras und seiner Umkehrung Streckenlängen berechnen und rechte Winkel prüfen."
+        text: "Der Baustein: Ich kann mit dem Satz des Pythagoras und seiner Umkehrung Streckenlängen berechnen und rechte Winkel prüfen. Du brauchst es, weil in Kegel und Pyramide rechtwinklige Dreiecke stecken."
       - type: definition
         term: Satz des Pythagoras
         explanation: "In einem rechtwinkligen Dreieck mit den Katheten $a$ und $b$ und der Hypotenuse $c$ gilt $a^2 + b^2 = c^2$. Damit berechnest du aus zwei Seiten die dritte."
@@ -87,7 +87,7 @@ blocks:
     title: Pyramide, Kegel und Kugel
     blocks:
       - type: text
-        text: "Der Baustein: Ich kann Pyramide, Kegel und Kugel beschreiben und Körper aus dem Alltag in Grundkörper zerlegen."
+        text: "Der Baustein: Ich kann Pyramide, Kegel und Kugel beschreiben und Körper aus dem Alltag in Grundkörper zerlegen. Du brauchst es, um Körper schon vor dem Rechnen zu erkennen und zu zerlegen."
       - type: definition
         term: Pyramide
         explanation: "Eine Pyramide hat ein Vieleck als Grundfläche. Ihre Seitenflächen sind Dreiecke, die in einer Spitze zusammenlaufen."

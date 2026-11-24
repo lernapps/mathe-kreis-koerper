@@ -70,6 +70,7 @@ const alt = computed(() => (liegt.value ? props.bildRechteck : props.bildKreis).
   gap: 0.5rem;
 }
 .torte-regler input {
+  accent-color: var(--page-accent);
   width: 100%;
   min-height: 2.75rem;
 }

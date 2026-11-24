@@ -81,6 +81,7 @@ const alt = computed(() => props.bild.replace("{grad}", String(grad.value)));
   gap: 0.5rem;
 }
 .ek-regler input {
+  accent-color: var(--page-accent);
   width: 100%;
   min-height: 2.75rem;
 }

@@ -43,19 +43,19 @@ blocks:
       - type: text
         text: "Archimedes fand: Das Volumen der Kugel ist so groß wie der Zylinder minus der Kegel. Mit den Formeln für Zylinder und Kegel kannst du die Rechnung nachvollziehen. Der Kegel fasst ein Drittel des Zylinders, also $\\frac{1}{3} \\cdot 2\\pi r^3$."
       - type: formula
-        formula: 'V_{\text{Zylinder}} = 2 \cdot \pi \cdot r^3'
+        formula: 'V_{Zylinder} = 2 \cdot \pi \cdot r^3'
       - type: formula
-        formula: 'V_{\text{Kegel}} = \frac{1}{3} \cdot 2 \cdot \pi \cdot r^3 = \frac{2}{3} \cdot \pi \cdot r^3'
+        formula: 'V_{Kegel} = \frac{1}{3} \cdot 2 \cdot \pi \cdot r^3 = \frac{2}{3} \cdot \pi \cdot r^3'
       - type: text
         text: "Für die Kugel bleibt der Rest übrig. Das Verhältnis von Kegel, Kugel und Zylinder ist 1 zu 2 zu 3. Dieses Ergebnis nimmst du hier als gegeben. Die Begründung dafür führen wir hier nicht aus."
       - type: formula
-        formula: "V_{\text{Kugel}} = V_{\text{Zylinder}} - V_{\text{Kegel}}"
+        formula: "V_{Kugel} = V_{Zylinder} - V_{Kegel}"
       - type: formula
-        formula: 'V_{\text{Kugel}} = 2 \pi r^3 - \frac{2}{3} \pi r^3 = \frac{4}{3} \pi r^3'
+        formula: 'V_{Kugel} = 2 \pi r^3 - \frac{2}{3} \pi r^3 = \frac{4}{3} \pi r^3'
       - type: text
         text: "Auch die Oberfläche geht auf Archimedes zurück. Sie ist so groß wie der Mantel des Zylinders um die Kugel. Das nimmst du hier als gegeben. Der Mantel ist 2 · π · r mal 2 · r."
       - type: formula
-        formula: 'O_{\text{Kugel}} = 2\pi r \cdot 2r = 4 \cdot \pi \cdot r^2'
+        formula: 'O_{Kugel} = 2\pi r \cdot 2r = 4 \cdot \pi \cdot r^2'
       - type: definition
         term: Kugel (Formeln)
         explanation: "Für die Kugel mit dem Radius $r$ gilt $V = \\frac{4}{3} \\cdot \\pi \\cdot r^3$ und $O = 4 \\cdot \\pi \\cdot r^2$. Die Oberfläche ist das Vierfache der Fläche eines Kreises mit demselben Radius."

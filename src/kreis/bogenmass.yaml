@@ -37,6 +37,8 @@ blocks:
         title: Der Taschenrechner
         blocks:
           - type: text
+            text: "Wenn du einen Winkel in den Taschenrechner eingibst, musst du ihm sagen, in welchem Maß er gemeint ist."
+          - type: text
             text: "Dein Taschenrechner hat einen Modus für Winkel: DEG für Grad, RAD für Bogenmaß. Rechnest du sin(30) und erhältst −0,988, steht er auf RAD. Auf DEG ist sin(30) = 0,5. Mit π : 6 und Modus RAD kommt ebenfalls 0,5 heraus."
   - type: section
     id: beispiel
@@ -120,11 +122,11 @@ blocks:
         id: winkel-zuordnen
         text: "Ordne jedem Winkel im Gradmaß sein Bogenmaß zu."
         pairs:
-          - { left: "90°", right: "π : 2 (Viertelkreis)" }
-          - { left: "180°", right: "π (Halbkreis)" }
-          - { left: "270°", right: "3π : 2 (Dreiviertelkreis)" }
-          - { left: "360°", right: "2π (Vollkreis)" }
-        explanation: "Der Vollkreis hat das Bogenmaß 2π. Halbkreis, Viertelkreis und Dreiviertelkreis sind die passenden Anteile davon."
+          - { left: "30°", right: "π : 6" }
+          - { left: "45°", right: "π : 4" }
+          - { left: "60°", right: "π : 3" }
+          - { left: "120°", right: "2π : 3" }
+        explanation: "Von Grad ins Bogenmaß: Der Winkel geteilt durch 180° ist der Faktor vor π. 30° sind ein Sechstel von 180°, 45° ein Viertel, 60° ein Drittel, 120° zwei Drittel."
       - type: true-false
         id: neunzig-grad
         text: "Der Winkel 90° und der Winkel mit dem Bogenmaß π : 2 beschreiben denselben Winkel."

@@ -35,6 +35,8 @@ blocks:
         text: "Ein **Zylinder** ist wie ein Prisma, nur mit einem Kreis als Grundfläche. Mit dem Radius r hat die Grundfläche den Flächeninhalt π · r². Das Volumen ist wieder Grundfläche mal Höhe."
       - type: formula
         formula: 'V = G \cdot h = \pi \cdot r^2 \cdot h'
+      - type: text
+        text: "Wenn du die Oberfläche brauchst, musst du auch die gekrümmte Fläche außen herum kennen: den Mantel."
       - type: definition
         term: Mantel
         explanation: "Der Mantel eines Körpers ist seine gekrümmte oder seitliche Fläche ohne Grundfläche und Deckfläche. Beim Zylinder ist er die Fläche, die um die Dose herum liegt."

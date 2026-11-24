@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 170" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 195" role="img" aria-labelledby="t d">
   <title id="t">Die Breite eines Flusses von oben</title>
   <desc id="d">Ein Fluss fließt zwischen zwei geraden Ufern. Am anderen Ufer steht ein Baum. Am eigenen Ufer liegt der Punkt A genau gegenüber dem Baum. Der Punkt B liegt auf dem eigenen Ufer im Abstand s von A. Von B aus ist der Winkel beta zwischen der Strecke nach A und der Blicklinie zum Baum gemessen. A, B und der Baum bilden ein rechtwinkliges Dreieck, der rechte Winkel liegt bei A. Die Flussbreite w ist die Strecke von A zum Baum.</desc>
   <rect x="10" y="55" width="270" height="65" fill="#9cc5f0" fill-opacity="0.5"/>

@@ -69,6 +69,7 @@ const text = computed(() => satz(n.value, props.ergebnis));
   gap: 0.5rem;
 }
 .vieleck-regler input {
+  accent-color: var(--page-accent);
   width: 100%;
   min-height: 2.75rem;
 }

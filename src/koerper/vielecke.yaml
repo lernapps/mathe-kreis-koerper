@@ -70,6 +70,8 @@ blocks:
         title: Vom Vieleck zum Kreis
         blocks:
           - type: text
+            text: "Wenn du dich fragst, was ein Vieleck mit dem Kreis zu tun hat, rechne den Umfang eines Vielecks mit sehr vielen Ecken."
+          - type: text
             text: "Bei 96 Ecken ist der Umfang des Vielecks mit r = 1 etwa 6,282. Das ist fast 2 · π ≈ 6,283. Das ist dasselbe Annähern wie auf der ersten Seite: Je mehr Ecken, desto mehr gleicht das Vieleck dem Kreis."
   - type: section
     id: uebung
@@ -150,4 +152,4 @@ blocks:
             info: "Auch dieses Dreieck ist im Allgemeinen nicht rechtwinklig und hat r nicht als Seite. Mit ihm kommst du an die Seite a nicht direkt heran."
         explanation: "Das versteckte rechtwinklige Dreieck entsteht, wenn du das Teildreieck mit seiner Höhe halbierst. Der Winkel dort ist 180° : n."
       - type: text
-        text: "**Das kannst du jetzt:** Du findest in einem regelmäßigen Vieleck das rechtwinklige Dreieck und berechnest Seite, Winkel und Fläche. Am Ende dieses Kapitels hast du Umfang, Fläche und Volumen von runden Körpern berechnet und Strecken und Winkel in Dreiecken. Immer hat dir das versteckte Dreieck oder das Annähern geholfen."
+        text: "**Das kannst du jetzt:** Du findest in einem regelmäßigen Vieleck das rechtwinklige Dreieck und berechnest Seite, Winkel und Fläche."
