@@ -77,12 +77,16 @@ const alt = computed(() => (liegt.value ? props.bildRechteck : props.bildKreis).
   align-self: flex-start;
   min-height: 2.75rem;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--page-accent);
-  border-radius: 0.4rem;
+  border: 2px solid var(--page-accent);
+  border-radius: 0.375rem;
   background: var(--page-accent);
   color: var(--page-on-accent);
   font: inherit;
   cursor: pointer;
+}
+.torte-knopf:focus-visible {
+  outline: 3px solid var(--page-text);
+  outline-offset: 2px;
 }
 .torte-bild {
   width: 100%;

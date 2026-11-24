@@ -9,7 +9,7 @@ blocks:
     title: Wofür diese Seite ist
     blocks:
       - type: text
-        text: "Das brauchst du für die Körper in diesem Kapitel: Du kennst Prismen, rechnest mit dem Satz des Pythagoras und erkennst Pyramide, Kegel und Kugel. Zu jedem Thema gibt es die wichtigsten Wörter, ein Beispiel und einen Selbsttest. Er zählt nichts und wird nicht gespeichert."
+        text: "Das brauchst du für die Körper in diesem Kapitel: Du kennst Prismen, rechnest mit dem Satz des Pythagoras und erkennst Pyramide, Kegel und Kugel. Zu jedem Thema gibt es die wichtigsten Wörter und ein Beispiel. Zwei Aufgaben auf der Seite zeigen dir, ob du bereit bist. Sie zählen nichts und werden nicht gespeichert."
   - type: section
     id: prisma
     title: "Volumen und Oberfläche: Prisma"
@@ -30,68 +30,25 @@ blocks:
         blocks:
           - type: text
             text: "Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Grundfläche 4 · 3 = 12 cm², Volumen 12 · 2 = 24 cm³. Oberfläche: 2 · (12 + 8 + 6) = 52 cm²."
-      - type: vue-component
-        id: test-prisma-volumen
-        component: Kurztest
-        props:
-          question: "Ein Prisma hat als Grundfläche ein Dreieck mit dem Flächeninhalt 12 cm². Es ist 5 cm hoch. Wie groß ist sein Volumen?"
-          options:
-            - {
-                text: "60 cm³",
-                correct: true,
-                info: "V = G · h = 12 · 5 = 60. Die 12 cm² sind schon der Flächeninhalt des Dreiecks.",
-              }
-            - {
-                text: "17 cm³",
-                correct: false,
-                info: "Du hast Grundfläche und Höhe addiert. Das Volumen ist ein Produkt: G · h.",
-              }
-            - {
-                text: "60 cm²",
-                correct: false,
-                info: "Die Zahl stimmt, aber ein Volumen hat die Einheit cm³, nicht cm².",
-              }
-            - {
-                text: "30 cm³",
-                correct: false,
-                info: "Du hast durch 2 geteilt, als müsstest du die Dreiecksfläche erst ausrechnen. Die ist hier aber schon gegeben.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Ein Prisma hat als Grundfläche ein Dreieck mit dem Flächeninhalt 12 cm² und ist 5 cm hoch. Wie groß ist sein Volumen? Antwort: 60 cm³, denn V = G · h = 12 · 5. 17 cm³ käme vom Addieren, 60 cm² hat die falsche Einheit.
-      - type: vue-component
-        id: test-quader-oberflaeche
-        component: Kurztest
-        props:
-          question: "Ein Quader ist 3 cm lang, 4 cm breit und 5 cm hoch. Wie groß ist seine Oberfläche?"
-          options:
-            - {
-                text: "94 cm²",
-                correct: true,
-                info: "Drei Paare gleicher Rechtecke: 2 · (3 · 4 + 3 · 5 + 4 · 5) = 2 · 47 = 94.",
-              }
-            - {
-                text: "60 cm²",
-                correct: false,
-                info: "Das ist die Zahl des Volumens (3 · 4 · 5). Gesucht ist die Fläche aller Seiten.",
-              }
-            - {
-                text: "47 cm²",
-                correct: false,
-                info: "Du hast nur drei Rechtecke gezählt. Der Quader hat sechs Seiten, je zwei gleiche.",
-              }
-            - {
-                text: "12 cm²",
-                correct: false,
-                info: "Das ist nur die Grundfläche 3 · 4. Dazu kommen Deckfläche und vier Seitenflächen.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Ein Quader ist 3 cm lang, 4 cm breit und 5 cm hoch. Wie groß ist seine Oberfläche? Antwort: 94 cm², denn 2 · (3 · 4 + 3 · 5 + 4 · 5) = 2 · 47. 60 wäre die Zahl des Volumens, 47 nur die Hälfte der Seiten.
+      - type: single-choice
+        id: quader-oberflaeche
+        text: "Ein Quader ist 3 cm lang, 4 cm breit und 5 cm hoch. Wie groß ist seine Oberfläche?"
+        options:
+          - text: "94 cm²"
+            correct: true
+            info: "Drei Paare gleicher Rechtecke: 2 · (3 · 4 + 3 · 5 + 4 · 5) = 2 · 47 = 94."
+          - text: "60 cm²"
+            correct: false
+            info: "Das ist die Zahl des Volumens (3 · 4 · 5). Gesucht ist die Fläche aller Seiten."
+          - text: "47 cm²"
+            correct: false
+            info: "Du hast nur drei Rechtecke gezählt. Der Quader hat sechs Seiten, je zwei gleiche."
+          - text: "12 cm²"
+            correct: false
+            info: "Das ist nur die Grundfläche 3 · 4. Dazu kommen Deckfläche und vier Seitenflächen."
+        explanation: "Die Oberfläche ist die Summe aller sechs Rechtecke. Je zwei gegenüberliegende sind gleich."
       - type: text
-        text: "Wenn die Antwort falsch war: Schau dir den Baustein „Volumen und Oberfläche: Prisma“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/volumen-oberflaeche-prisma/)."
+        text: "Wenn dir das noch schwerfällt: Schau dir den Baustein „Volumen und Oberfläche: Prisma“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/volumen-oberflaeche-prisma/)."
   - type: section
     id: pythagoras
     title: Satz des Pythagoras
@@ -106,30 +63,25 @@ blocks:
         blocks:
           - type: text
             text: "Katheten 3 cm und 4 cm: c² = 3² + 4² = 9 + 16 = 25, also c = 5 cm. Ist die Hypotenuse gegeben und eine Kathete gesucht, ziehst du ab: a² = c² − b²."
-      - type: vue-component
-        id: test-pythagoras
-        component: Kurztest
-        props:
-          question: "Ein rechtwinkliges Dreieck hat die Katheten 6 cm und 8 cm. Wie lang ist die Hypotenuse?"
-          options:
-            - { text: "10 cm", correct: true, info: "c² = 6² + 8² = 36 + 64 = 100, also c = 10." }
-            - {
-                text: "14 cm",
-                correct: false,
-                info: "Du hast die Katheten addiert (6 + 8). Beim Satz des Pythagoras addierst du die Quadrate und ziehst dann die Wurzel.",
-              }
-            - { text: "100 cm", correct: false, info: "Das ist c². Es fehlt die Wurzel: c = √100 = 10." }
-            - {
-                text: "5,3 cm",
-                correct: false,
-                info: "Du hast die Quadrate subtrahiert (64 − 36 = 28). Das gilt, wenn die Hypotenuse gegeben ist und eine Kathete fehlt.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Ein rechtwinkliges Dreieck hat die Katheten 6 cm und 8 cm. Wie lang ist die Hypotenuse? Antwort: 10 cm, denn c² = 36 + 64 = 100 und c = 10. 14 wäre die Summe der Katheten, 100 ist c² ohne Wurzel, 5,3 käme vom Subtrahieren.
+      - type: single-choice
+        id: kathete-pythagoras
+        text: "In einem rechtwinkligen Dreieck ist die Hypotenuse 13 cm lang und eine Kathete 5 cm. Wie lang ist die andere Kathete?"
+        options:
+          - text: "12 cm"
+            correct: true
+            info: "b² = c² − a² = 169 − 25 = 144, also b = 12."
+          - text: "8 cm"
+            correct: false
+            info: "Du hast 13 − 5 gerechnet. Beim Satz des Pythagoras werden die Quadrate subtrahiert, nicht die Längen."
+          - text: "18 cm"
+            correct: false
+            info: "Du hast die Längen addiert (13 + 5). Die Hypotenuse ist aber die längste Seite, die andere Kathete ist kürzer."
+          - text: "13,9 cm"
+            correct: false
+            info: "Du hast die Quadrate addiert, wie bei der Hypotenuse. Hier ist die Hypotenuse gegeben, also subtrahierst du."
+        explanation: "Ist die Hypotenuse gegeben, rechnest du b² = c² − a² und ziehst die Wurzel."
       - type: text
-        text: "Wenn die Antwort falsch war: Schau dir den Baustein „Satz des Pythagoras“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/satz-des-pythagoras/)."
+        text: "Wenn dir das noch schwerfällt: Schau dir den Baustein „Satz des Pythagoras“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/satz-des-pythagoras/)."
   - type: section
     id: grundkoerper
     title: Pyramide, Kegel und Kugel
@@ -150,38 +102,8 @@ blocks:
         blocks:
           - type: text
             text: "Ein Bleistiftspitzer-Turm: Ein Quader, darauf eine Pyramide. Du zerlegst ihn in diese zwei Grundkörper und kannst jeden einzeln betrachten."
-      - type: vue-component
-        id: test-zerlegen
-        component: Kurztest
-        props:
-          question: "Eine Eistüte hat unten eine Waffel und oben eine Eiskugel, die zur Hälfte herausschaut. In welche Grundkörper zerlegst du sie?"
-          options:
-            - {
-                text: "Kegel und Halbkugel",
-                correct: true,
-                info: "Die Waffel läuft unten in einer Spitze zusammen und hat oben einen Kreis, das ist ein Kegel. Darauf sitzt die obere Hälfte einer Kugel.",
-              }
-            - {
-                text: "Zylinder und Kugel",
-                correct: false,
-                info: "Ein Zylinder hat keine Spitze. Die Waffel ist unten spitz.",
-              }
-            - {
-                text: "Pyramide und Halbkugel",
-                correct: false,
-                info: "Eine Pyramide hat ein Vieleck als Grundfläche. Die Waffel hat oben einen Kreis.",
-              }
-            - {
-                text: "Kegel und Zylinder",
-                correct: false,
-                info: "Das Eis oben ist rund und hat keine ebene Seite. Es ist eine Halbkugel, kein Zylinder.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Eine Eistüte hat unten eine Waffel und oben eine Eiskugel, die zur Hälfte herausschaut. In welche Grundkörper zerlegst du sie? Antwort: in einen Kegel und eine Halbkugel. Die Waffel läuft unten spitz zu und hat oben einen Kreis, das ist ein Kegel. Ein Zylinder hätte keine Spitze, eine Pyramide hätte ein Vieleck als Grundfläche.
       - type: text
-        text: "Wenn die Antwort falsch war: Schau dir den Baustein „Pyramide, Kegel und Kugel“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/grundkoerper-pyramide-kegel-kugel/)."
+        text: "Wenn dir das noch schwerfällt: Schau dir den Baustein „Pyramide, Kegel und Kugel“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/grundkoerper-pyramide-kegel-kugel/)."
   - type: section
     id: bereit
     title: Du bist bereit, wenn du …

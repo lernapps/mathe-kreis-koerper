@@ -8,6 +8,8 @@ blocks:
     title: Winkel am Mittelpunkt
     blocks:
       - type: text
+        text: "Wenn du bei einem regelmäßigen Vieleck Seite, Winkel oder Fläche ausrechnen willst, zum Beispiel für ein Sechseck-Pflaster, hilft dir ein Dreieck im Vieleck."
+      - type: text
         text: "Ein regelmäßiges Vieleck hat lauter gleich lange Seiten und gleich große Winkel. Seine Ecken liegen alle auf einem Kreis um den Mittelpunkt M. Verbindest du jede Ecke mit M, zerlegst du das Vieleck in gleiche Dreiecke."
       - type: number
         id: winkel-mitte
@@ -20,6 +22,8 @@ blocks:
     id: herleitung
     title: Das Dreieck halbieren
     blocks:
+      - type: text
+        text: "Wenn du Seite und Fläche aus dem Radius ausrechnen willst, brauchst du ein rechtwinkliges Dreieck. Du erzeugst es, indem du ein Teildreieck halbierst."
       - type: text
         text: "Jedes dieser Dreiecke ist gleichschenklig: Zwei Seiten sind Radien r des Kreises, die dritte ist eine Seite a des Vielecks. Du halbierst es mit der Höhe. So entsteht ein rechtwinkliges Dreieck. Im Bild ist es für ein Fünfeck blau markiert."
       - type: figure
@@ -47,6 +51,8 @@ blocks:
     id: beispiel
     title: Das Fünfeck
     blocks:
+      - type: text
+        text: "Wenn du die Formeln an einem Vieleck prüfen willst, rechne ein Fünfeck durch."
       - type: example
         title: "Fünfeck mit r = 5 cm"
         blocks:

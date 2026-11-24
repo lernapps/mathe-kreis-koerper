@@ -8,6 +8,8 @@ blocks:
     title: Wie oft passt der Durchmesser in den Umfang?
     blocks:
       - type: text
+        text: "Wenn du wissen willst, wie lang der Rand eines Kreises ist, musst du ihn nicht abrollen und messen. Zwischen Rand und Durchmesser gibt es eine feste Beziehung. Du findest sie, indem du einige runde Dinge misst."
+      - type: text
         text: "Auf dem Schulhof misst du vier runde Dinge. Den Umfang U legst du mit einer Schnur und misst die Schnur. Den Durchmesser d misst du quer durch den Kreis. Wie oft der Durchmesser in den Umfang passt, rechnest du mit einer Division: U : d."
       - type: table
         caption: "Vier Messungen (d: Durchmesser, U: Umfang)"
@@ -29,7 +31,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Bei jedem Gegenstand kommt fast dieselbe Zahl heraus. Das ist kein Zufall. Messen mit der Schnur ist aber ungenau. Du kannst π genauer bestimmen, wenn du den Kreis **einschließt**: Du zeichnest ein Vieleck innen und eines außen, beide mit gleich langen Seiten. Eine gerade Strecke ist der kürzeste Weg zwischen zwei Punkten. Darum ist der Kreisumfang länger als der Umfang des inneren Vielecks. Der Kreis liegt ganz im äußeren Vieleck, und jedes Stück des Kreises ist kürzer als der Weg außen herum. Darum ist der Kreisumfang kürzer als der Umfang des äußeren Vielecks.
+          Bei jedem Gegenstand kommt fast dieselbe Zahl heraus. Das ist kein Zufall. Wenn du diese Zahl genauer wissen willst, als Schnur und Zollstock sie zeigen, **schließt** du den Kreis **ein**: Du zeichnest ein Vieleck innen und eines außen, beide mit gleich langen Seiten. Eine gerade Strecke ist der kürzeste Weg zwischen zwei Punkten. Darum ist der Kreisumfang länger als der Umfang des inneren Vielecks. Der Kreis liegt ganz im äußeren Vieleck, und jedes Stück des Kreises ist kürzer als der Weg außen herum. Darum ist der Kreisumfang kürzer als der Umfang des äußeren Vielecks.
       - type: definition
         term: Kreiszahl π
         explanation: "π (sprich „Pi“) ist das Verhältnis von Umfang und Durchmesser eines Kreises: $\\pi = U : d$. Es ist für jeden Kreis gleich."
@@ -44,6 +46,7 @@ blocks:
           ergebnis: "Mit {n} Ecken liegt π zwischen {innen} und {aussen}."
           bild: "Ein Kreis mit einem Vieleck mit {n} Ecken innen (durchgezogene Linie) und einem außen (gestrichelte Linie)."
           lupe: "Lupe: der oberste Teil des Kreises, vergrößert"
+          fein: "Ab 48 Ecken siehst du im Bild kaum noch einen Unterschied zwischen Vieleck und Kreis. Die beiden Zahlen unterscheiden sich weiter, und genau das engt π ein."
         nojs: |
           Ein Kreis mit Radius 1 und dem Durchmesser 2. Innen und außen liegt je ein regelmäßiges Vieleck. Der Umfang jedes Vielecks, geteilt durch 2, ist eine Grenze für π:
 
@@ -64,6 +67,8 @@ blocks:
     id: beispiel
     title: Das Sechseck von Hand
     blocks:
+      - type: text
+        text: "Wenn du sehen willst, wie so eine Grenze entsteht, rechne sie für das Sechseck von Hand."
       - type: example
         title: Die untere Grenze 3
         blocks:

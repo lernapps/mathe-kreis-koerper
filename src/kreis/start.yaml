@@ -8,7 +8,7 @@ blocks:
     title: Wofür diese Seite ist
     blocks:
       - type: text
-        text: "Das brauchst du für dieses Kapitel: Du rechnest mit Längen und Flächen, mit Dezimalzahlen und mit Sinus, Kosinus und Tangens. Zu jedem Thema findest du die wichtigsten Wörter, ein Beispiel und einen Selbsttest. Er zählt nichts und wird nicht gespeichert."
+        text: "Das brauchst du für dieses Kapitel: Du rechnest mit Längen und Flächen, mit Dezimalzahlen und mit Sinus, Kosinus und Tangens. Zu jedem Thema gibt es die wichtigsten Wörter und ein Beispiel. Zwei Aufgaben auf der Seite zeigen dir, ob du bereit bist. Sie zählen nichts und werden nicht gespeichert."
   - type: section
     id: flaeche-umfang
     title: "Fläche und Umfang: Rechteck, Quadrat"
@@ -29,30 +29,25 @@ blocks:
         blocks:
           - type: text
             text: "Ein Beet ist 4 m lang und 3 m breit. Der Flächeninhalt ist 4 · 3 = 12 m². Der Umfang ist 2 · (4 + 3) = 14 m."
-      - type: vue-component
-        id: test-rechteck
-        component: Kurztest
-        props:
-          question: "Ein rechteckiges Beet ist 12 m lang und 7,5 m breit. Wie groß ist sein Flächeninhalt?"
-          options:
-            - {
-                text: "39 m",
-                correct: false,
-                info: "Das ist der Umfang 2 · (12 + 7,5). Gefragt ist die Fläche, und die hat die Einheit m².",
-              }
-            - { text: "90 m²", correct: true, info: "12 · 7,5 = 90. Länge mal Breite, die Einheit ist m²." }
-            - {
-                text: "19,5 m²",
-                correct: false,
-                info: "Du hast Länge und Breite addiert (12 + 7,5). Für die Fläche musst du multiplizieren.",
-              }
-            - { text: "90 m", correct: false, info: "Die Zahl stimmt, aber eine Fläche hat die Einheit m², nicht m." }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Ein rechteckiges Beet ist 12 m lang und 7,5 m breit. Wie groß ist sein Flächeninhalt? Antwort: 90 m². Denn 12 · 7,5 = 90, und eine Fläche hat die Einheit m². 39 m wäre der Umfang, 19,5 m² käme vom Addieren statt Multiplizieren.
+      - type: single-choice
+        id: rechteck-flaeche
+        text: "Ein rechteckiges Beet ist 12 m lang und 7,5 m breit. Wie groß ist sein Flächeninhalt?"
+        options:
+          - text: "39 m"
+            correct: false
+            info: "Das ist der Umfang 2 · (12 + 7,5). Gefragt ist die Fläche, und die hat die Einheit m²."
+          - text: "90 m²"
+            correct: true
+            info: "12 · 7,5 = 90. Länge mal Breite, die Einheit ist m². Beim Malnehmen mit 7,5 rechnest du 12 · 7 + 12 · 0,5."
+          - text: "19,5 m²"
+            correct: false
+            info: "Du hast Länge und Breite addiert (12 + 7,5). Für die Fläche musst du multiplizieren."
+          - text: "90 m"
+            correct: false
+            info: "Die Zahl stimmt, aber eine Fläche hat die Einheit m², nicht m."
+        explanation: "Der Flächeninhalt ist Länge mal Breite. Mit Dezimalzahlen rechnest du wie mit ganzen Zahlen und achtest auf die Kommastelle."
       - type: text
-        text: "Wenn die Antwort falsch war: Schau dir den Baustein „Fläche und Umfang: Rechteck, Quadrat“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/flaeche-umfang-quadrat-rechteck/)."
+        text: "Wenn dir das noch schwerfällt: Schau dir den Baustein „Fläche und Umfang: Rechteck, Quadrat“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/flaeche-umfang-quadrat-rechteck/)."
   - type: section
     id: dezimalbrueche
     title: Rechnen mit Dezimalbrüchen
@@ -70,64 +65,8 @@ blocks:
         blocks:
           - type: text
             text: "2,5 · 0,4: Rechne erst ohne Komma, 25 · 4 = 100. Dann setzt du das Komma. Die Faktoren haben zusammen zwei Stellen nach dem Komma, also 1,00 = 1."
-      - type: vue-component
-        id: test-malnehmen
-        component: Kurztest
-        props:
-          question: Was ergibt 3,6 · 0,25?
-          options:
-            - {
-                text: "0,9",
-                correct: true,
-                info: "36 · 25 = 900. Die Faktoren haben zusammen drei Stellen nach dem Komma, also 0,900 = 0,9.",
-              }
-            - {
-                text: "9",
-                correct: false,
-                info: "36 · 25 = 900 stimmt, aber das Komma fehlt. Zusammen drei Stellen nach dem Komma, also 0,900.",
-              }
-            - {
-                text: "0,09",
-                correct: false,
-                info: "Das Komma steht zu weit links. Drei Stellen nach dem Komma ergeben 0,900, und 0,900 ist 0,9.",
-              }
-            - { text: "14,4", correct: false, info: "Das ist 3,6 : 0,25, also geteilt. Hier sollst du malnehmen." }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Was ergibt 3,6 · 0,25? Antwort: 0,9. Denn 36 · 25 = 900, und die Faktoren haben zusammen drei Stellen nach dem Komma: 0,900 = 0,9. 14,4 wäre 3,6 : 0,25.
-      - type: vue-component
-        id: test-runden
-        component: Kurztest
-        props:
-          question: Runde 3,1416 auf drei Stellen nach dem Komma.
-          options:
-            - {
-                text: "3,141",
-                correct: false,
-                info: "Du hast abgeschnitten. Hinter der dritten Stelle steht eine 6, also wird aufgerundet.",
-              }
-            - {
-                text: "3,142",
-                correct: true,
-                info: "Hinter der dritten Stelle (1) steht eine 6. Das ist 5 oder mehr, also wird aufgerundet.",
-              }
-            - {
-                text: "3,14",
-                correct: false,
-                info: "Das ist auf zwei Stellen gerundet. Gefragt sind drei Stellen nach dem Komma.",
-              }
-            - {
-                text: "3,15",
-                correct: false,
-                info: "Das wäre auf zwei Stellen gerundet und dabei falsch aufgerundet. Außerdem sind drei Stellen gefragt.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Runde 3,1416 auf drei Stellen nach dem Komma. Antwort: 3,142. Hinter der dritten Stelle steht eine 6, also wird aufgerundet. 3,141 wäre abgeschnitten, 3,14 nur auf zwei Stellen gerundet.
       - type: text
-        text: "Wenn die Antwort falsch war: Schau dir den Baustein „Rechnen mit Dezimalbrüchen“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/dezimalbrueche-rechnen/)."
+        text: "Wenn dir das noch schwerfällt: Schau dir den Baustein „Rechnen mit Dezimalbrüchen“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/dezimalbrueche-rechnen/)."
   - type: section
     id: trigonometrie
     title: Trigonometrie im rechtwinkligen Dreieck
@@ -148,68 +87,25 @@ blocks:
         blocks:
           - type: text
             text: "Ein Dreieck hat die Hypotenuse 8 cm und den Winkel α = 30°. Die Gegenkathete ist a = 8 · sin 30° = 8 · 0,5 = 4 cm."
-      - type: vue-component
-        id: test-seite
-        component: Kurztest
-        props:
-          question: "Ein rechtwinkliges Dreieck hat die Hypotenuse 10 cm und den Winkel α = 30°. Wie lang ist die Gegenkathete von α?"
-          options:
-            - {
-                text: "5 cm",
-                correct: true,
-                info: "Gegenkathete zu Hypotenuse ist der Sinus: 10 · sin 30° = 10 · 0,5 = 5.",
-              }
-            - {
-                text: "8,7 cm",
-                correct: false,
-                info: "Das ist 10 · cos 30°, also die Ankathete. Die Gegenkathete liegt α gegenüber und gehört zum Sinus.",
-              }
-            - {
-                text: "20 cm",
-                correct: false,
-                info: "Du hast durch 0,5 geteilt. Die Gegenkathete ist kürzer als die Hypotenuse, also muss man malnehmen: 10 · sin 30°.",
-              }
-            - {
-                text: "3 cm",
-                correct: false,
-                info: "Ein Winkel von 30° bedeutet nicht 30 % von 10. Du brauchst den Sinus von 30°, und der ist 0,5.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Ein rechtwinkliges Dreieck hat die Hypotenuse 10 cm und den Winkel α = 30°. Wie lang ist die Gegenkathete von α? Antwort: 5 cm, denn 10 · sin 30° = 10 · 0,5 = 5. 8,7 cm wäre die Ankathete (Kosinus).
-      - type: vue-component
-        id: test-winkel
-        component: Kurztest
-        props:
-          question: "In einem rechtwinkligen Dreieck ist die Gegenkathete von α 3 cm lang und die Ankathete 4 cm. Wie findest du α?"
-          options:
-            - {
-                text: "tan α = 3 : 4, also α ≈ 36,9°",
-                correct: true,
-                info: "Gegenkathete und Ankathete gehören zum Tangens. Den Winkel gibt die Umkehrfunktion tan⁻¹(0,75) ≈ 36,9°.",
-              }
-            - {
-                text: "sin α = 3 : 4, also α ≈ 48,6°",
-                correct: false,
-                info: "Der Sinus braucht die Hypotenuse, hier ist aber die Ankathete gegeben. Die Hypotenuse wäre 5 cm.",
-              }
-            - {
-                text: "tan α = 4 : 3, also α ≈ 53,1°",
-                correct: false,
-                info: "Du hast die Seiten vertauscht. Der Tangens ist Gegenkathete durch Ankathete, hier also 3 : 4.",
-              }
-            - {
-                text: "α = 3 : 4 = 0,75°",
-                correct: false,
-                info: "0,75 ist nur der Wert des Tangens. Den Winkel bekommst du erst mit der Umkehrfunktion tan⁻¹ deines Taschenrechners (Modus DEG).",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: In einem rechtwinkligen Dreieck ist die Gegenkathete von α 3 cm lang und die Ankathete 4 cm. Wie findest du α? Antwort: tan α = 3 : 4 = 0,75, also α = tan⁻¹(0,75) ≈ 36,9°. Der Sinus bräuchte die Hypotenuse, und 4 : 3 wäre mit vertauschten Seiten gerechnet.
+      - type: single-choice
+        id: kathete-sinus
+        text: "Ein rechtwinkliges Dreieck hat die Hypotenuse 10 cm und den Winkel α = 30°. Wie lang ist die Gegenkathete von α?"
+        options:
+          - text: "5 cm"
+            correct: true
+            info: "Gegenkathete zu Hypotenuse ist der Sinus: 10 · sin 30° = 10 · 0,5 = 5."
+          - text: "8,7 cm"
+            correct: false
+            info: "Das ist 10 · cos 30°, also die Ankathete. Die Gegenkathete liegt α gegenüber und gehört zum Sinus."
+          - text: "20 cm"
+            correct: false
+            info: "Du hast durch 0,5 geteilt. Die Gegenkathete ist kürzer als die Hypotenuse, also muss man malnehmen: 10 · sin 30°."
+          - text: "3 cm"
+            correct: false
+            info: "Ein Winkel von 30° bedeutet nicht 30 % von 10. Du brauchst den Sinus von 30°, und der ist 0,5."
+        explanation: "Wenn Hypotenuse und Winkel bekannt sind und die Gegenkathete gesucht ist, nimmst du den Sinus."
       - type: text
-        text: "Wenn die Antwort falsch war: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/)."
+        text: "Wenn dir das noch schwerfällt: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/)."
   - type: section
     id: bereit
     title: Du bist bereit, wenn du …

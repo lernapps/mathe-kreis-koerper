@@ -14,6 +14,8 @@ const props = defineProps<{
   bild: string;
   /** The name of the magnifier view. */
   lupe: string;
+  /** A sentence shown from 48 corners on: the picture no longer shows the difference, the numbers do. */
+  fein: string;
 }>();
 
 const stufe = ref(0);
@@ -49,6 +51,7 @@ const text = computed(() => satz(n.value, props.ergebnis));
       </svg>
     </div>
     <p class="vieleck-ergebnis" aria-live="polite">{{ text }}</p>
+    <p v-if="n >= 48" class="vieleck-ergebnis">{{ fein }}</p>
   </div>
 </template>
 

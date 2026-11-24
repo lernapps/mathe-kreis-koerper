@@ -8,6 +8,8 @@ blocks:
     title: Wie groß ist die Fläche einer runden Torte?
     blocks:
       - type: text
+        text: "Wenn du wissen willst, wie viel Platz oder Material ein Kreis braucht, zum Beispiel für eine Torte, eine Tischplatte oder ein Beet, brauchst du seine Fläche."
+      - type: text
         text: "Eine runde Torte hat den Radius r = 10 cm. Zwei Quadrate helfen dir beim Schätzen. Das große Quadrat umschließt die Torte und hat die Seitenlänge 20 cm, also die Fläche 400 cm². Das kleine Quadrat liegt in der Torte, seine Ecken liegen auf dem Rand. Es hat die Fläche 200 cm²."
       - type: single-choice
         id: torte-schaetzen
@@ -27,6 +29,8 @@ blocks:
     id: herleitung
     title: Aus Tortenstücken wird ein Rechteck
     blocks:
+      - type: text
+        text: "Wenn du die Fläche eines Kreises ausrechnen willst, hilft ein Trick: Du verwandelst den Kreis in eine Figur, deren Fläche du schon berechnen kannst, ein Rechteck."
       - type: text
         text: "Schneide den Kreis in gleich große Tortenstücke. Lege sie abwechselnd nebeneinander, eines mit der Spitze nach oben, das nächste nach unten. Mit dem Regler änderst du die Zahl der Stücke, der Knopf legt sie um. Die Stücke sind abwechselnd rosa mit gestricheltem Rand und grau, damit du sie auseinanderhältst."
       - type: vue-component
@@ -59,6 +63,8 @@ blocks:
     id: beispiel
     title: Die runde Torte
     blocks:
+      - type: text
+        text: "Wenn du die Formel ausprobieren willst, rechne die Fläche der Torte genau aus."
       - type: example
         title: "Radius 10 cm"
         blocks:

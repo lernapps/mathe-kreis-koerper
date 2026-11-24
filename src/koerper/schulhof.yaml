@@ -8,6 +8,8 @@ blocks:
     title: Der Baum und sein Schatten
     blocks:
       - type: text
+        text: "Wenn du etwas messen willst, das du nicht erreichst, etwa die Höhe eines Baums oder die Breite eines Flusses, misst du etwas anderes und rechnest. Dafür suchst du ein Dreieck."
+      - type: text
         text: "Auf dem Schulhof steht ein hoher Baum. Du kannst nicht hinaufklettern. Aber du kannst messen, was du erreichst. Ein 2 m langer Stab wirft einen Schatten von 1,5 m. Zur selben Zeit wirft der Baum einen Schatten von 6 m."
       - type: number
         id: baum-schatten
@@ -42,6 +44,8 @@ blocks:
         licence: CC0-1.0
       - type: formula
         formula: 'w = s \cdot \tan \beta'
+      - type: text
+        text: "Wenn du vor einer Messaufgabe stehst und nicht weißt, womit du rechnen sollst, hilft diese Übersicht."
       - type: table
         caption: Welches Verfahren passt?
         header: [Situation, Verfahren]
@@ -53,6 +57,8 @@ blocks:
     id: beispiel
     title: Der Baum auf dem Schulhof
     blocks:
+      - type: text
+        text: "Wenn du das Verfahren an einem Baum prüfen willst, rechne ein Beispiel durch."
       - type: example
         title: "Abstand 15 m, Winkel 32°"
         blocks:

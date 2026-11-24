@@ -8,7 +8,7 @@ blocks:
     title: Wofür diese Seite ist
     blocks:
       - type: text
-        text: "Das brauchst du für die Messungen auf dem Schulhof und für die Vielecke: die Strahlensätze und Sinus, Kosinus und Tangens. Zu jedem Thema gibt es das Wichtigste, ein Beispiel und einen Selbsttest. Er zählt nichts und wird nicht gespeichert."
+        text: "Das brauchst du für die Messungen auf dem Schulhof und für die Vielecke: die Strahlensätze und Sinus, Kosinus und Tangens. Zu jedem Thema gibt es die wichtigsten Wörter und ein Beispiel. Zwei Aufgaben auf der Seite zeigen dir, ob du bereit bist. Sie zählen nichts und werden nicht gespeichert."
   - type: section
     id: strahlensaetze
     title: Strahlensätze
@@ -23,38 +23,25 @@ blocks:
         blocks:
           - type: text
             text: "Ein Stab von 2 m wirft einen Schatten von 3 m. Ein Mast wirft zur selben Zeit 12 m Schatten. Der Faktor ist 12 : 3 = 4, also ist der Mast 2 · 4 = 8 m hoch."
-      - type: vue-component
-        id: test-schatten
-        component: Kurztest
-        props:
-          question: "Ein Stab ist 1,5 m hoch und wirft einen Schatten von 2 m. Zur selben Zeit wirft ein Baum einen Schatten von 12 m. Wie hoch ist der Baum?"
-          options:
-            - {
-                text: "9 m",
-                correct: true,
-                info: "Der Schatten des Baums ist 6-mal so lang (12 : 2). Also ist der Baum 6-mal so hoch wie der Stab: 1,5 · 6 = 9.",
-              }
-            - {
-                text: "8 m",
-                correct: false,
-                info: "Du hast 12 : 1,5 gerechnet. Verglichen werden Schatten mit Schatten (12 : 2) und Höhe mit Höhe, nicht Schatten mit Höhe.",
-              }
-            - {
-                text: "18 m",
-                correct: false,
-                info: "Du hast 12 mal 1,5 gerechnet. Du musst den Faktor 12 : 2 = 6 bestimmen und die Stabhöhe damit multiplizieren.",
-              }
-            - {
-                text: "10,5 m",
-                correct: false,
-                info: "Du hast 12 minus 1,5 gerechnet. Bei ähnlichen Figuren werden Längen mit demselben Faktor multipliziert, nicht um dieselbe Zahl verlängert.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Ein Stab ist 1,5 m hoch und wirft einen Schatten von 2 m. Zur selben Zeit wirft ein Baum einen Schatten von 12 m. Wie hoch ist der Baum? Antwort: 9 m. Der Faktor ist 12 : 2 = 6, und 1,5 · 6 = 9. Die anderen Zahlen kommen von falschen Rechnungen (8 vom Teilen durch die Stabhöhe, 18 vom Malnehmen mit 12, 10,5 vom Subtrahieren).
+      - type: single-choice
+        id: schatten-stab
+        text: "Ein Stab ist 1,5 m hoch und wirft einen Schatten von 2 m. Zur selben Zeit wirft ein Baum einen Schatten von 12 m. Wie hoch ist der Baum?"
+        options:
+          - text: "9 m"
+            correct: true
+            info: "Der Schatten des Baums ist 6-mal so lang (12 : 2). Also ist der Baum 6-mal so hoch wie der Stab: 1,5 · 6 = 9."
+          - text: "8 m"
+            correct: false
+            info: "Du hast 12 : 1,5 gerechnet. Verglichen werden Schatten mit Schatten (12 : 2) und Höhe mit Höhe, nicht Schatten mit Höhe."
+          - text: "18 m"
+            correct: false
+            info: "Du hast 12 mal 1,5 gerechnet. Du musst den Faktor 12 : 2 = 6 bestimmen und die Stabhöhe damit multiplizieren."
+          - text: "10,5 m"
+            correct: false
+            info: "Du hast 12 minus 1,5 gerechnet. Bei ähnlichen Figuren werden Längen mit demselben Faktor multipliziert, nicht um dieselbe Zahl verlängert."
+        explanation: "Aus dem Verhältnis der Schatten folgt der Faktor, mit dem du die Stabhöhe multiplizierst."
       - type: text
-        text: "Wenn die Antwort falsch war: Schau dir den Baustein „Strahlensätze“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/strahlensaetze/)."
+        text: "Wenn dir das noch schwerfällt: Schau dir den Baustein „Strahlensätze“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/strahlensaetze/)."
   - type: section
     id: trigonometrie
     title: Trigonometrie im rechtwinkligen Dreieck
@@ -72,38 +59,25 @@ blocks:
         blocks:
           - type: text
             text: "Die Ankathete von α = 50° ist 6 cm lang. Die Gegenkathete ist a = 6 · tan 50° ≈ 6 · 1,192 ≈ 7,15 cm."
-      - type: vue-component
-        id: test-turm
-        component: Kurztest
-        props:
-          question: "Du stehst 20 m vor einem Turm und siehst seine Spitze unter dem Winkel 40°. Die Augenhöhe zählt nicht mit. Wie hoch ist der Turm?"
-          options:
-            - {
-                text: "16,8 m",
-                correct: true,
-                info: "Abstand und Höhe sind Ankathete und Gegenkathete von 40°, das gehört zum Tangens: 20 · tan 40° ≈ 16,8.",
-              }
-            - {
-                text: "12,9 m",
-                correct: false,
-                info: "Das ist 20 · sin 40°. Der Sinus braucht die Hypotenuse. Hier ist aber die Ankathete (der Abstand) gegeben.",
-              }
-            - {
-                text: "15,3 m",
-                correct: false,
-                info: "Das ist 20 · cos 40°, also die Ankathete zur Hypotenuse. Gesucht ist aber die Gegenkathete, und die steckt im Tangens.",
-              }
-            - {
-                text: "23,8 m",
-                correct: false,
-                info: "Du hast 20 durch tan 40° geteilt. Die Höhe ist die Gegenkathete, also muss man mit dem Tangens malnehmen.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Selbsttest: Du stehst 20 m vor einem Turm und siehst seine Spitze unter dem Winkel 40°. Die Augenhöhe zählt nicht mit. Wie hoch ist der Turm? Antwort: 20 · tan 40° ≈ 16,8 m. Abstand und Höhe sind Ankathete und Gegenkathete, das gehört zum Tangens. 12,9 käme vom Sinus, 15,3 vom Kosinus, 23,8 vom Teilen durch den Tangens.
+      - type: single-choice
+        id: turm-tangens
+        text: "Du stehst 20 m vor einem Turm und siehst seine Spitze unter dem Winkel 40°. Die Augenhöhe zählt nicht mit. Wie hoch ist der Turm?"
+        options:
+          - text: "16,8 m"
+            correct: true
+            info: "Abstand und Höhe sind Ankathete und Gegenkathete von 40°, das gehört zum Tangens: 20 · tan 40° ≈ 16,8."
+          - text: "12,9 m"
+            correct: false
+            info: "Das ist 20 · sin 40°. Der Sinus braucht die Hypotenuse. Hier ist aber die Ankathete (der Abstand) gegeben."
+          - text: "15,3 m"
+            correct: false
+            info: "Das ist 20 · cos 40°, also die Ankathete zur Hypotenuse. Gesucht ist aber die Gegenkathete, und die steckt im Tangens."
+          - text: "23,8 m"
+            correct: false
+            info: "Du hast 20 durch tan 40° geteilt. Die Höhe ist die Gegenkathete, also muss man mit dem Tangens malnehmen."
+        explanation: "Sind Winkel und Ankathete bekannt und ist die Gegenkathete gesucht, rechnest du Ankathete mal Tangens."
       - type: text
-        text: "Wenn die Antwort falsch war: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/)."
+        text: "Wenn dir das noch schwerfällt: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/)."
   - type: section
     id: bereit
     title: Du bist bereit, wenn du …

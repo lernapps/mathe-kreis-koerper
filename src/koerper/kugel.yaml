@@ -8,24 +8,38 @@ blocks:
     title: Drei Körper, ein Radius
     blocks:
       - type: text
-        text: "Ein Kegel, eine Kugel und ein Zylinder haben alle denselben Radius r. Kegel und Zylinder sind so hoch wie die Kugel dick ist, also 2 · r. Du kennst schon die Volumen von Zylinder und Kegel."
+        text: "Wenn du wissen willst, wie viel in eine Kugel passt oder wie viel Material ihre Oberfläche braucht, hilft ein Vergleich mit Kegel und Zylinder. Archimedes hat ihn vor über 2000 Jahren gefunden."
+      - type: text
+        text: "Ein Kegel, eine Kugel und ein Zylinder haben alle denselben Radius r. Kegel und Zylinder sind so hoch wie die Kugel dick ist, also 2 · r. Die Kugel passt genau in den Zylinder."
       - type: figure
         image: images/kugel-archimedes.svg
-        alt: "Ein Kegel, eine Kugel und ein Zylinder nebeneinander, alle mit dem Radius r und der Höhe 2 mal r. Darunter die Volumenanteile 1, 2 und 3."
-        caption: "Kegel, Kugel und Zylinder mit gleichem Radius und gleicher Höhe 2 · r. Die Zahlen geben das Verhältnis der Volumen an."
+        alt: "Ein Kegel, eine Kugel und ein Zylinder nebeneinander, alle mit dem Radius r und der Höhe 2 mal r."
+        caption: "Kegel, Kugel und Zylinder mit gleichem Radius und gleicher Höhe 2 · r."
         source: eigene Zeichnung
         licence: CC0-1.0
-      - type: number
-        id: zylinder-2r
-        text: "Der Zylinder hat den Radius r = 3 cm und die Höhe 2 · r = 6 cm. Wie groß ist sein Volumen? Rechne mit π ≈ 3,14."
-        answer: 169.56
-        tolerance: 0.01
-        unit: cm³
-        explanation: "V = π · r² · h = 3,14 · 9 · 6 = 169,56 cm³. Allgemein ist das V = π · r² · 2r = 2 · π · r³."
+      - type: single-choice
+        id: kugel-im-zylinder
+        text: "Welchen Anteil des Zylinders füllt die Kugel etwa?"
+        options:
+          - text: "Etwa ein Drittel."
+            correct: false
+            info: "Die Kugel berührt den Zylinder rundum und füllt mehr als ein Drittel."
+          - text: "Etwa die Hälfte."
+            correct: false
+            info: "Das ist zu wenig. Die Kugel füllt etwas mehr als die Hälfte des Zylinders."
+          - text: "Etwa zwei Drittel."
+            correct: true
+            info: "Genau zwei Drittel. Das hat Archimedes herausgefunden, und du rechnest es gleich nach."
+          - text: "Fast alles."
+            correct: false
+            info: "In den Ecken des Zylinders oben und unten bleibt viel Platz. Es ist deutlich weniger als alles."
+        explanation: "Die Kugel füllt zwei Drittel des Zylinders. Wie man darauf kommt, zeigt der nächste Abschnitt."
   - type: section
     id: herleitung
     title: Archimedes' Vergleich
     blocks:
+      - type: text
+        text: "Wenn du das Volumen einer Kugel ausrechnen willst, hilft ein Vergleich: Kegel und Kugel zusammen füllen den Zylinder."
       - type: text
         text: "Archimedes fand: Das Volumen der Kugel ist so groß wie der Zylinder minus der Kegel. Mit den Formeln für Zylinder und Kegel kannst du die Rechnung nachvollziehen. Der Kegel fasst ein Drittel des Zylinders, also $\\frac{1}{3} \\cdot 2\\pi r^3$."
       - type: formula
@@ -49,6 +63,8 @@ blocks:
     id: beispiel
     title: Eine Kugel mit r = 6 cm
     blocks:
+      - type: text
+        text: "Wenn du die Formeln an einer Kugel prüfen willst, rechne sie für r = 6 cm."
       - type: example
         title: "Radius 6 cm"
         blocks:

@@ -8,6 +8,8 @@ const props = defineProps<{
   /** The label of the button that pours once more, and of the button that starts again. */
   weiter: string;
   neu: string;
+  /** The sentence shown instead of the pouring button once the cylinder is full. */
+  voll: string;
   /** The sentence under the figure, with {k} and {rest}. */
   ergebnis: string;
   /** What the figure shows, for screen readers, with {k}. */
@@ -54,8 +56,9 @@ function giessen(): void {
       <line x1="180" y1="50" x2="280" y2="50" stroke="var(--page-muted)" stroke-width="1" stroke-dasharray="4 3" />
     </svg>
     <div class="us-knoepfe">
-      <button type="button" class="us-knopf" :disabled="k >= 3" @click="giessen">{{ weiter }}</button>
-      <button type="button" class="us-knopf us-zweit" :disabled="k === 0" @click="k = 0">{{ neu }}</button>
+      <button v-if="k < 3" type="button" class="us-knopf" @click="giessen">{{ weiter }}</button>
+      <strong v-else class="us-voll">{{ voll }}</strong>
+      <button v-if="k > 0" type="button" class="us-knopf us-zweit" @click="k = 0">{{ neu }}</button>
     </div>
     <p class="us-ergebnis" aria-live="polite">{{ text }}</p>
   </div>
@@ -81,20 +84,23 @@ function giessen(): void {
 .us-knopf {
   min-height: 2.75rem;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--page-accent);
-  border-radius: 0.4rem;
+  border: 2px solid var(--page-accent);
+  border-radius: 0.375rem;
   background: var(--page-accent);
   color: var(--page-on-accent);
   font: inherit;
   cursor: pointer;
 }
 .us-zweit {
-  background: transparent;
+  background: var(--page-background);
   color: var(--page-accent);
 }
-.us-knopf:disabled {
-  opacity: 0.5;
-  cursor: default;
+.us-knopf:focus-visible {
+  outline: 3px solid var(--page-text);
+  outline-offset: 2px;
+}
+.us-voll {
+  align-self: center;
 }
 .us-ergebnis {
   margin: 0;
