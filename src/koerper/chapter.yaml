@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zylinder, Kegel, Kugel und Vielecke berechnen
+summary: Du berechnest Volumen und Oberfläche von runden und spitzen Körpern und Strecken und Winkel in Dreiecken und Vielecken. Dazu suchst du das rechtwinklige Dreieck, das sich im Bild versteckt.
+pages: [start, zylinder, pyramide-kegel, kugel, dreiecke-start, schulhof, vielecke]
+# Die Selbsteinschätzung des Kapitels: zwei Rechenaufgaben je Seite, die ohne die Seite verständlich sind (keine Wiederholungsseiten).
+selfAssessment:
+  pages:
+    - exercises:
+        - /koerper/zylinder/#zylinder-volumen
+        - /koerper/zylinder/#zylinder-oberflaeche
+        - /koerper/pyramide-kegel/#kegel-volumen
+        - /koerper/pyramide-kegel/#mantellinie
+    - exercises:
+        - /koerper/kugel/#kugel-volumen
+        - /koerper/kugel/#kugel-oberflaeche
+        - /koerper/schulhof/#baumhoehe
+        - /koerper/schulhof/#schatten-hoehe
+    - exercises:
+        - /koerper/vielecke/#seitenlaenge
+        - /koerper/vielecke/#vieleck-flaeche

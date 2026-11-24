@@ -1,0 +1,155 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Regelmäßige Vielecke
+description: "In jedem regelmäßigen Vieleck steckt ein rechtwinkliges Dreieck. Damit berechnest du Seitenlänge, Winkel und Fläche und siehst, wie das Vieleck zum Kreis wird."
+competencies: [berechnungen-dreiecke-vielecke]
+blocks:
+  - type: section
+    id: einstieg
+    title: Winkel am Mittelpunkt
+    blocks:
+      - type: text
+        text: "Wenn du bei einem regelmäßigen Vieleck Seite, Winkel oder Fläche ausrechnen willst, zum Beispiel für ein Sechseck-Pflaster, hilft dir ein Dreieck im Vieleck."
+      - type: text
+        text: "Ein regelmäßiges Vieleck hat lauter gleich lange Seiten und gleich große Winkel. Seine Ecken liegen alle auf einem Kreis um den Mittelpunkt M. Verbindest du jede Ecke mit M, zerlegst du das Vieleck in gleiche Dreiecke."
+      - type: number
+        id: winkel-mitte
+        text: "Ein regelmäßiges Achteck wird so in acht gleiche Dreiecke zerlegt. Wie groß ist der Winkel jedes Dreiecks bei M?"
+        answer: 45
+        tolerance: 0
+        unit: °
+        explanation: "Um den Mittelpunkt herum liegt der Vollwinkel 360°. Geteilt auf 8 gleiche Dreiecke sind das 360° : 8 = 45° je Dreieck."
+  - type: section
+    id: herleitung
+    title: Das Dreieck halbieren
+    blocks:
+      - type: text
+        text: "Wenn du Seite und Fläche aus dem Radius ausrechnen willst, brauchst du ein rechtwinkliges Dreieck. Du erzeugst es, indem du ein Teildreieck halbierst."
+      - type: text
+        text: "Jedes dieser Dreiecke ist gleichschenklig: Zwei Seiten sind Radien r des Kreises, die dritte ist eine Seite a des Vielecks. Du halbierst es mit der Höhe. So entsteht ein rechtwinkliges Dreieck. Im Bild ist es für ein Fünfeck blau markiert."
+      - type: figure
+        image: images/vieleck-dreieck.svg
+        alt: "Ein regelmäßiges Fünfeck in einem Kreis um den Mittelpunkt M, in fünf gleichschenklige Dreiecke zerlegt. Eines davon ist halbiert. Das blaue rechtwinklige Dreieck hat die Hypotenuse r, die Kathete ρ von M zur Mitte der Seite und die Kathete a : 2, die halbe Seite. Der Winkel bei M ist 36 Grad."
+        caption: "Das blaue Dreieck: Hypotenuse r, Ankathete ρ, Gegenkathete a : 2. Der Winkel bei M ist die Hälfte von 72°."
+        source: eigene Zeichnung
+        licence: CC0-1.0
+      - type: text
+        text: "Der Winkel bei M ist im halbierten Dreieck nur halb so groß: 180° : n. Die Strecke ρ (sprich „Rho“) von M zur Mitte einer Seite heißt **Apothem**. Sie ist die Höhe des Teildreiecks."
+      - type: definition
+        term: Apothem
+        explanation: "Das Apothem ρ eines regelmäßigen Vielecks ist der Abstand vom Mittelpunkt zur Mitte einer Seite. Es steht senkrecht auf der Seite."
+      - type: formula
+        formula: 'a = 2 \cdot r \cdot \sin \frac{180^\circ}{n}'
+      - type: formula
+        formula: '\rho = r \cdot \cos \frac{180^\circ}{n}'
+      - type: text
+        text: "Die Fläche besteht aus n Teildreiecken. Jedes hat die Grundseite a und die Höhe ρ."
+      - type: formula
+        formula: 'A = n \cdot \frac{1}{2} \cdot a \cdot \rho'
+      - type: text
+        text: "Der Innenwinkel des Vielecks ist an jeder Ecke zweimal der Winkel an der Basis des Teildreiecks, also 180° − 360° : n."
+  - type: section
+    id: beispiel
+    title: Das Fünfeck
+    blocks:
+      - type: text
+        text: "Wenn du die Formeln an einem Vieleck prüfen willst, rechne ein Fünfeck durch."
+      - type: example
+        title: "Fünfeck mit r = 5 cm"
+        blocks:
+          - type: text
+            text: "Der Winkel im halbierten Dreieck ist 180° : 5 = 36°."
+          - type: formula
+            formula: 'a = 2 \cdot 5 \cdot \sin 36^\circ \approx 5,88'
+          - type: formula
+            formula: '\rho = 5 \cdot \cos 36^\circ \approx 4,05'
+          - type: formula
+            formula: 'A = 5 \cdot \frac{1}{2} \cdot 5,88 \cdot 4,05 \approx 59,4'
+          - type: text
+            text: "Die Seite ist etwa 5,88 cm lang, das Apothem 4,05 cm, die Fläche etwa 59,4 cm². (Mit den hier gerundeten Werten 5,88 und 4,05 kommt 59,5 heraus. Mit den genauen Zwischenwerten ist es 59,4.) Der Innenwinkel ist 180° − 72° = 108°."
+      - type: note
+        title: Vom Vieleck zum Kreis
+        blocks:
+          - type: text
+            text: "Wenn du dich fragst, was ein Vieleck mit dem Kreis zu tun hat, rechne den Umfang eines Vielecks mit sehr vielen Ecken."
+          - type: text
+            text: "Bei 96 Ecken ist der Umfang des Vielecks mit r = 1 etwa 6,282. Das ist fast 2 · π ≈ 6,283. Das ist dasselbe Annähern wie auf der ersten Seite: Je mehr Ecken, desto mehr gleicht das Vieleck dem Kreis."
+  - type: section
+    id: uebung
+    title: Aufgaben
+    blocks:
+      - type: generated
+        id: innenwinkel
+        given:
+          n: { oneOf: [5, 6, 8, 9, 10, 12] }
+        task:
+          text: "Wie groß ist der Innenwinkel eines regelmäßigen Vielecks mit {{n}} Ecken? Gib ihn in Grad an."
+        answer: { value: "180 - 360 / n", compare: { number: { decimals: 0, tolerance: 0, unit: "°" } } }
+        mistakes:
+          - value: "360 / n"
+            message: "Das ist der Winkel bei M im Teildreieck, nicht der Innenwinkel des Vielecks. Der Innenwinkel ist 180° minus dieser Winkel."
+          - value: "180 / n"
+            message: "Das ist der halbe Winkel bei M. Der Innenwinkel ist 180° − 360° : n."
+        hint: "Der Innenwinkel und der Winkel bei M im Teildreieck, 360° : n, ergeben zusammen 180°."
+        steps:
+          - '$180^\circ - 360^\circ : {{n}} = {{answer}}^\circ$'
+      - type: generated
+        id: seitenlaenge
+        given:
+          n: { oneOf: [5, 6, 8, 10] }
+          r: { int: [4, 12], step: 1 }
+        task:
+          text: "Ein regelmäßiges Vieleck mit {{n}} Ecken liegt in einem Kreis mit dem Radius r = {{r}} cm. Wie lang ist eine Seite? Runde auf zwei Stellen nach dem Komma."
+        answer:
+          { value: "round(2 * r * sin(180 / n), 2)", compare: { number: { decimals: 2, tolerance: 0.01, unit: cm } } }
+        mistakes:
+          - value: "round(r * sin(180 / n), 2)"
+            message: "Das ist die halbe Seite a : 2. Die Seite ist doppelt so lang: a = 2 · r · sin(180° : n)."
+          - value: "round(2 * r * sin(360 / n), 2)"
+            message: "Im rechtwinkligen Dreieck ist der Winkel bei M nur halb so groß wie im Teildreieck: 180° : n, nicht 360° : n."
+        hint: "Im rechtwinkligen Dreieck ist r die Hypotenuse und a : 2 die Gegenkathete zu 180° : n."
+        steps:
+          - '$a = 2 \cdot r \cdot \sin \frac{180^\circ}{n} = 2 \cdot {{r}} \cdot \sin \frac{180^\circ}{{{n}}} = {{answer}}$'
+      - type: generated
+        id: vieleck-flaeche
+        given:
+          n: { oneOf: [5, 6, 8, 10] }
+          r: { int: [4, 10], step: 1 }
+        task:
+          text: "Ein regelmäßiges Vieleck mit {{n}} Ecken liegt in einem Kreis mit dem Radius r = {{r}} cm. Berechne seine Fläche und runde auf eine Stelle nach dem Komma."
+        answer:
+          {
+            value: "round(n * (2 * r * sin(180 / n)) * (r * cos(180 / n)) / 2, 1)",
+            compare: { number: { decimals: 1, tolerance: 0.1, unit: cm² } },
+          }
+        mistakes:
+          - value: "round(n * (2 * r * sin(180 / n)) * r / 2, 1)"
+            message: "Du hast r als Höhe der Teildreiecke genommen. Die Höhe ist das Apothem ρ = r · cos(180° : n), und das ist kürzer als r."
+          - value: "round(n * (r * sin(180 / n)) * (r * cos(180 / n)) / 2, 1)"
+            message: "Du hast die halbe Seite a : 2 als Grundseite genommen. Die Teildreiecke haben die ganze Seite a als Grundseite."
+        hint: "Berechne erst a und ρ. Jedes Teildreieck hat die Fläche ein halb mal a mal ρ, und es gibt n davon."
+        steps:
+          - '$A = n \cdot \frac{1}{2} \cdot a \cdot \rho$'
+          - "Mit a = 2 · r · sin(180° : n) und ρ = r · cos(180° : n) ergibt das {{answer}} cm²."
+      - type: number
+        id: apothem
+        text: "Ein regelmäßiges Sechseck liegt in einem Kreis mit dem Radius 10 cm. Wie lang ist sein Apothem ρ? Runde auf eine Stelle nach dem Komma."
+        answer: 8.7
+        tolerance: 0.05
+        unit: cm
+        explanation: "Im Teildreieck ist der Winkel 180° : 6 = 30°. Dann ist ρ = r · cos 30° = 10 · 0,866 ≈ 8,7 cm. Du kannst es auch mit Pythagoras prüfen: Die halbe Seite ist 5 cm, also ρ² = 10² − 5² = 75, und die Wurzel daraus ist etwa 8,7."
+      - type: single-choice
+        id: welches-dreieck
+        text: "Du willst die Seite eines regelmäßigen Zehnecks aus dem Radius r berechnen. In welchem Dreieck rechnest du?"
+        options:
+          - text: "Im halbierten Teildreieck mit dem Winkel 18° bei M"
+            correct: true
+            info: "Der Winkel bei M im Teildreieck ist 360° : 10 = 36°, halbiert 18°. Im rechtwinkligen Dreieck liegt a : 2 diesem Winkel gegenüber."
+          - text: "Im Teildreieck mit dem Winkel 36° bei M, ohne es zu halbieren"
+            correct: false
+            info: "Dieses Dreieck ist nicht rechtwinklig, du kannst den Sinus nicht direkt benutzen. Erst halbieren, dann hast du einen rechten Winkel."
+          - text: "Im Dreieck aus drei Ecken des Vielecks"
+            correct: false
+            info: "Auch dieses Dreieck ist im Allgemeinen nicht rechtwinklig und hat r nicht als Seite. Mit ihm kommst du an die Seite a nicht direkt heran."
+        explanation: "Das versteckte rechtwinklige Dreieck entsteht, wenn du das Teildreieck mit seiner Höhe halbierst. Der Winkel dort ist 180° : n."
+      - type: text
+        text: "**Das kannst du jetzt:** Du findest in einem regelmäßigen Vieleck das rechtwinklige Dreieck und berechnest Seite, Winkel und Fläche."

@@ -1,0 +1,138 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Die Fläche des Kreises
+description: "Du schneidest einen Kreis in Tortenstücke und legst sie zu einem Fast-Rechteck. Daraus entsteht A = π · r²."
+competencies: [kreis-umfang-flaeche]
+blocks:
+  - type: section
+    id: einstieg
+    title: Wie groß ist die Fläche einer runden Torte?
+    blocks:
+      - type: text
+        text: "Wenn du wissen willst, wie viel Platz oder Material ein Kreis braucht, zum Beispiel für eine Torte, eine Tischplatte oder ein Beet, brauchst du seine Fläche."
+      - type: text
+        text: "Eine runde Torte hat den Radius r = 10 cm. Zwei Quadrate helfen dir beim Schätzen. Das große Quadrat umschließt die Torte und hat die Seitenlänge 20 cm, also die Fläche 400 cm². Das kleine Quadrat liegt in der Torte, seine Ecken liegen auf dem Rand. Es hat die Fläche 200 cm²."
+      - type: single-choice
+        id: torte-schaetzen
+        text: "Welche Fläche kann die Torte haben?"
+        options:
+          - text: "150 cm²"
+            correct: false
+            info: "Das ist weniger als das kleine Quadrat in der Torte (200 cm²). Die Torte ist größer."
+          - text: "330 cm²"
+            correct: true
+            info: "Die Fläche liegt zwischen dem kleinen Quadrat (200 cm²) und dem großen (400 cm²)."
+          - text: "450 cm²"
+            correct: false
+            info: "Das ist mehr als das große Quadrat (400 cm²), das die Torte umschließt."
+        explanation: "Die Torte füllt das kleine Quadrat und liegt im großen. Ihre Fläche muss zwischen 200 cm² und 400 cm² liegen. Genau rechnest du sie gleich aus."
+  - type: section
+    id: herleitung
+    title: Aus Tortenstücken wird ein Rechteck
+    blocks:
+      - type: text
+        text: "Wenn du die Fläche eines Kreises ausrechnen willst, hilft ein Trick: Du verwandelst den Kreis in eine Figur, deren Fläche du schon berechnen kannst, ein Rechteck."
+      - type: text
+        text: "Schneide den Kreis in gleich große Tortenstücke. Lege sie abwechselnd nebeneinander, eines mit der Spitze nach oben, das nächste nach unten. Mit dem Regler änderst du die Zahl der Stücke, der Knopf legt sie um. Die Stücke sind abwechselnd rosa mit gestricheltem Rand und grau, damit du sie auseinanderhältst."
+      - type: vue-component
+        id: torte
+        component: Torte
+        props:
+          label: Anzahl der Stücke
+          umlegen: Stücke umlegen
+          zurueck: Zurück zum Kreis
+          ergebnis: "Bei {n} Stücken ist die Figur etwa {b} · r breit und fast r hoch. Je mehr Stücke, desto näher kommt die Breite an π · r ≈ 3,14 · r."
+          bildKreis: "Ein Kreis, in {n} gleich große Stücke geteilt."
+          bildRechteck: "Die {n} Stücke nebeneinander, abwechselnd mit der Spitze nach oben und nach unten. Die Figur ist fast ein Rechteck."
+        nojs: |
+          Ein Kreis mit dem Radius r wird in n gleich große Stücke geteilt. Die Stücke liegen abwechselnd mit der Spitze nach oben und nach unten nebeneinander. Je mehr Stücke es sind, desto mehr sieht die Figur wie ein Rechteck aus. Die Länge der oberen Kante in Vielfachen von r (sie wird immer näher an π · r):
+
+          - 4 Stücke: 2,828 · r.
+          - 8 Stücke: 3,061 · r.
+          - 16 Stücke: 3,121 · r.
+          - 32 Stücke: 3,137 · r.
+
+          Die Höhe ist etwas kleiner als r und kommt mit mehr Stücken immer näher an r.
+      - type: text
+        text: "Die Figur ist fast ein Rechteck. Seine Höhe ist der Radius r. Seine Breite ist die Hälfte des Kreisumfangs, denn oben liegt der halbe Rand und unten der andere halbe Rand. Mit U = 2 · π · r ist die Breite also π · r. Die Fläche des Rechtecks ist Breite mal Höhe."
+      - type: formula
+        formula: 'A = \pi \cdot r \cdot r = \pi \cdot r^2'
+      - type: definition
+        term: Kreisfläche
+        explanation: "Die Kreisfläche mit dem Radius $r$ ist $A = \\pi \\cdot r^2$. Der Radius wird mit sich selbst multipliziert, nicht mit 2."
+  - type: section
+    id: beispiel
+    title: Die runde Torte
+    blocks:
+      - type: text
+        text: "Wenn du die Formel ausprobieren willst, rechne die Fläche der Torte genau aus."
+      - type: example
+        title: "Radius 10 cm"
+        blocks:
+          - type: formula
+            formula: 'A = \pi \cdot r^2'
+          - type: formula
+            formula: 'A \approx 3,14 \cdot 10^2 = 314'
+          - type: text
+            text: "Die Torte hat eine Fläche von etwa 314 cm². Das liegt zwischen 200 cm² und 400 cm², wie geschätzt."
+          - type: text
+            text: "Rückwärts geht es so: Aus A = π · r² folgt r² = A : π. Dann ziehst du die Wurzel. Aus A = 314 cm² wird r² = 100 und r = 10 cm."
+  - type: section
+    id: uebung
+    title: Aufgaben
+    blocks:
+      - type: generated
+        id: flaeche-aus-radius
+        given:
+          r: { int: [3, 20], step: 1 }
+        task:
+          text: "Ein Kreis hat den Radius r = {{r}} cm. Berechne seine Fläche mit π ≈ 3,14."
+        answer: { value: "3.14 * r * r", compare: { number: { decimals: 2, tolerance: 0, unit: cm² } } }
+        mistakes:
+          - value: "2 * 3.14 * r"
+            message: "Das ist der Umfang 2 · π · r, eine Länge. Für die Fläche multiplizierst du r mit sich selbst: π · r²."
+          - value: "3.14 * r"
+            message: "Du hast r nicht quadriert. Die Fläche ist π · r², also π · r · r."
+          - value: "3.14 * (2 * r) * (2 * r)"
+            message: "Du hast den Durchmesser statt des Radius eingesetzt. In π · r² steht der Radius."
+        hint: "Rechne erst r² = r · r, dann mal 3,14."
+        steps:
+          - '$A = \pi \cdot r^2 \approx 3,14 \cdot {{r}}^2 = {{answer}}$'
+      - type: generated
+        id: flaeche-aus-durchmesser
+        given:
+          d: { int: [6, 30], step: 2 }
+        task:
+          text: "Eine runde Tischplatte hat den Durchmesser d = {{d}} cm. Berechne ihre Fläche mit π ≈ 3,14."
+        answer: { value: "3.14 * (d / 2) * (d / 2)", compare: { number: { decimals: 2, tolerance: 0, unit: cm² } } }
+        mistakes:
+          - value: "3.14 * d * d"
+            message: "Du hast den Durchmesser statt des Radius quadriert. Der Radius ist halb so lang wie der Durchmesser: r = d : 2."
+          - value: "3.14 * d"
+            message: "Das ist der Umfang π · d. Für die Fläche brauchst du den Radius, quadriert, mal π."
+        hint: "Der Radius ist die Hälfte von {{d}} cm. Dann rechnest du π · r²."
+        steps:
+          - "$r = {{d}} : 2$"
+          - '$A = \pi \cdot r^2 \approx 3,14 \cdot r^2 = {{answer}}$'
+      - type: number
+        id: radius-aus-flaeche
+        text: "Ein Kreis hat die Fläche 314 cm². Wie groß ist sein Radius? Rechne mit π ≈ 3,14."
+        answer: 10
+        tolerance: 0
+        unit: cm
+        explanation: "A = π · r² = 314, also r² = 314 : 3,14 = 100. Die Zahl, die mit sich selbst multipliziert 100 ergibt, ist 10. Der Radius ist 10 cm."
+      - type: single-choice
+        id: radius-verdoppeln-flaeche
+        text: "Der Radius eines Kreises wird verdoppelt. Was passiert mit seiner Fläche?"
+        options:
+          - text: "Sie wird doppelt so groß."
+            correct: false
+            info: "Das gilt für den Umfang. Die Fläche enthält r², und 2² ist 4."
+          - text: "Sie wird viermal so groß."
+            correct: true
+            info: "A = π · r². Mit 2 · r wird daraus π · (2 · r)² = π · 4 · r², also das Vierfache."
+          - text: "Sie wird achtmal so groß."
+            correct: false
+            info: "Achtmal wäre r³ wie beim Volumen. Die Fläche hat nur r²."
+        explanation: "Weil r quadriert wird, wächst die Fläche schneller als der Radius: doppelter Radius, vierfache Fläche."
+      - type: text
+        text: "**Das kannst du jetzt:** Du kannst die Fläche eines Kreises aus Radius oder Durchmesser berechnen und weißt, warum der Radius quadriert wird."

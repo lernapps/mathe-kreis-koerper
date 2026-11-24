@@ -1,0 +1,155 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Die Kugel nach Archimedes
+description: "Kegel, Kugel und Zylinder mit gleichem Radius und der Höhe 2 · r verhalten sich im Volumen wie 1 zu 2 zu 3. Daraus folgen Volumen und Oberfläche der Kugel."
+competencies: [volumen-oberflaeche-pyramide-kegel-kugel]
+blocks:
+  - type: section
+    id: einstieg
+    title: Drei Körper, ein Radius
+    blocks:
+      - type: text
+        text: "Wenn du wissen willst, wie viel in eine Kugel passt oder wie viel Material ihre Oberfläche braucht, hilft ein Vergleich mit Kegel und Zylinder. Archimedes hat ihn vor über 2000 Jahren gefunden."
+      - type: text
+        text: "Ein Kegel, eine Kugel und ein Zylinder haben alle denselben Radius r. Kegel und Zylinder sind so hoch wie die Kugel dick ist, also 2 · r. Die Kugel passt genau in den Zylinder."
+      - type: figure
+        image: images/kugel-archimedes.svg
+        alt: "Ein Kegel, eine Kugel und ein Zylinder nebeneinander, alle mit dem Radius r und der Höhe 2 mal r."
+        caption: "Kegel, Kugel und Zylinder mit gleichem Radius und gleicher Höhe 2 · r."
+        source: eigene Zeichnung
+        licence: CC0-1.0
+      - type: single-choice
+        id: kugel-im-zylinder
+        text: "Welchen Anteil des Zylinders füllt die Kugel etwa?"
+        options:
+          - text: "Etwa ein Drittel."
+            correct: false
+            info: "Die Kugel berührt den Zylinder rundum und füllt mehr als ein Drittel."
+          - text: "Etwa die Hälfte."
+            correct: false
+            info: "Das ist zu wenig. Die Kugel füllt etwas mehr als die Hälfte des Zylinders."
+          - text: "Etwa zwei Drittel."
+            correct: true
+            info: "Genau zwei Drittel. Das hat Archimedes herausgefunden, und du rechnest es gleich nach."
+          - text: "Fast alles."
+            correct: false
+            info: "In den Ecken des Zylinders oben und unten bleibt viel Platz. Es ist deutlich weniger als alles."
+        explanation: "Die Kugel füllt zwei Drittel des Zylinders. Wie man darauf kommt, zeigt der nächste Abschnitt."
+  - type: section
+    id: herleitung
+    title: Archimedes' Vergleich
+    blocks:
+      - type: text
+        text: "Wenn du das Volumen einer Kugel ausrechnen willst, hilft ein Vergleich: Kegel und Kugel zusammen füllen den Zylinder."
+      - type: text
+        text: "Archimedes fand: Das Volumen der Kugel ist so groß wie der Zylinder minus der Kegel. Mit den Formeln für Zylinder und Kegel kannst du die Rechnung nachvollziehen. Der Kegel fasst ein Drittel des Zylinders, also $\\frac{1}{3} \\cdot 2\\pi r^3$."
+      - type: formula
+        formula: 'V_{Zylinder} = 2 \cdot \pi \cdot r^3'
+      - type: formula
+        formula: 'V_{Kegel} = \frac{1}{3} \cdot 2 \cdot \pi \cdot r^3 = \frac{2}{3} \cdot \pi \cdot r^3'
+      - type: text
+        text: "Für die Kugel bleibt der Rest übrig. Das Verhältnis von Kegel, Kugel und Zylinder ist 1 zu 2 zu 3. Dieses Ergebnis nimmst du hier als gegeben. Die Begründung dafür führen wir hier nicht aus."
+      - type: formula
+        formula: "V_{Kugel} = V_{Zylinder} - V_{Kegel}"
+      - type: formula
+        formula: 'V_{Kugel} = 2 \pi r^3 - \frac{2}{3} \pi r^3 = \frac{4}{3} \pi r^3'
+      - type: text
+        text: "Auch die Oberfläche geht auf Archimedes zurück. Sie ist so groß wie der Mantel des Zylinders um die Kugel. Das nimmst du hier als gegeben. Der Mantel ist 2 · π · r mal 2 · r."
+      - type: formula
+        formula: 'O_{Kugel} = 2\pi r \cdot 2r = 4 \cdot \pi \cdot r^2'
+      - type: definition
+        term: Kugel (Formeln)
+        explanation: "Für die Kugel mit dem Radius $r$ gilt $V = \\frac{4}{3} \\cdot \\pi \\cdot r^3$ und $O = 4 \\cdot \\pi \\cdot r^2$. Die Oberfläche ist das Vierfache der Fläche eines Kreises mit demselben Radius."
+  - type: section
+    id: beispiel
+    title: Eine Kugel mit r = 6 cm
+    blocks:
+      - type: text
+        text: "Wenn du die Formeln an einer Kugel prüfen willst, rechne sie für r = 6 cm."
+      - type: example
+        title: "Radius 6 cm"
+        blocks:
+          - type: formula
+            formula: 'V = \frac{4}{3} \cdot 3,14 \cdot 6^3 = 904,32'
+          - type: formula
+            formula: 'O = 4 \cdot 3,14 \cdot 6^2 = 452,16'
+          - type: text
+            text: "Volumen 904,32 cm³, Oberfläche 452,16 cm². Das Volumen wächst mit r³, die Oberfläche mit r²."
+  - type: section
+    id: uebung
+    title: Aufgaben
+    blocks:
+      - type: generated
+        id: kugel-volumen
+        given:
+          r: { int: [4, 12], step: 1 }
+        task:
+          text: "Eine Kugel hat den Radius r = {{r}} cm. Berechne ihr Volumen mit π ≈ 3,14 und runde auf zwei Stellen nach dem Komma."
+        answer:
+          {
+            value: "round(4 * 3.14 * r * r * r / 3, 2)",
+            compare: { number: { decimals: 2, tolerance: 0.01, unit: cm³ } },
+          }
+        mistakes:
+          - value: "round(4 * 3.14 * r * r, 2)"
+            message: "Das ist die Oberfläche, eine Fläche. Das Volumen hat r³ und den Faktor ein Drittel."
+          - value: "round(4 * 3.14 * r * r * r, 2)"
+            message: "Es fehlt das Drittel. Das Volumen ist vier Drittel mal π mal r³."
+          - value: "round(4 * 3.14 * (2 * r) * (2 * r) * (2 * r) / 3, 2)"
+            message: "Du hast den Durchmesser statt des Radius eingesetzt. In der Formel steht der Radius."
+        hint: "Rechne erst r³ = r · r · r, dann mal 4 · π, dann durch 3."
+        steps:
+          - '$V = \frac{4}{3} \cdot \pi \cdot r^3 \approx \frac{4}{3} \cdot 3,14 \cdot {{r}}^3 = {{answer}}$'
+      - type: generated
+        id: kugel-oberflaeche
+        given:
+          r: { int: [2, 15], step: 1 }
+        task:
+          text: "Eine Kugel hat den Radius r = {{r}} cm. Berechne ihre Oberfläche mit π ≈ 3,14."
+        answer: { value: "4 * 3.14 * r * r", compare: { number: { decimals: 2, tolerance: 0, unit: cm² } } }
+        mistakes:
+          - value: "3.14 * r * r"
+            message: "Das ist nur die Fläche eines Kreises. Die Oberfläche der Kugel ist viermal so groß."
+          - value: "4 * 3.14 * (2 * r) * (2 * r)"
+            message: "Du hast den Durchmesser statt des Radius quadriert. In 4 · π · r² steht der Radius."
+          - value: "2 * 3.14 * r"
+            message: "Das ist der Umfang eines Kreises, eine Länge. Die Oberfläche braucht r²."
+        hint: "Die Oberfläche der Kugel ist das Vierfache der Kreisfläche π · r²."
+        steps:
+          - '$O = 4 \cdot \pi \cdot r^2 \approx 4 \cdot 3,14 \cdot {{r}}^2 = {{answer}}$'
+      - type: number
+        id: eistuete
+        text: "Eine Eistüte besteht aus einem Kegel mit dem Radius 3 cm und der Höhe 8 cm. Oben sitzt eine Halbkugel mit demselben Radius. Wie groß ist das gesamte Volumen? Rechne mit π ≈ 3,14."
+        answer: 131.88
+        tolerance: 0.01
+        unit: cm³
+        explanation: "Kegel: ein Drittel mal 3,14 mal 3² mal 8 = 75,36. Halbkugel: die Hälfte der Kugel, also zwei Drittel mal 3,14 mal 3³ = 56,52. Zusammen 75,36 + 56,52 = 131,88 cm³."
+      - type: single-choice
+        id: verhaeltnis
+        text: "Kegel, Kugel und Zylinder haben denselben Radius r, Kegel und Zylinder die Höhe 2 · r. In welchem Verhältnis stehen ihre Volumen (Kegel : Kugel : Zylinder)?"
+        options:
+          - text: "1 : 2 : 3"
+            correct: true
+            info: "Kegel: zwei Drittel mal π mal r³, Kugel: vier Drittel mal π mal r³, Zylinder: zwei mal π mal r³. Mit Drittel gerechnet sind das 2 : 4 : 6, also 1 : 2 : 3."
+          - text: "1 : 3 : 3"
+            correct: false
+            info: "Die Kugel fasst nicht so viel wie der Zylinder. Sie liegt im Zylinder und lässt Platz in den Ecken."
+          - text: "1 : 2 : 4"
+            correct: false
+            info: "Der Zylinder ist genau Kegel plus Kugel, also 1 + 2 = 3 Teile."
+        explanation: "Kegel und Kugel zusammen füllen den Zylinder: 1 + 2 = 3. Das war Archimedes' Entdeckung."
+      - type: single-choice
+        id: radius-verdoppeln-kugel
+        text: "Der Radius einer Kugel wird verdoppelt. Wie ändert sich ihr Volumen?"
+        options:
+          - text: "Es wird doppelt so groß."
+            correct: false
+            info: "Das gilt für eine Länge wie den Umfang. Das Volumen enthält r³."
+          - text: "Es wird viermal so groß."
+            correct: false
+            info: "Viermal ist die Flächenvergrößerung (r²). Für das Volumen kommt noch ein Faktor 2 dazu."
+          - text: "Es wird achtmal so groß."
+            correct: true
+            info: "V enthält r³. Mit 2 · r wird daraus 2³ · r³ = 8 · r³."
+        explanation: "Das Volumen wächst mit der dritten Potenz des Radius: Doppelter Radius ergibt achtfaches Volumen."
+      - type: text
+        text: "**Das kannst du jetzt:** Du kannst Volumen und Oberfläche einer Kugel berechnen und kennst die Idee von Archimedes. Damit bist du am Ende der Körper und gehst zu Dreiecken und Vielecken über."

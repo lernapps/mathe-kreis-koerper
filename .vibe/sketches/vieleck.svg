@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Kreis mit eingeschriebenem und umschriebenem Sechseck">
+<circle cx="120" cy="120" r="80" fill="none" stroke="#555" stroke-width="2"/>
+<polygon points="200,120 160,189.3 80,189.3 40,120 80,50.7 160,50.7" fill="none" stroke="#06c" stroke-width="2"/>
+<polygon points="212.4,120 166.2,200 73.8,200 27.6,120 73.8,40 166.2,40" fill="none" stroke="#a40" stroke-width="2" stroke-dasharray="5 3"/>
+</svg>

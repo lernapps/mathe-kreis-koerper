@@ -1,0 +1,173 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Der Zylinder
+description: "Ein Zylinder ist ein Prisma mit einem Kreis als Grundfläche. Du berechnest sein Volumen, seinen abgerollten Mantel und seine Oberfläche."
+competencies: [volumen-oberflaeche-zylinder]
+blocks:
+  - type: section
+    id: einstieg
+    title: Eine runde Dose
+    blocks:
+      - type: text
+        text: "Wenn du wissen willst, wie viel in eine Dose passt oder wie viel Blech sie braucht, brauchst du Volumen und Oberfläche eines Zylinders."
+      - type: text
+        text: "Eine runde Dose hat den Radius 4 cm und ist 10 cm hoch. Sie steht in einer quadratischen Schachtel mit der Kantenlänge 8 cm und der Höhe 10 cm. Die Schachtel fasst 640 cm³."
+      - type: single-choice
+        id: dose-schaetzen
+        text: "Wie viel passt in die Dose im Vergleich zur Schachtel?"
+        options:
+          - text: "Weniger als in die Schachtel."
+            correct: true
+            info: "Die Dose steht ganz in der Schachtel und lässt in den vier Ecken Platz frei. Also fasst sie weniger als 640 cm³."
+          - text: "Genauso viel wie in die Schachtel."
+            correct: false
+            info: "Dann müsste die Dose die Ecken der Schachtel ausfüllen. Sie ist aber rund, in den Ecken bleibt Platz."
+          - text: "Mehr als in die Schachtel."
+            correct: false
+            info: "Die Dose steht innerhalb der Schachtel. Was in sie passt, passt auch in die Schachtel."
+        explanation: "Die Dose ist ein Teil der Schachtel. Wie groß dieser Teil ist, rechnest du gleich aus."
+  - type: section
+    id: herleitung
+    title: Ein Prisma mit einem Kreis
+    blocks:
+      - type: text
+        text: "Wenn du wissen willst, wie viel in eine Dose passt, rechnest du mit der Grundfläche und der Höhe."
+      - type: text
+        text: "Ein **Zylinder** ist wie ein Prisma, nur mit einem Kreis als Grundfläche. Mit dem Radius r hat die Grundfläche den Flächeninhalt π · r². Das Volumen ist wieder Grundfläche mal Höhe."
+      - type: formula
+        formula: 'V = G \cdot h = \pi \cdot r^2 \cdot h'
+      - type: text
+        text: "Wenn du die Oberfläche brauchst, musst du auch die gekrümmte Fläche außen herum kennen: den Mantel."
+      - type: definition
+        term: Mantel
+        explanation: "Der Mantel eines Körpers ist seine gekrümmte oder seitliche Fläche ohne Grundfläche und Deckfläche. Beim Zylinder ist er die Fläche, die um die Dose herum liegt."
+      - type: text
+        text: "Für die Oberfläche brauchst du den Mantel. Stell dir das Etikett einer Dose vor. Du schneidest es senkrecht auf und rollst es ab. Es wird ein Rechteck. Seine Höhe ist die Höhe h der Dose. Seine Breite ist der Umfang des Kreises, also 2 · π · r."
+      - type: figure
+        image: images/zylinder-mantel.svg
+        alt: "Links ein Zylinder mit Radius r und Höhe h. Rechts der abgerollte Mantel als Rechteck mit der Breite 2 mal Pi mal r und der Höhe h."
+        caption: "Das Etikett ist abgerollt ein Rechteck: so breit wie der Kreisumfang, so hoch wie der Zylinder."
+        source: eigene Zeichnung
+        licence: CC0-1.0
+      - type: formula
+        formula: 'M = 2 \cdot \pi \cdot r \cdot h'
+      - type: formula
+        formula: 'O = 2 \cdot \pi \cdot r^2 + M'
+      - type: text
+        text: "Die Oberfläche besteht aus zwei Kreisen (Boden und Deckel) und dem Mantel."
+  - type: section
+    id: beispiel
+    title: Eine Dose mit r = 4 cm
+    blocks:
+      - type: text
+        text: "Wenn du die drei Formeln an einer Dose prüfen willst, rechne sie für r = 4 cm."
+      - type: example
+        title: "Radius 4 cm, Höhe 10 cm"
+        blocks:
+          - type: formula
+            formula: 'V = \pi \cdot r^2 \cdot h'
+          - type: formula
+            formula: 'V \approx 3,14 \cdot 16 \cdot 10 = 502,4'
+          - type: formula
+            formula: 'M = 2 \cdot \pi \cdot r \cdot h'
+          - type: formula
+            formula: 'M \approx 2 \cdot 3,14 \cdot 4 \cdot 10 = 251,2'
+          - type: formula
+            formula: 'O = 2 \cdot 3,14 \cdot 16 + 251,2'
+          - type: formula
+            formula: "O = 100,48 + 251,2 = 351,68"
+          - type: text
+            text: "Volumen 502,4 cm³, Mantel 251,2 cm², Oberfläche 351,68 cm². Beachte die Einheiten: Das Volumen hat cm³, Mantel und Oberfläche haben cm²."
+  - type: section
+    id: uebung
+    title: Aufgaben
+    blocks:
+      - type: generated
+        id: zylinder-volumen
+        given:
+          r: { int: [3, 10], step: 1 }
+          h: { int: [3, 20], step: 1 }
+        task:
+          text: "Ein Zylinder hat den Radius r = {{r}} cm und die Höhe h = {{h}} cm. Berechne sein Volumen mit π ≈ 3,14."
+        answer: { value: "3.14 * r * r * h", compare: { number: { decimals: 2, tolerance: 0, unit: cm³ } } }
+        mistakes:
+          - value: "3.14 * (2 * r) * (2 * r) * h"
+            message: "Du hast den Durchmesser statt des Radius quadriert. In π · r² steht der Radius."
+          - value: "3.14 * r * h"
+            message: "Du hast r nicht quadriert. Die Grundfläche ist π · r², nicht π · r."
+          - value: "2 * 3.14 * r * h"
+            message: "Das ist der Mantel, eine Fläche. Das Volumen ist Grundfläche mal Höhe: π · r² · h."
+        hint: "Rechne erst die Grundfläche π · r², dann mal die Höhe."
+        steps:
+          - '$G = \pi \cdot r^2 \approx 3,14 \cdot {{r}}^2$'
+          - '$V = G \cdot h \approx 3,14 \cdot {{r}}^2 \cdot {{h}} = {{answer}}$'
+      - type: generated
+        id: zylinder-mantel
+        given:
+          r: { int: [3, 10], step: 1 }
+          h: { int: [3, 20], step: 1 }
+        task:
+          text: "Das Etikett einer Dose hat die Höhe h = {{h}} cm. Die Dose hat den Radius r = {{r}} cm. Wie groß ist der Flächeninhalt des Etiketts? Rechne mit π ≈ 3,14 und nimm an, dass es genau um die Dose passt."
+        answer: { value: "2 * 3.14 * r * h", compare: { number: { decimals: 2, tolerance: 0, unit: cm² } } }
+        mistakes:
+          - value: "3.14 * r * h"
+            message: "Es fehlt der Faktor 2. Das Etikett ist so breit wie der Umfang 2 · π · r."
+          - value: "3.14 * r * r * h"
+            message: "Das ist das Volumen. Das Etikett ist ein Rechteck mit Breite 2 · π · r und Höhe h."
+        hint: "Das abgerollte Etikett ist ein Rechteck. Seine Breite ist der Umfang des Kreises."
+        steps:
+          - '$M = 2 \cdot \pi \cdot r \cdot h \approx 2 \cdot 3,14 \cdot {{r}} \cdot {{h}} = {{answer}}$'
+      - type: generated
+        id: zylinder-oberflaeche
+        given:
+          r: { int: [3, 10], step: 1 }
+          h: { int: [3, 20], step: 1 }
+        where: ["r * h != 2 * r + 2 * h"]
+        task:
+          text: "Ein Zylinder hat den Radius r = {{r}} cm und die Höhe h = {{h}} cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14."
+        answer:
+          {
+            value: "2 * 3.14 * r * r + 2 * 3.14 * r * h",
+            compare: { number: { decimals: 2, tolerance: 0, unit: cm² } },
+          }
+        mistakes:
+          - value: "2 * 3.14 * r * h"
+            message: "Du hast nur den Mantel gerechnet. Boden und Deckel fehlen."
+          - value: "3.14 * r * r + 2 * 3.14 * r * h"
+            message: "Du hast nur einen Kreis gezählt. Boden und Deckel sind zwei Kreise."
+          - value: "3.14 * r * r * h"
+            message: "Das ist das Volumen. Die Oberfläche ist die Summe der Flächen: zwei Kreise und der Mantel."
+        hint: "Zähle die Flächen: zwei Kreise (Boden und Deckel) und der Mantel."
+        steps:
+          - '$O = 2 \cdot \pi \cdot r^2 + 2 \cdot \pi \cdot r \cdot h$'
+          - '$O \approx 2 \cdot 3,14 \cdot {{r}}^2 + 2 \cdot 3,14 \cdot {{r}} \cdot {{h}} = {{answer}}$'
+      - type: number
+        id: zylinder-hoehe
+        text: "Ein Zylinder hat den Radius 5 cm und das Volumen 628 cm³. Wie hoch ist er? Rechne mit π ≈ 3,14."
+        answer: 8
+        tolerance: 0
+        unit: cm
+        explanation: "V = π · r² · h, also h = V : (π · r²) = 628 : (3,14 · 25) = 628 : 78,5 = 8. Der Zylinder ist 8 cm hoch."
+      - type: single-choice
+        id: radius-doppelt
+        text: "Ein Zylinder bekommt den doppelten Radius, die Höhe bleibt gleich. Was passiert mit dem Volumen?"
+        options:
+          - text: "Es wird doppelt so groß."
+            correct: false
+            info: "Das gilt, wenn die Höhe verdoppelt wird. Der Radius steht im Quadrat."
+          - text: "Es wird viermal so groß."
+            correct: true
+            info: "V = π · r² · h. Mit 2 · r wird daraus π · 4 · r² · h, also das Vierfache."
+          - text: "Es wird achtmal so groß."
+            correct: false
+            info: "Achtmal wäre es, wenn alle drei Längen (r, r und h) doppelt so groß würden. Hier ändert sich nur der Radius, und der steht zweimal im Produkt."
+        explanation: "Die Grundfläche wächst mit dem Quadrat des Radius. Doppelter Radius ergibt vierfache Grundfläche und bei gleicher Höhe vierfaches Volumen."
+      - type: ordering
+        id: oberflaeche-schritte
+        text: "Bringe die Schritte zur Oberfläche eines Zylinders in die richtige Reihenfolge."
+        items:
+          - Radius r und Höhe h ablesen
+          - Grundfläche π · r² und Mantel 2 · π · r · h berechnen
+          - Zwei Grundflächen und den Mantel addieren
+        explanation: "Erst die Maße, dann die einzelnen Flächen, zuletzt die Summe. Die Grundfläche brauchst du zweimal, für Boden und Deckel."
+      - type: text
+        text: "**Das kannst du jetzt:** Du kannst Volumen, Mantel und Oberfläche eines Zylinders berechnen und weißt, woher der Faktor 2 · π · r im Mantel kommt."
