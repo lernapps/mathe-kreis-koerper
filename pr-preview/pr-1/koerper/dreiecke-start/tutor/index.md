@@ -37,7 +37,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Das brauchst du für Dreiecke und Vielecke“
 
-Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/strahlensaetze/, https://lernapps.net/apps/map/mathematik/c/trigonometrie/
+Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/strahlensaetze/, https://lernapps.net/apps/map/mathematik/c/trigonometrie/
 
 Was du für Dreiecke und Vielecke brauchst: die Strahlensätze und Sinus, Kosinus und Tangens im rechtwinkligen Dreieck.
 
