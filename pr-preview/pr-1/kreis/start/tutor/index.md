@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=rechteck-flaeche`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/kreis/start/?via=tutor#rechteck-flaeche`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -43,7 +45,7 @@ Was du für dieses Kapitel können musst: Fläche und Umfang, Rechnen mit Dezima
 
 ### Wofür diese Seite ist
 
-Das brauchst du für dieses Kapitel: Du rechnest mit Längen und Flächen, mit Dezimalzahlen und mit Sinus, Kosinus und Tangens. Zu jedem Thema findest du die wichtigsten Wörter, ein Beispiel und einen Selbsttest. Er zählt nichts und wird nicht gespeichert.
+Das brauchst du für dieses Kapitel: Du rechnest mit Längen und Flächen, mit Dezimalzahlen und mit Sinus, Kosinus und Tangens. Zu jedem Thema gibt es die wichtigsten Wörter und ein Beispiel. Zwei Aufgaben auf der Seite zeigen dir, ob du bereit bist. Sie zählen nichts und werden nicht gespeichert.
 
 ### Fläche und Umfang: Rechteck, Quadrat
 
@@ -59,9 +61,9 @@ Der Baustein: Ich kann Flächeninhalt und Umfang von Quadrat und Rechteck berech
 
 Ein Beet ist 4 m lang und 3 m breit. Der Flächeninhalt ist 4 · 3 = 12 m². Der Umfang ist 2 · (4 + 3) = 14 m.
 
-Interaktiv: Selbsttest: Ein rechteckiges Beet ist 12 m lang und 7,5 m breit. Wie groß ist sein Flächeninhalt? Antwort: 90 m². Denn 12 · 7,5 = 90, und eine Fläche hat die Einheit m². 39 m wäre der Umfang, 19,5 m² käme vom Addieren statt Multiplizieren.
+- Aufgabe `rechteck-flaeche` (unten)
 
-Wenn die Antwort falsch war: Schau dir den Baustein „Fläche und Umfang: Rechteck, Quadrat“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/flaeche-umfang-quadrat-rechteck/).
+Wenn dir das noch schwerfällt: Schau dir den Baustein „Fläche und Umfang: Rechteck, Quadrat“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/flaeche-umfang-quadrat-rechteck/).
 
 ### Rechnen mit Dezimalbrüchen
 
@@ -75,11 +77,7 @@ Der Baustein: Ich kann mit Dezimalbrüchen rechnen.
 
 2,5 · 0,4: Rechne erst ohne Komma, 25 · 4 = 100. Dann setzt du das Komma. Die Faktoren haben zusammen zwei Stellen nach dem Komma, also 1,00 = 1.
 
-Interaktiv: Selbsttest: Was ergibt 3,6 · 0,25? Antwort: 0,9. Denn 36 · 25 = 900, und die Faktoren haben zusammen drei Stellen nach dem Komma: 0,900 = 0,9. 14,4 wäre 3,6 : 0,25.
-
-Interaktiv: Selbsttest: Runde 3,1416 auf drei Stellen nach dem Komma. Antwort: 3,142. Hinter der dritten Stelle steht eine 6, also wird aufgerundet. 3,141 wäre abgeschnitten, 3,14 nur auf zwei Stellen gerundet.
-
-Wenn die Antwort falsch war: Schau dir den Baustein „Rechnen mit Dezimalbrüchen“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/dezimalbrueche-rechnen/).
+Wenn dir das noch schwerfällt: Schau dir den Baustein „Rechnen mit Dezimalbrüchen“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/dezimalbrueche-rechnen/).
 
 ### Trigonometrie im rechtwinkligen Dreieck
 
@@ -95,14 +93,38 @@ Der Baustein: Ich kann mit Sinus, Kosinus und Tangens Seiten und Winkel in recht
 
 Ein Dreieck hat die Hypotenuse 8 cm und den Winkel α = 30°. Die Gegenkathete ist a = 8 · sin 30° = 8 · 0,5 = 4 cm.
 
-Interaktiv: Selbsttest: Ein rechtwinkliges Dreieck hat die Hypotenuse 10 cm und den Winkel α = 30°. Wie lang ist die Gegenkathete von α? Antwort: 5 cm, denn 10 · sin 30° = 10 · 0,5 = 5. 8,7 cm wäre die Ankathete (Kosinus).
+- Aufgabe `kathete-sinus` (unten)
 
-Interaktiv: Selbsttest: In einem rechtwinkligen Dreieck ist die Gegenkathete von α 3 cm lang und die Ankathete 4 cm. Wie findest du α? Antwort: tan α = 3 : 4 = 0,75, also α = tan⁻¹(0,75) ≈ 36,9°. Der Sinus bräuchte die Hypotenuse, und 4 : 3 wäre mit vertauschten Seiten gerechnet.
-
-Wenn die Antwort falsch war: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/).
+Wenn dir das noch schwerfällt: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/).
 
 ### Du bist bereit, wenn du …
 
 - Flächeninhalt und Umfang von Quadrat und Rechteck berechnen kannst,
 - mit Dezimalbrüchen rechnen und sinnvoll runden kannst,
 - mit Sinus, Kosinus und Tangens eine Seite oder einen Winkel in einem rechtwinkligen Dreieck findest.
+
+### Aufgabe rechteck-flaeche
+
+- Aufgabe: Ein rechteckiges Beet ist 12 m lang und 7,5 m breit. Wie groß ist sein Flächeninhalt?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ 39 m – Das ist der Umfang 2 · (12 + 7,5). Gefragt ist die Fläche, und die hat die Einheit m².
+  - ✓ 90 m² – 12 · 7,5 = 90. Länge mal Breite, die Einheit ist m². Beim Malnehmen mit 7,5 rechnest du 12 · 7 + 12 · 0,5.
+  - ✗ 19,5 m² – Du hast Länge und Breite addiert (12 + 7,5). Für die Fläche musst du multiplizieren.
+  - ✗ 90 m – Die Zahl stimmt, aber eine Fläche hat die Einheit m², nicht m.
+- Lösung: 90 m²
+- Erklärung: Der Flächeninhalt ist Länge mal Breite. Mit Dezimalzahlen rechnest du wie mit ganzen Zahlen und achtest auf die Kommastelle.
+- Link: [../?via=tutor#rechteck-flaeche](../?via=tutor#rechteck-flaeche)
+
+### Aufgabe kathete-sinus
+
+- Aufgabe: Ein rechtwinkliges Dreieck hat die Hypotenuse 10 cm und den Winkel α = 30°. Wie lang ist die Gegenkathete von α?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 5 cm – Gegenkathete zu Hypotenuse ist der Sinus: 10 · sin 30° = 10 · 0,5 = 5.
+  - ✗ 8,7 cm – Das ist 10 · cos 30°, also die Ankathete. Die Gegenkathete liegt α gegenüber und gehört zum Sinus.
+  - ✗ 20 cm – Du hast durch 0,5 geteilt. Die Gegenkathete ist kürzer als die Hypotenuse, also muss man malnehmen: 10 · sin 30°.
+  - ✗ 3 cm – Ein Winkel von 30° bedeutet nicht 30 % von 10. Du brauchst den Sinus von 30°, und der ist 0,5.
+- Lösung: 5 cm
+- Erklärung: Wenn Hypotenuse und Winkel bekannt sind und die Gegenkathete gesucht ist, nimmst du den Sinus.
+- Link: [../?via=tutor#kathete-sinus](../?via=tutor#kathete-sinus)

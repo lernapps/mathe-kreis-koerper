@@ -43,13 +43,15 @@ Aus π = U : d wird eine Formel für den Umfang: U = π · d und U = 2 · π · 
 
 ### Die Schnur um den Brunnen
 
+Wenn du für einen Kreis die Länge des Randes brauchst, zum Beispiel für eine Schnur, ein Band oder einen Zaun, willst du sie ausrechnen, ohne zu messen.
+
 Der Rand eines runden Brunnens hat den Durchmesser 1,20 m. Du willst eine Schnur einmal um den Rand legen. Du weißt: Der Umfang ist ungefähr dreimal so lang wie der Durchmesser.
 
 - Aufgabe `brunnen-schaetzen` (unten)
 
 ### Von π zur Formel
 
-Du kennst die Zahl π aus U : d. Wenn du diese Gleichung umstellst, bekommst du den Umfang: Du multiplizierst mit d. Der Durchmesser ist doppelt so lang wie der Radius, d = 2 · r. So entsteht die zweite Form.
+Wenn du den Umfang ausrechnen willst, stellst du die Gleichung für π um: Aus π = U : d wird U = π · d, du multiplizierst mit d. Der Durchmesser ist doppelt so lang wie der Radius, d = 2 · r. So entsteht die zweite Form.
 
 $\pi = \frac{U}{d} \quad \Rightarrow \quad U = \pi \cdot d = 2 \cdot \pi \cdot r$
 
@@ -58,6 +60,8 @@ $\pi = \frac{U}{d} \quad \Rightarrow \quad U = \pi \cdot d = 2 \cdot \pi \cdot r
 In diesem Kapitel rechnest du mit π ≈ 3,14, wenn die Aufgabe es sagt. Dann ist das Ergebnis eindeutig vorgegeben. Die π-Taste deines Taschenrechners nutzt mehr Stellen. Das Ergebnis weicht dann ein wenig ab und gilt auf den Seiten zum Umfang, zur Fläche und zu den Körpern als falsch, wenn die Aufgabe 3,14 verlangt.
 
 ### Der Brunnenrand
+
+Wenn du die Formel an einem echten Maß prüfen willst, nimm den Brunnenrand von der letzten Seite.
 
 **Beispiel: Durchmesser 1,20 m**
 

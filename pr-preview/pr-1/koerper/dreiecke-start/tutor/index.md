@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=schatten-stab`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/koerper/dreiecke-start/?via=tutor#schatten-stab`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -43,7 +45,7 @@ Was du für Dreiecke und Vielecke brauchst: die Strahlensätze und Sinus, Kosinu
 
 ### Wofür diese Seite ist
 
-Das brauchst du für die Messungen auf dem Schulhof und für die Vielecke: die Strahlensätze und Sinus, Kosinus und Tangens. Zu jedem Thema gibt es das Wichtigste, ein Beispiel und einen Selbsttest. Er zählt nichts und wird nicht gespeichert.
+Das brauchst du für die Messungen auf dem Schulhof und für die Vielecke: die Strahlensätze und Sinus, Kosinus und Tangens. Zu jedem Thema gibt es die wichtigsten Wörter und ein Beispiel. Zwei Aufgaben auf der Seite zeigen dir, ob du bereit bist. Sie zählen nichts und werden nicht gespeichert.
 
 ### Strahlensätze
 
@@ -55,9 +57,9 @@ Der Baustein: Ich kann mit den Strahlensätzen Streckenlängen berechnen.
 
 Ein Stab von 2 m wirft einen Schatten von 3 m. Ein Mast wirft zur selben Zeit 12 m Schatten. Der Faktor ist 12 : 3 = 4, also ist der Mast 2 · 4 = 8 m hoch.
 
-Interaktiv: Selbsttest: Ein Stab ist 1,5 m hoch und wirft einen Schatten von 2 m. Zur selben Zeit wirft ein Baum einen Schatten von 12 m. Wie hoch ist der Baum? Antwort: 9 m. Der Faktor ist 12 : 2 = 6, und 1,5 · 6 = 9. Die anderen Zahlen kommen von falschen Rechnungen (8 vom Teilen durch die Stabhöhe, 18 vom Malnehmen mit 12, 10,5 vom Subtrahieren).
+- Aufgabe `schatten-stab` (unten)
 
-Wenn die Antwort falsch war: Schau dir den Baustein „Strahlensätze“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/strahlensaetze/).
+Wenn dir das noch schwerfällt: Schau dir den Baustein „Strahlensätze“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/strahlensaetze/).
 
 ### Trigonometrie im rechtwinkligen Dreieck
 
@@ -73,11 +75,37 @@ $\tan \alpha = \frac{\text{Gegenkathete}}{\text{Ankathete}}$
 
 Die Ankathete von α = 50° ist 6 cm lang. Die Gegenkathete ist a = 6 · tan 50° ≈ 6 · 1,192 ≈ 7,15 cm.
 
-Interaktiv: Selbsttest: Du stehst 20 m vor einem Turm und siehst seine Spitze unter dem Winkel 40°. Die Augenhöhe zählt nicht mit. Wie hoch ist der Turm? Antwort: 20 · tan 40° ≈ 16,8 m. Abstand und Höhe sind Ankathete und Gegenkathete, das gehört zum Tangens. 12,9 käme vom Sinus, 15,3 vom Kosinus, 23,8 vom Teilen durch den Tangens.
+- Aufgabe `turm-tangens` (unten)
 
-Wenn die Antwort falsch war: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/).
+Wenn dir das noch schwerfällt: Schau dir den Baustein „Trigonometrie im rechtwinkligen Dreieck“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/trigonometrie/).
 
 ### Du bist bereit, wenn du …
 
 - mit den Strahlensätzen eine fehlende Länge in ähnlichen Figuren findest,
 - in einem rechtwinkligen Dreieck mit Sinus, Kosinus oder Tangens eine Seite berechnest.
+
+### Aufgabe schatten-stab
+
+- Aufgabe: Ein Stab ist 1,5 m hoch und wirft einen Schatten von 2 m. Zur selben Zeit wirft ein Baum einen Schatten von 12 m. Wie hoch ist der Baum?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 9 m – Der Schatten des Baums ist 6-mal so lang (12 : 2). Also ist der Baum 6-mal so hoch wie der Stab: 1,5 · 6 = 9.
+  - ✗ 8 m – Du hast 12 : 1,5 gerechnet. Verglichen werden Schatten mit Schatten (12 : 2) und Höhe mit Höhe, nicht Schatten mit Höhe.
+  - ✗ 18 m – Du hast 12 mal 1,5 gerechnet. Du musst den Faktor 12 : 2 = 6 bestimmen und die Stabhöhe damit multiplizieren.
+  - ✗ 10,5 m – Du hast 12 minus 1,5 gerechnet. Bei ähnlichen Figuren werden Längen mit demselben Faktor multipliziert, nicht um dieselbe Zahl verlängert.
+- Lösung: 9 m
+- Erklärung: Aus dem Verhältnis der Schatten folgt der Faktor, mit dem du die Stabhöhe multiplizierst.
+- Link: [../?via=tutor#schatten-stab](../?via=tutor#schatten-stab)
+
+### Aufgabe turm-tangens
+
+- Aufgabe: Du stehst 20 m vor einem Turm und siehst seine Spitze unter dem Winkel 40°. Die Augenhöhe zählt nicht mit. Wie hoch ist der Turm?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 16,8 m – Abstand und Höhe sind Ankathete und Gegenkathete von 40°, das gehört zum Tangens: 20 · tan 40° ≈ 16,8.
+  - ✗ 12,9 m – Das ist 20 · sin 40°. Der Sinus braucht die Hypotenuse. Hier ist aber die Ankathete (der Abstand) gegeben.
+  - ✗ 15,3 m – Das ist 20 · cos 40°, also die Ankathete zur Hypotenuse. Gesucht ist aber die Gegenkathete, und die steckt im Tangens.
+  - ✗ 23,8 m – Du hast 20 durch tan 40° geteilt. Die Höhe ist die Gegenkathete, also muss man mit dem Tangens malnehmen.
+- Lösung: 16,8 m
+- Erklärung: Sind Winkel und Ankathete bekannt und ist die Gegenkathete gesucht, rechnest du Ankathete mal Tangens.
+- Link: [../?via=tutor#turm-tangens](../?via=tutor#turm-tangens)

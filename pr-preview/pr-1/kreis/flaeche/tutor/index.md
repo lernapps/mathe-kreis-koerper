@@ -43,11 +43,15 @@ Du schneidest einen Kreis in Tortenstücke und legst sie zu einem Fast-Rechteck.
 
 ### Wie groß ist die Fläche einer runden Torte?
 
+Wenn du wissen willst, wie viel Platz oder Material ein Kreis braucht, zum Beispiel für eine Torte, eine Tischplatte oder ein Beet, brauchst du seine Fläche.
+
 Eine runde Torte hat den Radius r = 10 cm. Zwei Quadrate helfen dir beim Schätzen. Das große Quadrat umschließt die Torte und hat die Seitenlänge 20 cm, also die Fläche 400 cm². Das kleine Quadrat liegt in der Torte, seine Ecken liegen auf dem Rand. Es hat die Fläche 200 cm².
 
 - Aufgabe `torte-schaetzen` (unten)
 
 ### Aus Tortenstücken wird ein Rechteck
+
+Wenn du die Fläche eines Kreises ausrechnen willst, hilft ein Trick: Du verwandelst den Kreis in eine Figur, deren Fläche du schon berechnen kannst, ein Rechteck.
 
 Schneide den Kreis in gleich große Tortenstücke. Lege sie abwechselnd nebeneinander, eines mit der Spitze nach oben, das nächste nach unten. Mit dem Regler änderst du die Zahl der Stücke, der Knopf legt sie um. Die Stücke sind abwechselnd rosa mit gestricheltem Rand und grau, damit du sie auseinanderhältst.
 
@@ -60,6 +64,8 @@ $A = \pi \cdot r \cdot r = \pi \cdot r^2$
 - **Kreisfläche**: Die Kreisfläche mit dem Radius $r$ ist $A = \pi \cdot r^2$. Der Radius wird mit sich selbst multipliziert, nicht mit 2.
 
 ### Die runde Torte
+
+Wenn du die Formel ausprobieren willst, rechne die Fläche der Torte genau aus.
 
 **Beispiel: Radius 10 cm**
 

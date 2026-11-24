@@ -43,11 +43,15 @@ Ein Zylinder ist ein Prisma mit einem Kreis als Grundfläche. Du berechnest sein
 
 ### Eine runde Dose
 
-Eine runde Dose hat eine kreisförmige Grundfläche mit dem Flächeninhalt 50 cm². Sie ist 12 cm hoch. Bei einem Prisma rechnest du das Volumen mit Grundfläche mal Höhe.
+Wenn du wissen willst, wie viel in eine Dose passt oder wie viel Blech sie braucht, brauchst du Volumen und Oberfläche eines Zylinders.
 
-- Aufgabe `dose-volumen` (unten)
+Eine runde Dose hat den Radius 4 cm und ist 10 cm hoch. Sie steht in einer quadratischen Schachtel mit der Kantenlänge 8 cm und der Höhe 10 cm. Die Schachtel fasst 640 cm³.
+
+- Aufgabe `dose-schaetzen` (unten)
 
 ### Ein Prisma mit einem Kreis
+
+Wenn du wissen willst, wie viel in eine Dose passt, rechnest du mit der Grundfläche und der Höhe.
 
 Ein **Zylinder** ist wie ein Prisma, nur mit einem Kreis als Grundfläche. Mit dem Radius r hat die Grundfläche den Flächeninhalt π · r². Das Volumen ist wieder Grundfläche mal Höhe.
 
@@ -66,6 +70,8 @@ $O = 2 \cdot \pi \cdot r^2 + M$
 Die Oberfläche besteht aus zwei Kreisen (Boden und Deckel) und dem Mantel.
 
 ### Eine Dose mit r = 4 cm
+
+Wenn du die drei Formeln an einer Dose prüfen willst, rechne sie für r = 4 cm.
 
 **Beispiel: Radius 4 cm, Höhe 10 cm**
 
@@ -99,13 +105,17 @@ Volumen 502,4 cm³, Mantel 251,2 cm², Oberfläche 351,68 cm². Beachte die E
 
 **Das kannst du jetzt:** Du kannst Volumen, Mantel und Oberfläche eines Zylinders berechnen und weißt, woher der Faktor 2 · π · r im Mantel kommt.
 
-### Aufgabe dose-volumen
+### Aufgabe dose-schaetzen
 
-- Aufgabe: Wie groß ist das Volumen der Dose in cm³, wenn du sie wie ein Prisma behandelst?
-- Antwortformat: eine Zahl eintippen (cm³)
-- Lösung: 600 cm³
-- Erklärung: V = G · h = 50 · 12 = 600 cm³. Das gilt für jeden Körper, der überall gleich dick ist. Beim Zylinder ist die Grundfläche ein Kreis.
-- Link: [../?via=tutor#dose-volumen](../?via=tutor#dose-volumen)
+- Aufgabe: Wie viel passt in die Dose im Vergleich zur Schachtel?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ Weniger als in die Schachtel. – Die Dose steht ganz in der Schachtel und lässt in den vier Ecken Platz frei. Also fasst sie weniger als 640 cm³.
+  - ✗ Genauso viel wie in die Schachtel. – Dann müsste die Dose die Ecken der Schachtel ausfüllen. Sie ist aber rund, in den Ecken bleibt Platz.
+  - ✗ Mehr als in die Schachtel. – Die Dose steht innerhalb der Schachtel. Was in sie passt, passt auch in die Schachtel.
+- Lösung: Weniger als in die Schachtel.
+- Erklärung: Die Dose ist ein Teil der Schachtel. Wie groß dieser Teil ist, rechnest du gleich aus.
+- Link: [../?via=tutor#dose-schaetzen](../?via=tutor#dose-schaetzen)
 
 ### Aufgabe zylinder-volumen
 

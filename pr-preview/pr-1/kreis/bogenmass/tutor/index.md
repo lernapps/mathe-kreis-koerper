@@ -43,11 +43,15 @@ Mit einer Verhältnisgleichung rechnest du Winkel vom Gradmaß ins Bogenmaß um 
 
 ### Ein Achtel des Vollkreises
 
+Wenn du Winkel in zwei Maßen kennst, Grad und Bogenmaß, musst du von einem ins andere wechseln können, zum Beispiel am Taschenrechner.
+
 Der Winkel 45° ist ein Achtel von 360°. Der Vollkreis hat im Bogenmaß den Wert 2π.
 
 - Aufgabe `achtel` (unten)
 
 ### Eine Verhältnisgleichung für beide Richtungen
+
+Wenn du von Grad ins Bogenmaß oder zurück wechseln willst, gibt es einen Weg für beide Richtungen: Der Anteil am Vollkreis ist in beiden Maßen gleich.
 
 Der Winkel α hat im Gradmaß denselben Anteil am Vollwinkel 360° wie sein Bogenmaß x am Vollkreis 2π. Aus dieser Gleichheit der Anteile lässt sich in beide Richtungen umrechnen.
 
@@ -64,6 +68,8 @@ Von Grad ins Bogenmaß multiplizierst du mit π und teilst durch 180°. Vom Boge
 Dein Taschenrechner hat einen Modus für Winkel: DEG für Grad, RAD für Bogenmaß. Rechnest du sin(30) und erhältst −0,988, steht er auf RAD. Auf DEG ist sin(30) = 0,5. Mit π : 6 und Modus RAD kommt ebenfalls 0,5 heraus.
 
 ### Hin und zurück
+
+Wenn du beide Richtungen sehen willst, rechne einen Winkel hin und einen zurück.
 
 **Beispiel: 225° und x = 2**
 

@@ -43,6 +43,8 @@ Ein Kegel fasst ein Drittel eines Zylinders mit gleicher Grundfläche und Höhe.
 
 ### Kegel in den Zylinder schütten
 
+Wenn du wissen willst, wie viel in einen Kegel oder eine Pyramide passt, vergleichst du sie mit einem Zylinder oder Prisma. Probiere es mit Wasser aus.
+
 Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe Höhe. Der Kegel ist mit Wasser gefüllt. Mit dem Knopf schüttest du ihn in den Zylinder. Der Zylinder ist unten noch leer. Der blaue Teil zeigt das Wasser.
 
 Interaktiv: Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe Höhe. Der Kegel ist voll Wasser. Du schüttest ihn in den Zylinder: - Nach 1 Mal ist der Zylinder zu einem Drittel gefüllt. - Nach 2 Mal ist er zu zwei Dritteln gefüllt. - Nach 3 Mal ist er ganz voll. Der Kegel fasst also ein Drittel des Zylinders.
@@ -51,6 +53,8 @@ Interaktiv: Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe 
 
 ### Ein Drittel des Prismas
 
+Wenn du das Volumen ausrechnen willst, ohne umzuschütten, nutzt du das Ergebnis des Versuchs als Formel.
+
 Das Umschütten zeigt, wie das Volumen eines Kegels entsteht: ein Drittel des Zylinders mit derselben Grundfläche G und derselben Höhe h. Für die Pyramide gilt dasselbe, wenn du sie mit einem Prisma gleicher Grundfläche und Höhe vergleichst. Das nimmst du hier als gegeben.
 
 $V_{\text{Kegel}} = \frac{1}{3} \cdot \pi \cdot r^2 \cdot h$
@@ -58,6 +62,8 @@ $V_{\text{Kegel}} = \frac{1}{3} \cdot \pi \cdot r^2 \cdot h$
 $V_{\text{Pyramide}} = \frac{1}{3} \cdot G \cdot h$
 
 ### Das versteckte Dreieck im Kegel
+
+Wenn du die Oberfläche brauchst, zum Beispiel für das Papier einer Tüte, brauchst du die Länge der Mantellinie. Du findest sie in einem Dreieck, das im Körper steckt.
 
 Für den Mantel brauchst du die **Mantellinie** s. Der Kegel ist gerade: Seine Spitze liegt senkrecht über dem Mittelpunkt des Grundkreises. Im Bild liegen Höhe h, Radius r und Mantellinie s in einem rechtwinkligen Dreieck. Der rechte Winkel liegt am Mittelpunkt des Grundkreises.
 
@@ -88,6 +94,8 @@ $M = 4 \cdot \frac{1}{2} \cdot a \cdot h_s = 2 \cdot a \cdot h_s$
 $O = a^2 + 2 \cdot a \cdot h_s$
 
 ### Ein Kegel mit r = 3 cm
+
+Wenn du die Formeln an einem Kegel prüfen willst, rechne ihn mit r = 3 cm durch.
 
 **Beispiel: Radius 3 cm, Höhe 4 cm**
 

@@ -43,13 +43,17 @@ Kegel, Kugel und Zylinder mit gleichem Radius und der Höhe 2 · r verhalten sic
 
 ### Drei Körper, ein Radius
 
-Ein Kegel, eine Kugel und ein Zylinder haben alle denselben Radius r. Kegel und Zylinder sind so hoch wie die Kugel dick ist, also 2 · r. Du kennst schon die Volumen von Zylinder und Kegel.
+Wenn du wissen willst, wie viel in eine Kugel passt oder wie viel Material ihre Oberfläche braucht, hilft ein Vergleich mit Kegel und Zylinder. Archimedes hat ihn vor über 2000 Jahren gefunden.
 
-Bild: Ein Kegel, eine Kugel und ein Zylinder nebeneinander, alle mit dem Radius r und der Höhe 2 mal r. Darunter die Volumenanteile 1, 2 und 3. Bildunterschrift: Kegel, Kugel und Zylinder mit gleichem Radius und gleicher Höhe 2 · r. Die Zahlen geben das Verhältnis der Volumen an.
+Ein Kegel, eine Kugel und ein Zylinder haben alle denselben Radius r. Kegel und Zylinder sind so hoch wie die Kugel dick ist, also 2 · r. Die Kugel passt genau in den Zylinder.
 
-- Aufgabe `zylinder-2r` (unten)
+Bild: Ein Kegel, eine Kugel und ein Zylinder nebeneinander, alle mit dem Radius r und der Höhe 2 mal r. Bildunterschrift: Kegel, Kugel und Zylinder mit gleichem Radius und gleicher Höhe 2 · r.
+
+- Aufgabe `kugel-im-zylinder` (unten)
 
 ### Archimedes' Vergleich
+
+Wenn du das Volumen einer Kugel ausrechnen willst, hilft ein Vergleich: Kegel und Kugel zusammen füllen den Zylinder.
 
 Archimedes fand: Das Volumen der Kugel ist so groß wie der Zylinder minus der Kegel. Mit den Formeln für Zylinder und Kegel kannst du die Rechnung nachvollziehen. Der Kegel fasst ein Drittel des Zylinders, also $\frac{1}{3} \cdot 2\pi r^3$.
 
@@ -70,6 +74,8 @@ $O_{\text{Kugel}} = 2\pi r \cdot 2r = 4 \cdot \pi \cdot r^2$
 - **Kugel (Formeln)**: Für die Kugel mit dem Radius $r$ gilt $V = \frac{4}{3} \cdot \pi \cdot r^3$ und $O = 4 \cdot \pi \cdot r^2$. Die Oberfläche ist das Vierfache der Fläche eines Kreises mit demselben Radius.
 
 ### Eine Kugel mit r = 6 cm
+
+Wenn du die Formeln an einer Kugel prüfen willst, rechne sie für r = 6 cm.
 
 **Beispiel: Radius 6 cm**
 
@@ -93,13 +99,18 @@ Volumen 904,32 cm³, Oberfläche 452,16 cm². Das Volumen wächst mit r³, die
 
 **Das kannst du jetzt:** Du kannst Volumen und Oberfläche einer Kugel berechnen und kennst die Idee von Archimedes. Damit bist du am Ende der Körper und gehst zu Dreiecken und Vielecken über.
 
-### Aufgabe zylinder-2r
+### Aufgabe kugel-im-zylinder
 
-- Aufgabe: Der Zylinder hat den Radius r = 3 cm und die Höhe 2 · r = 6 cm. Wie groß ist sein Volumen? Rechne mit π ≈ 3,14.
-- Antwortformat: eine Zahl eintippen (cm³)
-- Lösung: 169,56 cm³ (erlaubte Abweichung: 0,01 cm³)
-- Erklärung: V = π · r² · h = 3,14 · 9 · 6 = 169,56 cm³. Allgemein ist das V = π · r² · 2r = 2 · π · r³.
-- Link: [../?via=tutor#zylinder-2r](../?via=tutor#zylinder-2r)
+- Aufgabe: Welchen Anteil des Zylinders füllt die Kugel etwa?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ Etwa ein Drittel. – Die Kugel berührt den Zylinder rundum und füllt mehr als ein Drittel.
+  - ✗ Etwa die Hälfte. – Das ist zu wenig. Die Kugel füllt etwas mehr als die Hälfte des Zylinders.
+  - ✓ Etwa zwei Drittel. – Genau zwei Drittel. Das hat Archimedes herausgefunden, und du rechnest es gleich nach.
+  - ✗ Fast alles. – In den Ecken des Zylinders oben und unten bleibt viel Platz. Es ist deutlich weniger als alles.
+- Lösung: Etwa zwei Drittel.
+- Erklärung: Die Kugel füllt zwei Drittel des Zylinders. Wie man darauf kommt, zeigt der nächste Abschnitt.
+- Link: [../?via=tutor#kugel-im-zylinder](../?via=tutor#kugel-im-zylinder)
 
 ### Aufgabe kugel-volumen
 

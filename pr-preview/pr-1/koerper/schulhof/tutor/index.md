@@ -43,6 +43,8 @@ Die Höhe eines Baums und die Breite eines Flusses misst du nicht mit dem Maßba
 
 ### Der Baum und sein Schatten
 
+Wenn du etwas messen willst, das du nicht erreichst, etwa die Höhe eines Baums oder die Breite eines Flusses, misst du etwas anderes und rechnest. Dafür suchst du ein Dreieck.
+
 Auf dem Schulhof steht ein hoher Baum. Du kannst nicht hinaufklettern. Aber du kannst messen, was du erreichst. Ein 2 m langer Stab wirft einen Schatten von 1,5 m. Zur selben Zeit wirft der Baum einen Schatten von 6 m.
 
 - Aufgabe `baum-schatten` (unten)
@@ -63,6 +65,8 @@ Bild: Ein Fluss zwischen zwei Ufern von oben. Am anderen Ufer steht ein Baum, am
 
 $w = s \cdot \tan \beta$
 
+Wenn du vor einer Messaufgabe stehst und nicht weißt, womit du rechnen sollst, hilft diese Übersicht.
+
 Welches Verfahren passt?:
 - Situation | Verfahren
 - zwei Seiten im rechtwinkligen Dreieck, die dritte | Pythagoras: a² + b² = c²
@@ -70,6 +74,8 @@ Welches Verfahren passt?:
 - parallele Linien und ein Faktor, zum Beispiel Schatten | Strahlensatz: gleicher Faktor
 
 ### Der Baum auf dem Schulhof
+
+Wenn du das Verfahren an einem Baum prüfen willst, rechne ein Beispiel durch.
 
 **Beispiel: Abstand 15 m, Winkel 32°**
 

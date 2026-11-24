@@ -43,11 +43,15 @@ In jedem regelmäßigen Vieleck steckt ein rechtwinkliges Dreieck. Damit berechn
 
 ### Winkel am Mittelpunkt
 
+Wenn du bei einem regelmäßigen Vieleck Seite, Winkel oder Fläche ausrechnen willst, zum Beispiel für ein Sechseck-Pflaster, hilft dir ein Dreieck im Vieleck.
+
 Ein regelmäßiges Vieleck hat lauter gleich lange Seiten und gleich große Winkel. Seine Ecken liegen alle auf einem Kreis um den Mittelpunkt M. Verbindest du jede Ecke mit M, zerlegst du das Vieleck in gleiche Dreiecke.
 
 - Aufgabe `winkel-mitte` (unten)
 
 ### Das Dreieck halbieren
+
+Wenn du Seite und Fläche aus dem Radius ausrechnen willst, brauchst du ein rechtwinkliges Dreieck. Du erzeugst es, indem du ein Teildreieck halbierst.
 
 Jedes dieser Dreiecke ist gleichschenklig: Zwei Seiten sind Radien r des Kreises, die dritte ist eine Seite a des Vielecks. Du halbierst es mit der Höhe. So entsteht ein rechtwinkliges Dreieck. Im Bild ist es für ein Fünfeck blau markiert.
 
@@ -68,6 +72,8 @@ $A = n \cdot \frac{1}{2} \cdot a \cdot \rho$
 Der Innenwinkel des Vielecks ist an jeder Ecke zweimal der Winkel an der Basis des Teildreiecks, also 180° − 360° : n.
 
 ### Das Fünfeck
+
+Wenn du die Formeln an einem Vieleck prüfen willst, rechne ein Fünfeck durch.
 
 **Beispiel: Fünfeck mit r = 5 cm**
 

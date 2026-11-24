@@ -43,6 +43,8 @@ Der Umfang eines Kreises ist immer gleich oft so lang wie sein Durchmesser. Du s
 
 ### Wie oft passt der Durchmesser in den Umfang?
 
+Wenn du wissen willst, wie lang der Rand eines Kreises ist, musst du ihn nicht abrollen und messen. Zwischen Rand und Durchmesser gibt es eine feste Beziehung. Du findest sie, indem du einige runde Dinge misst.
+
 Auf dem Schulhof misst du vier runde Dinge. Den Umfang U legst du mit einer Schnur und misst die Schnur. Den Durchmesser d misst du quer durch den Kreis. Wie oft der Durchmesser in den Umfang passt, rechnest du mit einer Division: U : d.
 
 Vier Messungen (d: Durchmesser, U: Umfang):
@@ -56,7 +58,7 @@ Vier Messungen (d: Durchmesser, U: Umfang):
 
 ### Den Kreis von zwei Seiten einschließen
 
-Bei jedem Gegenstand kommt fast dieselbe Zahl heraus. Das ist kein Zufall. Messen mit der Schnur ist aber ungenau. Du kannst π genauer bestimmen, wenn du den Kreis **einschließt**: Du zeichnest ein Vieleck innen und eines außen, beide mit gleich langen Seiten. Eine gerade Strecke ist der kürzeste Weg zwischen zwei Punkten. Darum ist der Kreisumfang länger als der Umfang des inneren Vielecks. Der Kreis liegt ganz im äußeren Vieleck, und jedes Stück des Kreises ist kürzer als der Weg außen herum. Darum ist der Kreisumfang kürzer als der Umfang des äußeren Vielecks.
+Bei jedem Gegenstand kommt fast dieselbe Zahl heraus. Das ist kein Zufall. Wenn du diese Zahl genauer wissen willst, als Schnur und Zollstock sie zeigen, **schließt** du den Kreis **ein**: Du zeichnest ein Vieleck innen und eines außen, beide mit gleich langen Seiten. Eine gerade Strecke ist der kürzeste Weg zwischen zwei Punkten. Darum ist der Kreisumfang länger als der Umfang des inneren Vielecks. Der Kreis liegt ganz im äußeren Vieleck, und jedes Stück des Kreises ist kürzer als der Weg außen herum. Darum ist der Kreisumfang kürzer als der Umfang des äußeren Vielecks.
 
 - **Kreiszahl π**: π (sprich „Pi“) ist das Verhältnis von Umfang und Durchmesser eines Kreises: $\pi = U : d$. Es ist für jeden Kreis gleich.
 
@@ -67,6 +69,8 @@ Interaktiv: Ein Kreis mit Radius 1 und dem Durchmesser 2. Innen und außen liegt
 - Aufgabe `obere-grenze-96` (unten)
 
 ### Das Sechseck von Hand
+
+Wenn du sehen willst, wie so eine Grenze entsteht, rechne sie für das Sechseck von Hand.
 
 **Beispiel: Die untere Grenze 3**
 

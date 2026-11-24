@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=quader-oberflaeche`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/koerper/start/?via=tutor#quader-oberflaeche`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -43,7 +45,7 @@ Was du für die Körper brauchst: Volumen und Oberfläche von Prismen, den Satz 
 
 ### Wofür diese Seite ist
 
-Das brauchst du für die Körper in diesem Kapitel: Du kennst Prismen, rechnest mit dem Satz des Pythagoras und erkennst Pyramide, Kegel und Kugel. Zu jedem Thema gibt es die wichtigsten Wörter, ein Beispiel und einen Selbsttest. Er zählt nichts und wird nicht gespeichert.
+Das brauchst du für die Körper in diesem Kapitel: Du kennst Prismen, rechnest mit dem Satz des Pythagoras und erkennst Pyramide, Kegel und Kugel. Zu jedem Thema gibt es die wichtigsten Wörter und ein Beispiel. Zwei Aufgaben auf der Seite zeigen dir, ob du bereit bist. Sie zählen nichts und werden nicht gespeichert.
 
 ### Volumen und Oberfläche: Prisma
 
@@ -59,11 +61,9 @@ Der Baustein: Ich kann Volumen und Oberflächeninhalt von Prismen berechnen.
 
 Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Grundfläche 4 · 3 = 12 cm², Volumen 12 · 2 = 24 cm³. Oberfläche: 2 · (12 + 8 + 6) = 52 cm².
 
-Interaktiv: Selbsttest: Ein Prisma hat als Grundfläche ein Dreieck mit dem Flächeninhalt 12 cm² und ist 5 cm hoch. Wie groß ist sein Volumen? Antwort: 60 cm³, denn V = G · h = 12 · 5. 17 cm³ käme vom Addieren, 60 cm² hat die falsche Einheit.
+- Aufgabe `quader-oberflaeche` (unten)
 
-Interaktiv: Selbsttest: Ein Quader ist 3 cm lang, 4 cm breit und 5 cm hoch. Wie groß ist seine Oberfläche? Antwort: 94 cm², denn 2 · (3 · 4 + 3 · 5 + 4 · 5) = 2 · 47. 60 wäre die Zahl des Volumens, 47 nur die Hälfte der Seiten.
-
-Wenn die Antwort falsch war: Schau dir den Baustein „Volumen und Oberfläche: Prisma“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/volumen-oberflaeche-prisma/).
+Wenn dir das noch schwerfällt: Schau dir den Baustein „Volumen und Oberfläche: Prisma“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/volumen-oberflaeche-prisma/).
 
 ### Satz des Pythagoras
 
@@ -75,9 +75,9 @@ Der Baustein: Ich kann mit dem Satz des Pythagoras und seiner Umkehrung Strecken
 
 Katheten 3 cm und 4 cm: c² = 3² + 4² = 9 + 16 = 25, also c = 5 cm. Ist die Hypotenuse gegeben und eine Kathete gesucht, ziehst du ab: a² = c² − b².
 
-Interaktiv: Selbsttest: Ein rechtwinkliges Dreieck hat die Katheten 6 cm und 8 cm. Wie lang ist die Hypotenuse? Antwort: 10 cm, denn c² = 36 + 64 = 100 und c = 10. 14 wäre die Summe der Katheten, 100 ist c² ohne Wurzel, 5,3 käme vom Subtrahieren.
+- Aufgabe `kathete-pythagoras` (unten)
 
-Wenn die Antwort falsch war: Schau dir den Baustein „Satz des Pythagoras“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/satz-des-pythagoras/).
+Wenn dir das noch schwerfällt: Schau dir den Baustein „Satz des Pythagoras“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/satz-des-pythagoras/).
 
 ### Pyramide, Kegel und Kugel
 
@@ -93,12 +93,36 @@ Der Baustein: Ich kann Pyramide, Kegel und Kugel beschreiben und Körper aus dem
 
 Ein Bleistiftspitzer-Turm: Ein Quader, darauf eine Pyramide. Du zerlegst ihn in diese zwei Grundkörper und kannst jeden einzeln betrachten.
 
-Interaktiv: Selbsttest: Eine Eistüte hat unten eine Waffel und oben eine Eiskugel, die zur Hälfte herausschaut. In welche Grundkörper zerlegst du sie? Antwort: in einen Kegel und eine Halbkugel. Die Waffel läuft unten spitz zu und hat oben einen Kreis, das ist ein Kegel. Ein Zylinder hätte keine Spitze, eine Pyramide hätte ein Vieleck als Grundfläche.
-
-Wenn die Antwort falsch war: Schau dir den Baustein „Pyramide, Kegel und Kugel“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/grundkoerper-pyramide-kegel-kugel/).
+Wenn dir das noch schwerfällt: Schau dir den Baustein „Pyramide, Kegel und Kugel“ an. Seine Kartenseite: [Lernlandkarte](https://lernapps.net/apps/map/mathematik/c/grundkoerper-pyramide-kegel-kugel/).
 
 ### Du bist bereit, wenn du …
 
 - Volumen und Oberfläche von Prismen und Quadern berechnen kannst,
 - mit dem Satz des Pythagoras eine fehlende Seite eines rechtwinkligen Dreiecks findest,
 - Pyramide, Kegel und Kugel erkennst und einen Alltagskörper in Grundkörper zerlegst.
+
+### Aufgabe quader-oberflaeche
+
+- Aufgabe: Ein Quader ist 3 cm lang, 4 cm breit und 5 cm hoch. Wie groß ist seine Oberfläche?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 94 cm² – Drei Paare gleicher Rechtecke: 2 · (3 · 4 + 3 · 5 + 4 · 5) = 2 · 47 = 94.
+  - ✗ 60 cm² – Das ist die Zahl des Volumens (3 · 4 · 5). Gesucht ist die Fläche aller Seiten.
+  - ✗ 47 cm² – Du hast nur drei Rechtecke gezählt. Der Quader hat sechs Seiten, je zwei gleiche.
+  - ✗ 12 cm² – Das ist nur die Grundfläche 3 · 4. Dazu kommen Deckfläche und vier Seitenflächen.
+- Lösung: 94 cm²
+- Erklärung: Die Oberfläche ist die Summe aller sechs Rechtecke. Je zwei gegenüberliegende sind gleich.
+- Link: [../?via=tutor#quader-oberflaeche](../?via=tutor#quader-oberflaeche)
+
+### Aufgabe kathete-pythagoras
+
+- Aufgabe: In einem rechtwinkligen Dreieck ist die Hypotenuse 13 cm lang und eine Kathete 5 cm. Wie lang ist die andere Kathete?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 12 cm – b² = c² − a² = 169 − 25 = 144, also b = 12.
+  - ✗ 8 cm – Du hast 13 − 5 gerechnet. Beim Satz des Pythagoras werden die Quadrate subtrahiert, nicht die Längen.
+  - ✗ 18 cm – Du hast die Längen addiert (13 + 5). Die Hypotenuse ist aber die längste Seite, die andere Kathete ist kürzer.
+  - ✗ 13,9 cm – Du hast die Quadrate addiert, wie bei der Hypotenuse. Hier ist die Hypotenuse gegeben, also subtrahierst du.
+- Lösung: 12 cm
+- Erklärung: Ist die Hypotenuse gegeben, rechnest du b² = c² − a² und ziehst die Wurzel.
+- Link: [../?via=tutor#kathete-pythagoras](../?via=tutor#kathete-pythagoras)
