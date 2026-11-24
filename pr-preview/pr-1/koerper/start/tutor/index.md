@@ -49,7 +49,7 @@ Das brauchst du für die Körper in diesem Kapitel: Du kennst Prismen, rechnest 
 
 ### Volumen und Oberfläche: Prisma
 
-Der Baustein: Ich kann Volumen und Oberflächeninhalt von Prismen berechnen.
+Der Baustein: Ich kann Volumen und Oberflächeninhalt von Prismen berechnen. Du brauchst es, weil du den Zylinder ähnlich rechnest wie ein Prisma.
 
 - **Prisma**: Ein Prisma hat zwei gleiche Vielecke als Grundfläche und Deckfläche. Sie liegen parallel, und die Seitenflächen sind Rechtecke. Ein Quader ist ein Prisma mit einem Rechteck als Grundfläche.
 
@@ -67,7 +67,7 @@ Wenn dir das noch schwerfällt: Schau dir den Baustein „Volumen und Oberfläch
 
 ### Satz des Pythagoras
 
-Der Baustein: Ich kann mit dem Satz des Pythagoras und seiner Umkehrung Streckenlängen berechnen und rechte Winkel prüfen.
+Der Baustein: Ich kann mit dem Satz des Pythagoras und seiner Umkehrung Streckenlängen berechnen und rechte Winkel prüfen. Du brauchst es, weil in Kegel und Pyramide rechtwinklige Dreiecke stecken.
 
 - **Satz des Pythagoras**: In einem rechtwinkligen Dreieck mit den Katheten $a$ und $b$ und der Hypotenuse $c$ gilt $a^2 + b^2 = c^2$. Damit berechnest du aus zwei Seiten die dritte.
 
@@ -81,7 +81,7 @@ Wenn dir das noch schwerfällt: Schau dir den Baustein „Satz des Pythagoras“
 
 ### Pyramide, Kegel und Kugel
 
-Der Baustein: Ich kann Pyramide, Kegel und Kugel beschreiben und Körper aus dem Alltag in Grundkörper zerlegen.
+Der Baustein: Ich kann Pyramide, Kegel und Kugel beschreiben und Körper aus dem Alltag in Grundkörper zerlegen. Du brauchst es, um Körper schon vor dem Rechnen zu erkennen und zu zerlegen.
 
 - **Pyramide**: Eine Pyramide hat ein Vieleck als Grundfläche. Ihre Seitenflächen sind Dreiecke, die in einer Spitze zusammenlaufen.
 

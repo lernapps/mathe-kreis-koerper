@@ -65,6 +65,8 @@ Von Grad ins Bogenmaß multiplizierst du mit π und teilst durch 180°. Vom Boge
 
 **Merke: Der Taschenrechner**
 
+Wenn du einen Winkel in den Taschenrechner eingibst, musst du ihm sagen, in welchem Maß er gemeint ist.
+
 Dein Taschenrechner hat einen Modus für Winkel: DEG für Grad, RAD für Bogenmaß. Rechnest du sin(30) und erhältst −0,988, steht er auf RAD. Auf DEG ist sin(30) = 0,5. Mit π : 6 und Modus RAD kommt ebenfalls 0,5 heraus.
 
 ### Hin und zurück
@@ -199,8 +201,8 @@ Nr. | n | Lösung | F1 | F2
 
 - Aufgabe: Ordne jedem Winkel im Gradmaß sein Bogenmaß zu.
 - Antwortformat: jedem Eintrag links den passenden rechts zuordnen
-- Lösung: 90° – π : 2 (Viertelkreis); 180° – π (Halbkreis); 270° – 3π : 2 (Dreiviertelkreis); 360° – 2π (Vollkreis)
-- Erklärung: Der Vollkreis hat das Bogenmaß 2π. Halbkreis, Viertelkreis und Dreiviertelkreis sind die passenden Anteile davon.
+- Lösung: 30° – π : 6; 45° – π : 4; 60° – π : 3; 120° – 2π : 3
+- Erklärung: Von Grad ins Bogenmaß: Der Winkel geteilt durch 180° ist der Faktor vor π. 30° sind ein Sechstel von 180°, 45° ein Viertel, 60° ein Drittel, 120° zwei Drittel.
 - Link: [../?via=tutor#winkel-zuordnen](../?via=tutor#winkel-zuordnen)
 
 ### Aufgabe neunzig-grad

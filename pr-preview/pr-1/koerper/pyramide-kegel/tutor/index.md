@@ -45,7 +45,7 @@ Ein Kegel fasst ein Drittel eines Zylinders mit gleicher Grundfläche und Höhe.
 
 Wenn du wissen willst, wie viel in einen Kegel oder eine Pyramide passt, vergleichst du sie mit einem Zylinder oder Prisma. Probiere es mit Wasser aus.
 
-Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe Höhe. Der Kegel ist mit Wasser gefüllt. Mit dem Knopf schüttest du ihn in den Zylinder. Der Zylinder ist unten noch leer. Der blaue Teil zeigt das Wasser.
+Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe Höhe. Der Kegel ist mit Wasser gefüllt, der Zylinder noch leer. Mit dem Knopf füllst du den Kegel und schüttest ihn in den Zylinder, jedes Mal ein Kegel voll. Der blaue Teil zeigt das Wasser.
 
 Interaktiv: Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe Höhe. Der Kegel ist voll Wasser. Du schüttest ihn in den Zylinder: - Nach 1 Mal ist der Zylinder zu einem Drittel gefüllt. - Nach 2 Mal ist er zu zwei Dritteln gefüllt. - Nach 3 Mal ist er ganz voll. Der Kegel fasst also ein Drittel des Zylinders.
 
@@ -57,9 +57,9 @@ Wenn du das Volumen ausrechnen willst, ohne umzuschütten, nutzt du das Ergebnis
 
 Das Umschütten zeigt, wie das Volumen eines Kegels entsteht: ein Drittel des Zylinders mit derselben Grundfläche G und derselben Höhe h. Für die Pyramide gilt dasselbe, wenn du sie mit einem Prisma gleicher Grundfläche und Höhe vergleichst. Das nimmst du hier als gegeben.
 
-$V_{\text{Kegel}} = \frac{1}{3} \cdot \pi \cdot r^2 \cdot h$
+$V_{Kegel} = \frac{1}{3} \cdot \pi \cdot r^2 \cdot h$
 
-$V_{\text{Pyramide}} = \frac{1}{3} \cdot G \cdot h$
+$V_{Pyramide} = \frac{1}{3} \cdot G \cdot h$
 
 ### Das versteckte Dreieck im Kegel
 
@@ -81,7 +81,7 @@ $M = \frac{1}{2} \cdot 2 \pi r \cdot s = \pi \cdot r \cdot s$
 
 $O = \pi \cdot r^2 + \pi \cdot r \cdot s$
 
-Bei der Pyramide steckt das Dreieck ebenso im Körper. Die Pyramide ist gerade und ihr Boden ein Quadrat mit der Kante a. Die Höhe h trifft die Mitte des Bodens. Von dort geht eine Strecke der Länge a : 2 zur Mitte einer Kante. Die **Seitenhöhe** $h_s$ geht von der Spitze zur Mitte dieser Kante, sie ist die Hypotenuse.
+Wenn du die Oberfläche einer Pyramide brauchst, suchst du dasselbe Dreieck wie beim Kegel. Die Pyramide ist gerade und ihr Boden ein Quadrat mit der Kante a. Die Höhe h trifft die Mitte des Bodens. Von dort geht eine Strecke der Länge a : 2 zur Mitte einer Kante. Die **Seitenhöhe** $h_s$ geht von der Spitze zur Mitte dieser Kante, sie ist die Hypotenuse.
 
 Bild: Eine Pyramide mit quadratischer Grundfläche. Die gestrichelte Höhe, die halbe Grundkante und die Seitenhöhe bilden ein blau markiertes rechtwinkliges Dreieck. Bildunterschrift: Höhe, halbe Grundkante und Seitenhöhe: das blaue Dreieck hat einen rechten Winkel am Boden-Mittelpunkt.
 

@@ -57,6 +57,8 @@ $\pi = \frac{U}{d} \quad \Rightarrow \quad U = \pi \cdot d = 2 \cdot \pi \cdot r
 
 **Merke: Mit welchem Wert für π?**
 
+Wenn du mit π rechnest, musst du dich für einen Wert entscheiden.
+
 In diesem Kapitel rechnest du mit π ≈ 3,14, wenn die Aufgabe es sagt. Dann ist das Ergebnis eindeutig vorgegeben. Die π-Taste deines Taschenrechners nutzt mehr Stellen. Das Ergebnis weicht dann ein wenig ab und gilt auf den Seiten zum Umfang, zur Fläche und zu den Körpern als falsch, wenn die Aufgabe 3,14 verlangt.
 
 ### Der Brunnenrand

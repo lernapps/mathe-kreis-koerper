@@ -57,19 +57,19 @@ Wenn du das Volumen einer Kugel ausrechnen willst, hilft ein Vergleich: Kegel un
 
 Archimedes fand: Das Volumen der Kugel ist so groß wie der Zylinder minus der Kegel. Mit den Formeln für Zylinder und Kegel kannst du die Rechnung nachvollziehen. Der Kegel fasst ein Drittel des Zylinders, also $\frac{1}{3} \cdot 2\pi r^3$.
 
-$V_{\text{Zylinder}} = 2 \cdot \pi \cdot r^3$
+$V_{Zylinder} = 2 \cdot \pi \cdot r^3$
 
-$V_{\text{Kegel}} = \frac{1}{3} \cdot 2 \cdot \pi \cdot r^3 = \frac{2}{3} \cdot \pi \cdot r^3$
+$V_{Kegel} = \frac{1}{3} \cdot 2 \cdot \pi \cdot r^3 = \frac{2}{3} \cdot \pi \cdot r^3$
 
 Für die Kugel bleibt der Rest übrig. Das Verhältnis von Kegel, Kugel und Zylinder ist 1 zu 2 zu 3. Dieses Ergebnis nimmst du hier als gegeben. Die Begründung dafür führen wir hier nicht aus.
 
-$V_{ ext{Kugel}} = V_{ ext{Zylinder}} - V_{ ext{Kegel}}$
+$V_{Kugel} = V_{Zylinder} - V_{Kegel}$
 
-$V_{\text{Kugel}} = 2 \pi r^3 - \frac{2}{3} \pi r^3 = \frac{4}{3} \pi r^3$
+$V_{Kugel} = 2 \pi r^3 - \frac{2}{3} \pi r^3 = \frac{4}{3} \pi r^3$
 
 Auch die Oberfläche geht auf Archimedes zurück. Sie ist so groß wie der Mantel des Zylinders um die Kugel. Das nimmst du hier als gegeben. Der Mantel ist 2 · π · r mal 2 · r.
 
-$O_{\text{Kugel}} = 2\pi r \cdot 2r = 4 \cdot \pi \cdot r^2$
+$O_{Kugel} = 2\pi r \cdot 2r = 4 \cdot \pi \cdot r^2$
 
 - **Kugel (Formeln)**: Für die Kugel mit dem Radius $r$ gilt $V = \frac{4}{3} \cdot \pi \cdot r^3$ und $O = 4 \cdot \pi \cdot r^2$. Die Oberfläche ist das Vierfache der Fläche eines Kreises mit demselben Radius.
 

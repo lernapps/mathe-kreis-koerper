@@ -47,15 +47,17 @@ Was du für dieses Kapitel können musst: Fläche und Umfang, Rechnen mit Dezima
 
 Das brauchst du für dieses Kapitel: Du rechnest mit Längen und Flächen, mit Dezimalzahlen und mit Sinus, Kosinus und Tangens. Zu jedem Thema gibt es die wichtigsten Wörter und ein Beispiel. Zwei Aufgaben auf der Seite zeigen dir, ob du bereit bist. Sie zählen nichts und werden nicht gespeichert.
 
+Außerdem brauchst du für den ganzen Kurs zwei Wörter vom Kreis.
+
+- **Radius und Durchmesser**: Beim Kreis ist der Radius $r$ der Abstand vom Mittelpunkt zum Rand. Der Durchmesser $d$ geht durch den Mittelpunkt von Rand zu Rand und ist doppelt so lang: $d = 2 \cdot r$. Ein Kreis mit $r = 3$ cm hat $d = 6$ cm.
+
 ### Fläche und Umfang: Rechteck, Quadrat
 
-Der Baustein: Ich kann Flächeninhalt und Umfang von Quadrat und Rechteck berechnen.
+Der Baustein: Ich kann Flächeninhalt und Umfang von Quadrat und Rechteck berechnen. Du brauchst es, weil du Umfang und Fläche des Kreises mit denen von Rechteck und Quadrat vergleichst.
 
 - **Flächeninhalt**: Der Flächeninhalt sagt, wie viele Einheitsquadrate in eine Figur passen. Bei einem Rechteck mit Länge $a$ und Breite $b$ ist er $A = a \cdot b$, die Einheit ist zum Beispiel $\text{cm}^2$.
 
 - **Umfang**: Der Umfang ist die Länge des Randes einer Figur. Bei einem Rechteck ist er $U = 2 \cdot (a + b)$, die Einheit ist zum Beispiel cm.
-
-- **Radius und Durchmesser**: Beim Kreis ist der Radius $r$ der Abstand vom Mittelpunkt zum Rand. Der Durchmesser $d$ geht durch den Mittelpunkt von Rand zu Rand und ist doppelt so lang: $d = 2 \cdot r$. Ein Kreis mit $r = 3$ cm hat $d = 6$ cm.
 
 **Beispiel: Ein Beet**
 
@@ -67,7 +69,7 @@ Wenn dir das noch schwerfällt: Schau dir den Baustein „Fläche und Umfang: Re
 
 ### Rechnen mit Dezimalbrüchen
 
-Der Baustein: Ich kann mit Dezimalbrüchen rechnen.
+Der Baustein: Ich kann mit Dezimalbrüchen rechnen. Du brauchst es, weil fast jede Rechnung mit π eine Dezimalzahl ergibt.
 
 - **Stellenwert**: Der Stellenwert einer Ziffer sagt, wie viel sie wert ist. In 3,142 steht die 1 an der ersten Stelle nach dem Komma und bedeutet ein Zehntel, die 4 ein Hundertstel, die 2 ein Tausendstel.
 
@@ -81,7 +83,7 @@ Wenn dir das noch schwerfällt: Schau dir den Baustein „Rechnen mit Dezimalbr�
 
 ### Trigonometrie im rechtwinkligen Dreieck
 
-Der Baustein: Ich kann mit Sinus, Kosinus und Tangens Seiten und Winkel in rechtwinkligen Dreiecken berechnen.
+Der Baustein: Ich kann mit Sinus, Kosinus und Tangens Seiten und Winkel in rechtwinkligen Dreiecken berechnen. Du brauchst es, weil du Winkel am Kreis und in Körpern mit Sinus, Kosinus und Tangens verbindest.
 
 - **Hypotenuse**: Die Hypotenuse ist die längste Seite eines rechtwinkligen Dreiecks. Sie liegt dem rechten Winkel gegenüber.
 
@@ -118,13 +120,13 @@ Wenn dir das noch schwerfällt: Schau dir den Baustein „Trigonometrie im recht
 
 ### Aufgabe kathete-sinus
 
-- Aufgabe: Ein rechtwinkliges Dreieck hat die Hypotenuse 10 cm und den Winkel α = 30°. Wie lang ist die Gegenkathete von α?
+- Aufgabe: Ein rechtwinkliges Dreieck hat die Hypotenuse 8 cm und den Winkel α = 35°. Wie lang ist die Gegenkathete von α? Runde auf eine Stelle nach dem Komma.
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
-  - ✓ 5 cm – Gegenkathete zu Hypotenuse ist der Sinus: 10 · sin 30° = 10 · 0,5 = 5.
-  - ✗ 8,7 cm – Das ist 10 · cos 30°, also die Ankathete. Die Gegenkathete liegt α gegenüber und gehört zum Sinus.
-  - ✗ 20 cm – Du hast durch 0,5 geteilt. Die Gegenkathete ist kürzer als die Hypotenuse, also muss man malnehmen: 10 · sin 30°.
-  - ✗ 3 cm – Ein Winkel von 30° bedeutet nicht 30 % von 10. Du brauchst den Sinus von 30°, und der ist 0,5.
-- Lösung: 5 cm
-- Erklärung: Wenn Hypotenuse und Winkel bekannt sind und die Gegenkathete gesucht ist, nimmst du den Sinus.
+  - ✓ 4,6 cm – Gegenkathete zu Hypotenuse ist der Sinus: 8 · sin 35° ≈ 8 · 0,5736 = 4,589. Auf eine Stelle gerundet sind das 4,6.
+  - ✗ 4,59 cm – Die Rechnung stimmt, aber du hast auf zwei Stellen gerundet. Verlangt ist eine Stelle nach dem Komma: 4,6.
+  - ✗ 6,6 cm – Das ist 8 · cos 35°, also die Ankathete. Die Gegenkathete liegt α gegenüber und gehört zum Sinus.
+  - ✗ 13,9 cm – Du hast durch sin 35° geteilt. Die Gegenkathete ist kürzer als die Hypotenuse, also muss man malnehmen.
+- Lösung: 4,6 cm
+- Erklärung: Wenn Hypotenuse und Winkel bekannt sind und die Gegenkathete gesucht ist, rechnest du Hypotenuse mal Sinus und rundest zum Schluss.
 - Link: [../?via=tutor#kathete-sinus](../?via=tutor#kathete-sinus)

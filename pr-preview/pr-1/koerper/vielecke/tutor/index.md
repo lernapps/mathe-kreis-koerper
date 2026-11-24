@@ -89,6 +89,8 @@ Die Seite ist etwa 5,88 cm lang, das Apothem 4,05 cm, die Fläche etwa 59,4 c
 
 **Merke: Vom Vieleck zum Kreis**
 
+Wenn du dich fragst, was ein Vieleck mit dem Kreis zu tun hat, rechne den Umfang eines Vielecks mit sehr vielen Ecken.
+
 Bei 96 Ecken ist der Umfang des Vielecks mit r = 1 etwa 6,282. Das ist fast 2 · π ≈ 6,283. Das ist dasselbe Annähern wie auf der ersten Seite: Je mehr Ecken, desto mehr gleicht das Vieleck dem Kreis.
 
 ### Aufgaben
@@ -103,7 +105,7 @@ Bei 96 Ecken ist der Umfang des Vielecks mit r = 1 etwa 6,282. Das ist fast 2 ·
 
 - Aufgabe `welches-dreieck` (unten)
 
-**Das kannst du jetzt:** Du findest in einem regelmäßigen Vieleck das rechtwinklige Dreieck und berechnest Seite, Winkel und Fläche. Am Ende dieses Kapitels hast du Umfang, Fläche und Volumen von runden Körpern berechnet und Strecken und Winkel in Dreiecken. Immer hat dir das versteckte Dreieck oder das Annähern geholfen.
+**Das kannst du jetzt:** Du findest in einem regelmäßigen Vieleck das rechtwinklige Dreieck und berechnest Seite, Winkel und Fläche.
 
 ### Aufgabe winkel-mitte
 

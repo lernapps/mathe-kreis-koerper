@@ -51,7 +51,7 @@ Ein Kreis hat den Radius r = 5 cm. Du schneidest Schnurstücke, die so lang sin
 
 ### Einen Winkel mit einem Bogen messen
 
-Wenn du später mit Winkeln am Kreis rechnen willst, zum Beispiel mit Sinus und Kosinus an einer Kurve, ist ein Winkelmaß ohne Einheit bequem. Dieses Maß heißt Bogenmaß.
+Wenn du einen Winkel nicht in Grad angeben willst, zum Beispiel am Taschenrechner im Modus RAD, brauchst du ein Winkelmaß, das aus einer Länge entsteht. Es heißt Bogenmaß.
 
 Bisher misst du Winkel in Grad. Der Vollwinkel, einmal ganz um den Mittelpunkt herum, hat 360°. Das ist eine Verabredung. Es geht auch mit einer Länge: Ein Winkel mit der Spitze im Mittelpunkt schneidet aus dem Kreis einen **Bogen** aus. Je größer der Winkel, desto länger der Bogen. Damit das Maß nicht von der Größe des Kreises abhängt, teilst du die Bogenlänge b durch den Radius r.
 
@@ -64,6 +64,8 @@ Im Bild unten ist der Einheitskreis. Mit dem Regler stellst du den Winkel ein. D
 Interaktiv: Der Einheitskreis hat den Radius 1. Ein Winkel mit der Spitze im Mittelpunkt schneidet einen Bogen aus. Die Länge des Bogens ist das Bogenmaß des Winkels. Einige Winkel: - 30°: Bogenlänge 0,524, das ist $\frac{\pi}{6}$. - 60°: Bogenlänge 1,047, das ist $\frac{\pi}{3}$. - 90°: Bogenlänge 1,571, das ist $\frac{\pi}{2}$. - 180°: Bogenlänge 3,142, das ist $\pi$. - 270°: Bogenlänge 4,712, das ist $\frac{3\pi}{2}$. - 360°: Bogenlänge 6,283, das ist $2\pi$.
 
 Der ganze Kreisrand ist der Bogen zum Vollwinkel. Am Einheitskreis hat er die Länge U = 2 · π · 1. Der Halbkreis ist die Hälfte davon, der Viertelkreis ein Viertel.
+
+Wenn du dir die wichtigsten Winkel merken willst, hilft diese Tabelle.
 
 Wichtige Winkel im Gradmaß und im Bogenmaß:
 - Winkel | Bogenmaß

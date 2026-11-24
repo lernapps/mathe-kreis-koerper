@@ -57,6 +57,8 @@ Ein **Zylinder** ist wie ein Prisma, nur mit einem Kreis als Grundfläche. Mit d
 
 $V = G \cdot h = \pi \cdot r^2 \cdot h$
 
+Wenn du die Oberfläche brauchst, musst du auch die gekrümmte Fläche außen herum kennen: den Mantel.
+
 - **Mantel**: Der Mantel eines Körpers ist seine gekrümmte oder seitliche Fläche ohne Grundfläche und Deckfläche. Beim Zylinder ist er die Fläche, die um die Dose herum liegt.
 
 Für die Oberfläche brauchst du den Mantel. Stell dir das Etikett einer Dose vor. Du schneidest es senkrecht auf und rollst es ab. Es wird ein Rechteck. Seine Höhe ist die Höhe h der Dose. Seine Breite ist der Umfang des Kreises, also 2 · π · r.

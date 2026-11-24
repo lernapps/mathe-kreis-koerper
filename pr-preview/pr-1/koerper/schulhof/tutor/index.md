@@ -59,7 +59,7 @@ In diesem Dreieck sind der Winkel α und die Ankathete d bekannt. Gesucht ist di
 
 $h = d \cdot \tan \alpha$
 
-Beim Fluss geht es ähnlich. Du kannst nicht hinübergehen. Am anderen Ufer steht ein Baum. Du stellst dich genau gegenüber an den Punkt A und gehst am Ufer eine Strecke s bis zum Punkt B. Von B aus misst du den Winkel β zwischen dem Weg zurück nach A und der Blicklinie zum Baum. Die Flussbreite w ist die Strecke von A zum Baum.
+Wenn du die Breite eines Flusses brauchst, kannst du nicht hinübergehen und messen. Auch hier hilft ein Dreieck. Am anderen Ufer steht ein Baum. Du stellst dich genau gegenüber an den Punkt A und gehst am Ufer eine Strecke s bis zum Punkt B. Von B aus misst du den Winkel β zwischen dem Weg zurück nach A und der Blicklinie zum Baum. Die Flussbreite w ist die Strecke von A zum Baum.
 
 Bild: Ein Fluss zwischen zwei Ufern von oben. Am anderen Ufer steht ein Baum, am eigenen Ufer liegen die Punkte A und B. Das blaue Dreieck aus der Strecke s von A nach B, der Blicklinie von B zum Baum und der Flussbreite w ist rechtwinklig. Der rechte Winkel liegt bei A. Der Winkel β liegt bei B. Bildunterschrift: Das blaue Dreieck hat den rechten Winkel bei A. Die Flussbreite w liegt dem Winkel β gegenüber.
 
